@@ -1,0 +1,3 @@
+text (Url) {
+  description ("HTTP 요청 URL")
+}

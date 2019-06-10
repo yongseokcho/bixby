@@ -1,0 +1,12 @@
+action (GetRecipesByIngredient) {
+  description ("재료별 레시피 조회")
+  
+  collect {
+    input (__INPUT_NAME__) {
+      type (__INPUT_TYPE__)
+      min (Optional) max (One)
+    }
+  }
+  
+  output (__OUTPUT__)
+}
