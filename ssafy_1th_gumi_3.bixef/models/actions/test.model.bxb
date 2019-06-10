@@ -1,0 +1,6 @@
+action (test) {
+  description (__DESCRIPTION__)
+  type (Search)
+  
+  output (Recipe)
+}

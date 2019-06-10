@@ -1,0 +1,47 @@
+layout-macro-def(RecipeOneHeader) {
+  params {
+    param (recipe) {
+      type (Recipe)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {
+      content {
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{value(recipe.name)}")
+                  }
+                }
+              }
+            }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{value(recipe.hit)}")
+                  }
+                }
+              }
+            }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{value(recipe.rating)}")
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+action (ShowDetailedRecipe) {
+  description ("레시피 하나에 대한 뷰를 요청")
+  type (Commit)
+  
+  collect {
+    input (name) {
+      type (RecipeName)
+      min (Required) max (One)
+    }
+  }
+  
+  output (Recipe)
+}

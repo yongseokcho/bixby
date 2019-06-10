@@ -1,0 +1,7 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (test) {
+      local-endpoint (test.js)
+    }
+  }
+}

@@ -1,8 +1,23 @@
 structure (Recipe) {
   description ("레시피 구조체")
   
-  property (recipeName) {
+  property (name) {
     type (RecipeName)
+    min (Required) max (One)
+  }
+  
+  property (image) {
+    type (viv.core.BaseImage)
+    min (Required) max (One)
+  }
+  
+  property (rating) {
+    type (RatingScore)
+    min (Required) max (One)
+  }
+  
+  property (hit) {
+    type (Hit)
     min (Required) max (One)
   }
 }

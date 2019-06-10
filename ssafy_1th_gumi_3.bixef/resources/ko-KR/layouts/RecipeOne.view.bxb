@@ -1,0 +1,40 @@
+result-view {
+  match: Recipe (this)
+
+//  message {     
+//    template-macro (cardResult)
+//  }
+
+  render {
+    
+    layout {
+      layout-macro (RecipeOneImage) {
+        param (recipe) {
+          expression (this)
+        }
+      }
+      
+      layout-macro (RecipeOneHeader) {
+        param (recipe) {
+          expression (this)
+        }
+      }
+    }
+    
+    
+    // 결과 값 갯수에 따라 다르게 보여주도록 설정 (https://bixbydevelopers.com/dev/docs/reference/ui-kit/output.image-list-of)
+    // if (size(photos) == 1) {
+    //  layout-macro (photoinfo) {
+    //    param (photo) {
+    //      expression (photos)
+    //    }
+    //  }
+    //} else {
+    //  image-list-of (photos) {
+    //    size (Small)
+    //    title { template-macro (cardResults) }
+        
+    //  }
+    //}
+  }
+}
