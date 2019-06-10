@@ -1,0 +1,18 @@
+structure (Rating) {
+  description ("평점 구조체")
+  
+  property (score) {
+    type (RatingScore)
+    min (Required) max (One)
+  }
+  
+  property (comment) {
+    type (RatingComment)
+    min (Optional) max (One)
+  }
+  
+  property (userName) {
+    type (UserName)
+    min (Optional) max (One)
+  }
+}

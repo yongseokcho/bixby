@@ -1,8 +1,9 @@
 action (GetIngredientsByName) {
-  description ("검색어를  검색")
+  description ("검색어를 포함하는 재료 검색")
+  type (Search)
   
   collect {
-    input (ingredientSymbol) {
+    input (name) {
       type (IngredientSymbol)
       min (Required) max (Many)
     }
