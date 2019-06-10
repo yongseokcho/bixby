@@ -1,0 +1,12 @@
+action (GetIngredientsByName) {
+  description ("검색어를  검색")
+  
+  collect {
+    input (ingredientSymbol) {
+      type (IngredientSymbol)
+      min (Required) max (Many)
+    }
+  }
+  
+  output (Ingredient)
+}
