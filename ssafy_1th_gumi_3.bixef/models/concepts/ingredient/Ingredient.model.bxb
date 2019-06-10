@@ -1,0 +1,8 @@
+structure (Ingredient) {
+  description ("재료 구조체")
+  
+  property (name) {
+    type (IngredientSymbol)
+    min (Required) max (One)
+  }
+}
