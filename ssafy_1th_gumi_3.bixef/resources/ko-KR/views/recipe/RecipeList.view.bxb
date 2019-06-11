@@ -1,0 +1,23 @@
+result-view{
+  match: RecipeBasicStructure(result){
+    min (Required) max (Many)
+  }
+  message("검색한 결과입니다.")
+  render{
+    list-of(result){
+      where-each (item){
+        layout-macro (RecipeSummaryLarge){
+          param(recipe){
+            expression(item)
+          }
+        }
+      }
+    }
+  }
+  
+  conversation-drivers{
+    conversation-driver{
+      template("더 검색해볼까")
+    }
+  }
+}

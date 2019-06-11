@@ -1,6 +1,8 @@
 action (GetAllRecipes) {
   description ("모든 레시피 조회")
   type(Search)
-  
-  output (Recipe)
+  collect{
+    
+  }
+  output (RecipeBasicStructure)
 }

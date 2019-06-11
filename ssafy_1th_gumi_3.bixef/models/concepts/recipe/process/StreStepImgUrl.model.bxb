@@ -1,0 +1,3 @@
+text (StreStepImgUrl) {
+  description (STRE_STEP_IMAGE_URL 과정 이미지 URL)
+}

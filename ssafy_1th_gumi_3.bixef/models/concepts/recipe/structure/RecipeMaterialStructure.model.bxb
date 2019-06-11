@@ -1,0 +1,34 @@
+structure (RecipeMaterialStructure) {
+
+  description (FOOD_MATERIAL TABLE을 근본으로한 구조체)
+
+  property (recipeId) {
+    type (RecipeId)
+    min (Optional) max (One)
+  }
+
+  property (ingredientSequenceNo) {
+    type (IngredientSequenceNo)
+    min (Optional) max (One)
+  }
+
+  property (ingredientName) {
+    type (IngredientName)
+    min (Optional) max (One)
+  }
+
+  property (ingredientCapacity) {
+    type (IngredientCapacity)
+    min (Optional) max (One)
+  }
+
+  property (ingredientTypeCode) {
+    type (IngredientTypeCode)
+    min (Optional) max (One)
+  }
+
+  property (ingredientTypeName) {
+    type (IngredientTypeName)
+    min (Optional) max (One)
+  }
+}
