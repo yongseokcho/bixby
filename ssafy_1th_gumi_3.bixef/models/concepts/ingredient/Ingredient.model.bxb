@@ -25,4 +25,6 @@ enum (Ingredient) {
   
   symbol (계란)
   symbol (피망)
+  
+  symbol (의미없는재료)
 }

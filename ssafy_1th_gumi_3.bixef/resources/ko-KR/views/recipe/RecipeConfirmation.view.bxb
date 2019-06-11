@@ -1,15 +1,15 @@
 confirmation-view{
   match: Confirmation{
-    confirming: UpdateRecipeSearch(state)
+    confirming: CommitRecipeSearch(action)
   }
   message("검색한 결과입니다.")
   render{
     layout{ 
       section{
         content{
-          for-each(state.recipeCommitState.recipeBasicStructures){
+          for-each(action.recipeCommitState.recipeBasicStructures){
             as(item){
-              if(state.layoutType == 'LARGE'){
+              if(action.recipeCommitState.layoutType == 'LARGE'){
                 layout-macro (RecipeSummaryLarge){
                   param(recipe){
                     expression (item)

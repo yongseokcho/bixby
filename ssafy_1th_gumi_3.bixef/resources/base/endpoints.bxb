@@ -1,0 +1,17 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (BeginRecipeSearch) {
+      accepted-inputs (ingredients)
+      local-endpoint (recipe/BeginRecipeSearch.js)
+    }
+    action-endpoint (UpdateRecipeSearch) {
+      accepted-inputs (recipeCommitState, addIngredient, removeIngredient, layoutType)
+      local-endpoint (recipe/UpdateRecipeSearch.js)
+    }
+    
+    action-endpoint (CommitRecipeSearch) {
+      accepted-inputs (recipeCommitState)
+      local-endpoint (recipe/CommitRecipeSearch.js)
+    }
+  }
+}

@@ -1,0 +1,23 @@
+input-view{
+  match: RecipeCommitState(state)
+  message("검색한 결과입니다.")
+  render{
+    selection-of (state.recipeBasicStructures){
+      where-each (item){
+        if(state.layoutType == 'LARGE'){
+          layout-macro (RecipeSummaryLarge){
+            param(recipe){
+              expression (item)
+            }
+          }  
+        }else{
+          layout-macro (RecipeSummaryMedium){
+            param(recipe){
+              expression (item)
+            }
+          }
+        }
+      }
+    }
+  }
+}

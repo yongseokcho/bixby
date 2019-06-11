@@ -9,6 +9,11 @@ layout-macro-def(RecipeSummaryLarge) {
 
   content {
     image-card{
+      on-click{
+        intent{
+          goal: CommitRecipeSearch
+        }
+      }
       text-position (Below)
       image-object-fit (Cover)
       aspect-ratio(16:9)

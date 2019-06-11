@@ -74,5 +74,10 @@ structure (RecipeBasicStructure) {
     type (TypeName)
     min (Optional) max (One)
   }
+  
+  property (materials){
+    type(Material)
+    min (Optional) max (Many)
+  }
 
 }
