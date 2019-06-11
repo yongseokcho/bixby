@@ -1,8 +1,28 @@
-structure (Ingredient) {
-  description ("재료 구조체")
+enum (Ingredient) {
+  description (음식 재료)
+  //돼지고기 김치찌개
+  symbol (김치)
+  symbol (돼지고기)
   
-  property (name) {
-    type (IngredientSymbol)
-    min (Required) max (One)
-  }
+  //순두부찌개
+  symbol (두부)
+  symbol (버섯)
+  symbol (대파)
+  symbol (고추)
+  
+  //크림스파게티
+  symbol (스파게티)
+  symbol (베이컨)
+  symbol (양파)
+  symbol (밀가루)
+  symbol (버터)
+  symbol (우유)
+  
+  //미역국
+  symbol (미역)
+  symbol (소고기)
+  symbol (마늘)
+  
+  symbol (계란)
+  symbol (피망)
 }

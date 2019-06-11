@@ -1,0 +1,3 @@
+enum (RemoveIngredient) {
+  role-of (Ingredient)
+}

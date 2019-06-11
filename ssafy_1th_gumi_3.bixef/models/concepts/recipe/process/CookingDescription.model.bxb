@@ -1,0 +1,3 @@
+text (CookingDescription) {
+  description (COOKING_DC 요리설명)
+}

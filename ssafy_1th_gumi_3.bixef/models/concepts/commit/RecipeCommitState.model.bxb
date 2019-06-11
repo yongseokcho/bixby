@@ -1,0 +1,18 @@
+structure (RecipeCommitState) {
+  description (요리 검색 상태)
+  features{
+    transaction
+  }
+  property (ingredients) {
+    type (Ingredient)
+    min (Optional) max (Many)
+  }
+  property (layoutType){
+    type(LayoutType)
+    min (Required) max (One)
+  }
+  property (recipeBasicStructures){
+    type(RecipeBasicStructure)
+    min (Required) max (Many)
+  }
+}

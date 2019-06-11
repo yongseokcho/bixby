@@ -1,0 +1,37 @@
+confirmation-view{
+  match: Confirmation{
+    confirming: UpdateRecipeSearch(state)
+  }
+  message("검색한 결과입니다.")
+  render{
+    layout{ 
+      section{
+        content{
+          for-each(state.recipeCommitState.recipeBasicStructures){
+            as(item){
+              if(state.layoutType == 'LARGE'){
+                layout-macro (RecipeSummaryLarge){
+                  param(recipe){
+                    expression (item)
+                  }
+                }
+              }else{
+                layout-macro (RecipeSummaryMedium){
+                  param(recipe){
+                    expression (item)
+                  }
+                }
+              }
+            }
+          }
+        }  
+      } 
+    }
+  }
+
+  conversation-drivers{
+    conversation-driver{
+      template("더 검색해볼까")
+    }
+  }
+}

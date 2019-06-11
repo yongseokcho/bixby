@@ -12,4 +12,22 @@ capsule {
     modern-prompt-rejection
     support-halt-effect-in-computed-inputs
   }
+  
+  capsule-imports {
+    import (viv.core) { 
+      as (core) 
+    }
+    import (viv.entity) {
+      as (entity) version(3.18.11)
+    }
+    import (viv.money) {
+      as (money) version (2.20.9)
+    }
+    import (viv.common) {
+      as (common) version-from (entity)
+    }
+    import (viv.image) {
+      as (image) version-from (common)
+    }
+  }
 }

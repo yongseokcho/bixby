@@ -1,0 +1,4 @@
+structure (RecipeBasicStructureLarge) {
+  description (RecipeBasicStructure에서, large view를 위한 )
+  role-of (RecipeBasicStructure)
+}
