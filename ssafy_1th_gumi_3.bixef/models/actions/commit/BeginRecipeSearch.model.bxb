@@ -1,0 +1,11 @@
+action (BeginRecipeSearch) {
+  description (요리 검색 시작)
+  type(BeginTransaction)
+  collect {
+    input (ingredients) {
+      type (Ingredient)
+      min (Optional) max (Many)
+    }
+  }
+  output (RecipeCommitState)
+}
