@@ -11,7 +11,7 @@ layout-macro-def(RecipeSummaryMedium) {
     image-card{
       image-object-fit (Cover)
       aspect-ratio(21:9)
-      image-url("#{value(recipe.imgUrl)}")
+      image-url("#{value(recipe.images[0].url)}")
       title-area{
         halign (Start)
         slot1{

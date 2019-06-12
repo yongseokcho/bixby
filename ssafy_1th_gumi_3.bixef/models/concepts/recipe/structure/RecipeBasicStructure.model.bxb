@@ -25,9 +25,9 @@ structure (RecipeBasicStructure) {
     min (Optional) max (One)
   }
 
-  property (imgUrl) {
-    type (ImgUrl)
-    min (Optional) max (One)
+  property (images) {
+    type (viv.core.BaseImage)
+    min (Optional) max (Many)
   }
 
   property (ingredientCode) {
@@ -79,5 +79,19 @@ structure (RecipeBasicStructure) {
     type(Material)
     min (Optional) max (Many)
   }
+  
+  property (hit){
+    type(Hit)
+    min (Required) max (One)
+  }
+  
+  property (rating){
+    type(RatingScore)
+    min (Required) max (One)
+  }
 
+  property (comments){
+    type(Comment)
+    min (Optional) max (Many)
+  }
 }

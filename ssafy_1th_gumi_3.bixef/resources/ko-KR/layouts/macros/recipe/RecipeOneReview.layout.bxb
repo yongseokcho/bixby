@@ -1,0 +1,106 @@
+layout-macro-def(RecipeOneReview) {
+  params {
+    param (recipeBasicStructure) {
+      type (RecipeBasicStructure)
+      min (Required)
+      max (One)
+    }
+  }
+
+
+  content {
+    section {
+      content {
+        partitioned {
+          content { 
+            hbox {
+              content {
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("리뷰")
+                        style (Detail_L)
+                      }
+                    }
+                  }
+                }
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("점수")
+                        style (Detail_L)
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            for-each (recipeBasicStructure.comments) {
+              as (comment) {
+                hbox {
+                  content {
+                    vbox {
+                      content {
+                        single-line {
+                          text {
+                            value ("#{value(comment.userId)}")
+                            style (Detail_L_Soft)
+                          }
+                        }
+                      }
+                    }
+                    vbox {
+                      content {
+                        single-line {
+                          text {
+                            value ("#{value(comment.content)}")
+                            style (Detail_L_Soft)
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //     section {
+    //       content {
+    //         for-each (recipe) {
+    //           as (recipe) {
+    //             hbox {
+    //               content {
+    //                 vbox {
+    //                   content {
+    //                     single-line {
+    //                       text {
+    //                         value ("리뷰 1 : #{value(recipe.hit)}")
+    //                         
+    //                       }
+    //                     }
+    //                   }
+    //                 }
+    //                 vbox {
+    //                   content {
+    //                     single-line {
+    //                       text {
+    //                         value ("#{value(recipe.hit)}")
+    //                       }
+    //                     }
+    //                   }
+    //                 }
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+  }
+}
+
