@@ -6,13 +6,13 @@ input-view{
       where-each (item){
         if(state.layoutType == 'LARGE'){
           layout-macro (RecipeSummaryLarge){
-            param(recipe){
+            param(recipeBasicStructure){
               expression (item)
             }
           }  
         }else{
           layout-macro (RecipeSummaryMedium){
-            param(recipe){
+            param(recipeBasicStructure){
               expression (item)
             }
           }

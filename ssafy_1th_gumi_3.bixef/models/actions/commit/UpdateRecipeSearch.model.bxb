@@ -4,7 +4,7 @@ action (UpdateRecipeSearch) {
   collect {
     input (recipeCommitState) {
       type (RecipeCommitState)
-      min (Optional) max (One)
+      min (Required) max (One)
     }
     input-group(updates){
       requires(OneOrMoreOf)

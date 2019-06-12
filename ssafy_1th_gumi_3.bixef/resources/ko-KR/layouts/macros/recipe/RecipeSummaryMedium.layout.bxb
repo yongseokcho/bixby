@@ -1,6 +1,6 @@
 layout-macro-def(RecipeSummaryMedium) {
   params {
-    param (recipe) {
+    param (recipeBasicStructure) {
       type (RecipeBasicStructure)
       min (Required)
       max (One)
@@ -11,13 +11,13 @@ layout-macro-def(RecipeSummaryMedium) {
     image-card{
       image-object-fit (Cover)
       aspect-ratio(21:9)
-      image-url("#{value(recipe.images[0].url)}")
+      image-url("#{value(recipeBasicStructure.images[0].url)}")
       title-area{
         halign (Start)
         slot1{
           single-line{
             text{
-              value("#{value(recipe.recipeName)}")
+              value("#{value(recipeBasicStructure.recipeName)}")
               style(Title_S)
             }
           }
@@ -25,7 +25,7 @@ layout-macro-def(RecipeSummaryMedium) {
         slot3{
           single-line{
             text{
-              value("#{value(recipe.calorie)}")
+              value("#{value(recipeBasicStructure.calorie)}")
               style(Detail_M_Soft)
             }
             spacer
@@ -37,7 +37,7 @@ layout-macro-def(RecipeSummaryMedium) {
             spacer
             text{
               style(Detail_M_Soft)
-              value("#{value(recipe.level)}")
+              value("#{value(recipeBasicStructure.level)}")
             }
           }
         }

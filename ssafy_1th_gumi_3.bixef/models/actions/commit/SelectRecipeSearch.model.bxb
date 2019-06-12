@@ -1,0 +1,13 @@
+action (SelectRecipeSearch) {
+  type(UpdateTransaction)
+  description (레시피 중 하나를 선택했을 때 보여줄 액션)
+  collect {
+    input (recipeBasicStructure) {
+      type (RecipeBasicStructure)
+    }
+    input(recipeCommitState){
+      type(RecipeCommitState)
+    }
+  }
+  output (RecipeCommitState)
+}

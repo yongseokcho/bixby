@@ -3,30 +3,62 @@ confirmation-view{
     confirming: CommitRecipeSearch(action)
   }
   message("검색한 결과입니다.")
+  mode (Transactional)
+  confirm-options{
+    label("선택")
+    on-confirm{
+      if(size(action.recipeCommitState.recipeBasicStructures) > 1){
+        halt{
+          dialog("레시피를 하나만 선택해주세요")
+        }
+      }
+    }
+  }
   render{
     layout{ 
-      section{
-        content{
-          for-each(action.recipeCommitState.recipeBasicStructures){
-            as(item){
-              if(action.recipeCommitState.layoutType == 'LARGE'){
-                layout-macro (RecipeSummaryLarge){
-                  param(recipe){
-                    expression (item)
+      if(size(action.recipeCommitState.recipeBasicStructures) > 1){
+        section{
+          content{
+            for-each(action.recipeCommitState.recipeBasicStructures){
+              as(item){
+                if(action.recipeCommitState.layoutType == 'LARGE'){
+                  layout-macro (RecipeSummaryLarge){
+                    param(recipeBasicStructure){
+                      expression (item)
+                    }
                   }
-                }
-              }else{
-                layout-macro (RecipeSummaryMedium){
-                  param(recipe){
-                    expression (item)
+                }else{
+                  layout-macro (RecipeSummaryLarge){
+                    param(recipeBasicStructure){
+                      expression (item)
+                    }
                   }
                 }
               }
             }
           }
-        }  
-      } 
-    }
+        }
+      }else{
+        layout-macro (RecipeOneImage){
+          param(recipeBasicStructure){
+            expression (action.recipeCommitState.recipeBasicStructures[0])
+          }
+        }
+        
+        layout-macro (RecipeOneHeader){
+          param(recipeBasicStructure){
+            expression (action.recipeCommitState.recipeBasicStructures[0])
+          }
+        }
+        
+        layout-macro (RecipeOneReview){
+          param(recipeBasicStructure){
+            expression (action.recipeCommitState.recipeBasicStructures[0])
+          }
+        }
+      }
+
+    }  
   }
 
   conversation-drivers{

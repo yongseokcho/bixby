@@ -13,5 +13,10 @@ endpoints {
       accepted-inputs (recipeCommitState)
       local-endpoint (recipe/CommitRecipeSearch.js)
     }
+    
+    action-endpoint (SelectRecipeSearch) {
+      accepted-inputs (recipeBasicStructure, recipeCommitState)
+      local-endpoint (recipe/SelectRecipeSearch.js)
+    }
   }
 }

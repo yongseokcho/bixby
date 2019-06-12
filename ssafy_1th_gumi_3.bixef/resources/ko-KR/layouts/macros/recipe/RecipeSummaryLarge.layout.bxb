@@ -1,6 +1,6 @@
 layout-macro-def(RecipeSummaryLarge) {
   params {
-    param (recipe) {
+    param (recipeBasicStructure) {
       type (RecipeBasicStructure)
       min (Required)
       max (One)
@@ -12,18 +12,40 @@ layout-macro-def(RecipeSummaryLarge) {
       on-click{
         intent{
           goal: CommitRecipeSearch
+          route: SelectRecipeSearch
+          value: RecipeBasicStructure{
+            recipeId: $expr(recipeBasicStructure.recipeId)
+            recipeName: $expr(recipeBasicStructure.recipeName)
+              calorie: $expr(recipeBasicStructure.calorie)
+              cookingTime: $expr(recipeBasicStructure.cookingTime)
+              detailedUrl: $expr(recipeBasicStructure.detailedUrl)
+              ingredientCode: $expr(recipeBasicStructure.ingredientCode)
+              level: $expr(recipeBasicStructure.level)
+              nationCode: $expr(recipeBasicStructure.nationCode)
+              nationName: $expr(recipeBasicStructure.nationName)
+              price: $expr(recipeBasicStructure.price)
+              quantity: $expr(recipeBasicStructure.quantity)
+              summary: $expr(recipeBasicStructure.summary)
+              typeCode: $expr(recipeBasicStructure.typeCode)
+              typeName: $expr(recipeBasicStructure.typeName)
+              materials: $expr(recipeBasicStructure.materials)
+              hit: $expr(recipeBasicStructure.hit)
+              rating: $expr(recipeBasicStructure.rating)
+              comments: $expr(recipeBasicStructure.comments)
+              images: $expr(recipeBasicStructure.images)
+            }
         }
       }
       text-position (Below)
       image-object-fit (Cover)
       aspect-ratio(16:9)
-      image-url("#{value(recipe.images[0].url)}")
+      image-url("#{value(recipeBasicStructure.images[0].url)}")
       title-area{
         halign (Start)
         slot1{
           single-line{
             text{
-              value("#{value(recipe.recipeName)}")
+              value("#{value(recipeBasicStructure.recipeName)}")
               style(Title_S)
             }
           }
@@ -32,14 +54,14 @@ layout-macro-def(RecipeSummaryLarge) {
           single-line{
             text{              
               style(Detail_L)
-              value("#{value(recipe.summary)}")
+              value("#{value(recipeBasicStructure.summary)}")
             }
           }
         }
         slot3{
           single-line{
             text{
-              value("#{value(recipe.calorie)}")
+              value("#{value(recipeBasicStructure.calorie)}")
               style(Detail_M_Soft)
             }
             spacer
@@ -51,7 +73,7 @@ layout-macro-def(RecipeSummaryLarge) {
             spacer
             text{
               style(Detail_M_Soft)
-              value("#{value(recipe.level)}")
+              value("#{value(recipeBasicStructure.level)}")
             }
           }
         }
@@ -59,4 +81,3 @@ layout-macro-def(RecipeSummaryLarge) {
     }
   }
 }
-                               
