@@ -26,7 +26,7 @@ function Add(state, addIngredient){
   for(let i=0; i<addIngredient.length; i++){
     flag = true;
     for(let j=0; j<state.ingredients.length; j++){
-      if(addIngredient[i] == state.ingredients[j]){
+      if(addIngredient[i] == '의미없는재료' || addIngredient[i] == state.ingredients[j]){
         flag = false;
         break;
       }

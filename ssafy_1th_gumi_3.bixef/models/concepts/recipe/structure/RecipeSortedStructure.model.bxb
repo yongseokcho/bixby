@@ -1,0 +1,11 @@
+structure (RecipeSortedStructure) {
+  description (특정 기준으로 정렬된 레시피 구조체)
+  property (option) {
+    type (SortingOption)
+    min (Required) max (One)
+  }
+  property (recipeBasicStructures){
+    type (RecipeBasicStructure)
+    min (Required) max (Many)
+  }
+}

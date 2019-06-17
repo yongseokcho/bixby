@@ -44,13 +44,13 @@ confirmation-view{
             expression (action.recipeCommitState.recipeBasicStructures[0])
           }
         }
-        
+
         layout-macro (RecipeOneHeader){
           param(recipeBasicStructure){
             expression (action.recipeCommitState.recipeBasicStructures[0])
           }
         }
-        
+
         layout-macro (RecipeOneReview){
           param(recipeBasicStructure){
             expression (action.recipeCommitState.recipeBasicStructures[0])
@@ -62,8 +62,10 @@ confirmation-view{
   }
 
   conversation-drivers{
-    conversation-driver{
-      template("더 검색해볼까")
+    if(size(action.recipeCommitState.recipeBasicStructures) == 1){
+      conversation-driver{
+        template("뒤로")
+      }      
     }
   }
 }

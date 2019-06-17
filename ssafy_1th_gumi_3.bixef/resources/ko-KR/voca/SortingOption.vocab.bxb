@@ -1,0 +1,4 @@
+vocab(SortingOption) {
+  "평점" { "평점" }
+  "조회" { "조회" }
+}
