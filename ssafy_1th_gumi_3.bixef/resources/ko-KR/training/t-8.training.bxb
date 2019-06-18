@@ -1,5 +1,5 @@
 train (t-8a5r6ae89cppye9vzvw7fb6bw) {
-  utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch] {[g:AddIngredient] (뒤로)[v:Ingredient:의미없는재료]}")
-  plan (Y+Bg0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUpl0MSh2Dk/NzezBKIlODWxKDmDQQOvuRANwSWJJbgNDS1IAUqTaagh0YbWlYKFihlUcGhxTEnxzEsvSk3JTM0rYVDEoQpJCTsDIwMTAzMDCwMrAxuQxwDlM4P5jGA+BLCAMSNQhg2siw0A)
-  last-modified (1560774666864)
+  utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch] (뒤로)[v:LayoutType]")
+  plan (Y2Bn0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUpl0MSh2Dk/NzezBKIlODWxKDmDQQOvuRANwSWJJbgNDS1IAUqTaagh0YbWlYKFihkUcWjxSazMLy0JqSxIZWBjYGRgYmBmYGFgBbIZoDxmII8RzIMBZiCbDUgyAAA=)
+  last-modified (1560776192961)
 }

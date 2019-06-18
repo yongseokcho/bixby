@@ -39,26 +39,21 @@ layout-macro-def(RecipeOneReview) {
             }
             for-each (recipeBasicStructure.comments) {
               as (comment) {
-                hbox {
-                  content {
-                    vbox {
-                      content {
-                        single-line {
-                          text {
-                            value ("#{value(comment.userId)}")
-                            style (Detail_L_Soft)
-                          }
-                        }
+                title-area{
+                  halign (Start)
+                  slot1{
+                    single-line{
+                      text{
+                        value("#{value(comment.userId)}")
+                        style (Detail_M_Soft)
                       }
                     }
-                    vbox {
-                      content {
-                        single-line {
-                          text {
-                            value ("#{value(comment.content)}")
-                            style (Detail_L_Soft)
-                          }
-                        }
+                  }
+                  slot2{
+                    single-line{
+                      text{
+                       value("#{value(comment.content)}")
+                       style(Title_XS)
                       }
                     }
                   }
@@ -69,38 +64,34 @@ layout-macro-def(RecipeOneReview) {
         }
       }
     }
-
-    //     section {
-    //       content {
-    //         for-each (recipe) {
-    //           as (recipe) {
-    //             hbox {
-    //               content {
-    //                 vbox {
-    //                   content {
-    //                     single-line {
-    //                       text {
-    //                         value ("리뷰 1 : #{value(recipe.hit)}")
-    //                         
-    //                       }
-    //                     }
-    //                   }
-    //                 }
-    //                 vbox {
-    //                   content {
-    //                     single-line {
-    //                       text {
-    //                         value ("#{value(recipe.hit)}")
-    //                       }
-    //                     }
-    //                   }
-    //                 }
-    //               }
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
   }
 }
 
+// hbox {
+//   content {
+//     vbox {
+//       content {
+//         single-line {
+//           text {
+//             value ("#{value(comment.userId)}")
+//             style (Detail_L_Soft)
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// hbox {
+//   content {
+//     vbox {
+//       content {
+//         single-line {
+//           text {
+//             value ("#{value(comment.content)}")
+//             style (Detail_L_Soft)
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

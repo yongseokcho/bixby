@@ -1,5 +1,7 @@
-var http = require('http')
-var config = require('config')
+var http = require('http');
+var config = require('config');
+var console = require('console');
+var main = require('lib/tool.js');
 
 // 검색된 요리에서 필터링
 module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIngredient, removeIngredient, layoutType) {
@@ -12,16 +14,24 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
     Remove(recipeCommitState, removeIngredient);
     changed = true;
   }
+  if(layoutType != undefined){
+    if(layoutType == '뒤로'){
+      let db = main.GetAllRecipes();
+      db = main.ConvertRecipeBasicStructure(db);
+      recipeCommitState.recipeBasicStructures = db;
+      changed = true;
+    }else{
+      recipeCommitState.layoutType = layoutType;  
+    }
+  }
   if(changed){
     GetIngredient(recipeCommitState);  
-  }
-  if(layoutType != undefined){
-    recipeCommitState.layoutType = layoutType;
   }
   return recipeCommitState;
 }
 
 function Add(state, addIngredient){
+  console.log("UpdateRecipeSearch Add function called");
   let flag;
   for(let i=0; i<addIngredient.length; i++){
     flag = true;
@@ -38,6 +48,7 @@ function Add(state, addIngredient){
 }
 
 function Remove(state, removeIngredient){
+  console.log("UpdateRecipeSearch Remove function called");
   for(let i=0; i<removeIngredient.length; i++){
     for(let j=0; j<state.ingredients.length; j++){
       if(removeIngredient[i] == state.ingredients[j]){
@@ -48,17 +59,19 @@ function Remove(state, removeIngredient){
 }
 
 function GetIngredient(state){
+  console.log("UpdateRecipeSearch GetIngredient function called");
   let newRecipes = [];
-  for(let i=0; i<state.recipeBasicStructure.length; i++){
-    for(let j=0; j<state.recipeBasicStructure.materials.length; j++){
+  for(let i=0; i<state.recipeBasicStructures.length; i++){
+    for(let j=0; j<state.recipeBasicStructures[i].materials.length; j++){
       for(let k=0; k<state.ingredients.length; k++){
-        if(state.recipeBasicStructure[i].materials[j] == state.ingredients[k]){
-          newRecipes.push(state.recipeBasicStructure[i]);
-          j = state.recipeBasicStructure.materials.length;
+        if(state.recipeBasicStructures[i].materials[j] == state.ingredients[k]){
+          newRecipes.push(state.recipeBasicStructures[i]);
+          j = state.recipeBasicStructures[i].materials.length;
           break;
         }
       }  
     }
   }
-  state.recipeBasicStructure = newRecipes;
+  state.recipeBasicStructures = newRecipes;
 }
+

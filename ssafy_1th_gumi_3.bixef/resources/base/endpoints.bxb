@@ -18,5 +18,10 @@ endpoints {
       accepted-inputs (recipeBasicStructure, recipeCommitState)
       local-endpoint (recipe/SelectRecipeSearch.js)
     }
+    
+    action-endpoint (GetRecipeByName) {
+      accepted-inputs (recipeName)
+      local-endpoint (recipe/GetRecipeByName.js)
+    }
   }
 }

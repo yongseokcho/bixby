@@ -11,6 +11,17 @@ structure (RecipeCommitState) {
     type(LayoutType)
     min (Required) max (One)
   }
+  
+  property(pageNumber){
+    type(PageNumber)
+    min (Required) max (One)
+  }
+  
+  property (recipesPerPage){
+    type(RecipesPerPage)
+    min (Required) max (One)
+  }
+  
   property (recipeBasicStructures){
     type(RecipeBasicStructure)
     min (Required) max (Many)
