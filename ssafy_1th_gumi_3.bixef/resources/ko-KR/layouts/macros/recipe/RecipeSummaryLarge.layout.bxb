@@ -34,6 +34,9 @@ layout-macro-def(RecipeSummaryLarge) {
               comments: $expr(recipeBasicStructure.comments)
               images: $expr(recipeBasicStructure.images)
             }
+          subplan{
+            goal: AccessVivContext
+          }
         }
       }
       text-position (Below)

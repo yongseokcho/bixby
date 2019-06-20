@@ -10,7 +10,7 @@ endpoints {
     }
     
     action-endpoint (CommitRecipeSearch) {
-      accepted-inputs (recipeCommitState)
+      accepted-inputs (recipeCommitState, userIdentifier)
       local-endpoint (recipe/CommitRecipeSearch.js)
     }
     
@@ -19,9 +19,19 @@ endpoints {
       local-endpoint (recipe/SelectRecipeSearch.js)
     }
     
+    action-endpoint (LaunchWebSite) {
+      accepted-inputs (recipeBasicStructure, userIdentifier)
+      local-endpoint (base/LanchWebSite.js)
+    }
+    
     action-endpoint (GetRecipeByName) {
       accepted-inputs (recipeName)
       local-endpoint (recipe/GetRecipeByName.js)
+    }
+    
+    action-endpoint (AccessVivContext) {
+      accepted-inputs ($vivContext)
+      local-endpoint (base/AccessVivContext.js)
     }
   }
 }

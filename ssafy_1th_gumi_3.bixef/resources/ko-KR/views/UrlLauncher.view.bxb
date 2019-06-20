@@ -1,0 +1,35 @@
+result-view{
+  match :  UrlBody(this)
+  
+  message("웹으로 이동합니다.")
+  render{
+    layout{
+      section{
+        content{
+          title-area{
+            halign (Center)
+            slot2{
+              single-line{
+                text{
+                  value("#{value(this.recipeName)}")
+                  style (Title_M)
+                }
+              }
+            }
+            slot3{
+              single-line{
+                text{
+                  value("상세정보 페이지로 이동합니다")
+                  style (Detail_L_Soft)
+                }
+              }              
+            }
+          }
+        }
+      }
+    }
+  }
+  app-launch{
+    payload-uri("https://bixbydevelopers.com/dev/docs/reference/type/result-view.app-launch")
+  }
+}

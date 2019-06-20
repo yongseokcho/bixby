@@ -6,9 +6,13 @@ action (CommitRecipeSearch) {
       type (RecipeCommitState)
       min (Required) max (One)
     }
+    input(userIdentifier){
+      type(UserIdentifier)
+      min (Required) max (One)
+    }
   }
   confirm{
     by(Confirmation)
   }
-  output (RecipeBasicStructure)
+  output (UrlBody)
 }

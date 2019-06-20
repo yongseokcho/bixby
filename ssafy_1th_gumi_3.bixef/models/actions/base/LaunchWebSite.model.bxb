@@ -1,0 +1,15 @@
+action (LaunchWebSite) {
+  type(Search)
+  description (웹 사이트를 켠다)
+  collect {
+    input (recipeBasicStructure) {
+      type (RecipeBasicStructure)
+      min (Required) max (One)
+    }
+    input(userIdentifier){
+      type(UserIdentifier)
+      min (Required) max (One)
+    }
+  }
+  output (UrlBody)
+}

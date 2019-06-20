@@ -2,7 +2,13 @@ confirmation-view{
   match: Confirmation{
     confirming: CommitRecipeSearch(action)
   }
-  message("검색한 결과입니다.")
+  message{
+    template-macro (RecipeListMacro){
+      param (recipeCommitState){
+        expression (action.recipeCommitState)
+      }
+    }
+  }
   mode (Transactional)
   confirm-options{
     label("선택")
@@ -38,7 +44,7 @@ confirmation-view{
             }
           }
         }
-      }else{
+      }else{        
         layout-macro (RecipeOneImage){
           param(recipeBasicStructure){
             expression (action.recipeCommitState.recipeBasicStructures[0])

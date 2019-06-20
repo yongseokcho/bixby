@@ -1,6 +1,6 @@
 template-macro-def (NOT_FOUND_RECIPE_BY_NAME){
   content{
-   template("해당하는 이름의 레시피가 존재하지 않습니다.") 
+   template("해당하는 이름의 레시피가 존재하지 않습니다. 다시 검색해주세요.")  
   }
 }
 

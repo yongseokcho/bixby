@@ -16,10 +16,20 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
   }
   if(layoutType != undefined){
     if(layoutType == '뒤로'){
-      let db = main.GetAllRecipes();
+      let db = main.GetRecipesByMaterials(recipeCommitState.ingredients);
       db = main.ConvertRecipeBasicStructure(db);
       recipeCommitState.recipeBasicStructures = db;
       changed = true;
+    }else if(layoutType == '다음'){
+      if(recipeCommitState.maxPageNumber > recipeCommitState.pageNumber){ 
+        recipeCommitState.pageNumber++;
+        changed = true;        
+      }
+    }else if(layoutType == '이전'){
+      if(recipeCommitState.pageNumber > 0){
+        recipeCommitState.pageNumber--;  
+        changed = true;
+      }
     }else{
       recipeCommitState.layoutType = layoutType;  
     }

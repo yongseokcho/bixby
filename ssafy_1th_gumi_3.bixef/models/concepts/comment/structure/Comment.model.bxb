@@ -20,4 +20,8 @@ structure (Comment) {
     type (UserId)
     min (Required) max (One)
   }
+  property(rating){
+    type (Rating)
+    min (Required) max (One)
+  }
 }

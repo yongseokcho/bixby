@@ -29,5 +29,8 @@ capsule {
     import (viv.image) {
       as (image) version-from (common)
     }
+    import (viv.contact) {
+      as (contact) version(2.5146.7)
+    }
   }
 }

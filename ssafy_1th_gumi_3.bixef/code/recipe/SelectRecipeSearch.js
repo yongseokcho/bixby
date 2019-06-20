@@ -11,8 +11,9 @@ module.exports.function = function selectRecipeSearch (recipeBasicStructure, rec
   return {
     ingredients: recipeCommitState.ingredients,
     recipeBasicStructures : [recipeBasicStructure],
+    maxPageNumber : 1,
     pageNumber : 1,
-    recipesPerPage : 10,
+    recipesPerPage : 50,
     layoutType: 'LARGE'
   }
 }

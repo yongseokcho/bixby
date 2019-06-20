@@ -12,6 +12,11 @@ structure (RecipeCommitState) {
     min (Required) max (One)
   }
   
+  property (maxPageNumber){
+    type(MaxPageNumber)
+    min (Required) max (One)
+  }
+
   property(pageNumber){
     type(PageNumber)
     min (Required) max (One)

@@ -1,5 +1,5 @@
 train (t-8a5r6ae89cppye9vzvw7fb6bw) {
-  utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch] (뒤로)[v:LayoutType]")
-  plan (Y2Bn0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUpl0MSh2Dk/NzezBKIlODWxKDmDQQOvuRANwSWJJbgNDS1IAUqTaagh0YbWlYKFihkUcWjxSazMLy0JqSxIZWBjYGRgYmBmYGFgBbIZoDxmII8RzIMBZiCbDUgyAAA=)
-  last-modified (1560776192961)
+  utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch,r:AccessVivContext] (뒤로)[v:LayoutType]")
+  plan (nYzPCoJAEMY/06xeIugQ1UWQnqA8BZ0yu4rpmAvpyu4aeunZ27SOC9Echpnf9wczzKVM8i72VRHfmpLFW+/KWsq9SNz3POuwMegBL0umTpSymkJKRFpgbbAOpiEQqkSRsTSqMy3/Wer/XPpseiSxMESOSccbde5qwtLUKkkcMqoUyxkJrAy2XZqSlBf2CHilqFWYwsIINhyM4WKif3yIrYmlidWT77wvR29XO23gBQ==)
+  last-modified (1560947308473)
 }

@@ -1,17 +1,33 @@
 result-view{
   match: RecipeBasicStructure(result){
-    min (Required) max (Many)
+    min (Required) max (One)
   }
   message("최종 결과입니다")
   render{
-    list-of(result){
-      where-each (item){
-        layout-macro (RecipeSummaryLarge){
-          param(recipeBasicStructure){
-            expression(item)
-          }
+    layout{
+      layout-macro (RecipeOneImage){
+        param(recipeBasicStructure){
+          expression (result)
         }
       }
+
+      layout-macro (RecipeOneHeader){
+        param(recipeBasicStructure){
+          expression (result)
+        }
+      }
+
+      layout-macro (RecipeOneReview){
+        param(recipeBasicStructure){
+          expression (result)
+        }
+      }
+    }
+  }
+  
+  conversation-drivers{
+    conversation-driver{
+      template("상세 웹페이지 보기")
     }
   }
 }
