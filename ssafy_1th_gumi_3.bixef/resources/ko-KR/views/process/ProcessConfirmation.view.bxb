@@ -14,7 +14,12 @@ confirmation-view{
       if(action.processCommitState.layoutType == 'List'){
         for-each (action.processCommitState.processes){
           as (item){
-            layout-macro (ProcessSummary){
+            layout-macro (ProcessImage){
+              param (process){
+                expression (item)
+              }
+            }
+            layout-macro (ProcessDescription){
               param (process){
                 expression (item)
               }

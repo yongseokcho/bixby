@@ -4,6 +4,10 @@ structure (ProcessCommitState) {
     type (RecipeId)
     min (Required) max (One)
   }
+  property (recipeName){
+    type(RecipeName)
+    min (Required) max (One)
+  }
   property (totalStep){
     type (TotalStep)
     min (Required) max (One)

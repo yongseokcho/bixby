@@ -1,6 +1,7 @@
 var http = require('http');
 var config = require('config');
 
+// Database의 scheme을 Bixby structure로 변환시켜줌
 module.exports.ConvertRecipeBasicStructure = function(db){
   let result = [];
   for(let i=0; i<db.length; i++){
@@ -41,20 +42,33 @@ module.exports.ConvertRecipeBasicStructure = function(db){
   return result;
 }
 
+// Database의 scheme을 Bixby structure로 변환시켜줌
+module.exports.ConvertProcess = function(processes){
+  let result = [];
+  for(let i=0; i<processes.length; i++){
+    let obj = {
+      currentStep : processes[i].cooking_no,
+      description : processes[i].cooking_dc,
+      imgUrl : processes[i].stre_step_image_url,
+      tip : processes[i].tip,
+    };
+    result.push(obj);
+  }
+  return result;
+}
+
+// 모든 레시피들을 받아온다
 module.exports.GetAllRecipes = function(){
   return http.getUrl(config.get('remote.url') + 'foodBasic/findAll', { format: 'json' });
 }
 
+// 레시피를 재료명을 이용해 받아온다
 module.exports.GetRecipesByMaterials = function(ingredients){
-  // let query = "?page=0&criteria=all&material="+ingredients[0];
-  // for(let i=1; i<ingredients.length; i++){
-  //   query += "," + ingredients[i];
-  // }
-  // return http.getUrl(config.get('remote.url') + 'foodBasic/searchByMaterial' + query, {format: 'json'});
   let materials = ingredients[0];
   for(let i=1; i<ingredients.length; i++){
     materials += "," + ingredients[i];
   }
+  // 현재 page와 criteria는 deprecated 되어있음.
   let options = {
     query : {
       page : 0,
@@ -66,33 +80,15 @@ module.exports.GetRecipesByMaterials = function(ingredients){
   return http.getUrl(config.get('remote.url') + 'foodBasic/searchByMaterial', options);
 }
 
+// 요리과정을 레시피 아이디를 통해 받아옴
 module.exports.GetProcessesByRecipeId = function(recipeId){
-  let db = [
-    {
-      currentStep : 1,
-      description : "맥도날드는 맛있을 것 같긴 하지만..",
-      tip : "맥도날드는 콜라를 사용한다.",
-      imgUrl : "url임"
+  // GET Request를 위한 옵션 설정
+  let options = {
+    query : {
+      recipeId : recipeId
     },
-    {
-      currentStep : 2,
-      description : "롯데리아가 더 맛있을까?",
-      tip : "맥도날드는 사이다를 사용한다.",
-      imgUrl : "url임"
-    },
-    {
-      currentStep : 3,
-      description : "버거킹도 맛있겟다",
-      tip : "버거킹은 미란다를 사용한다.",
-      imgUrl : "url임"
-    }
-  ];
-  // let options = {
-  //   query : {
-  //     recipeId : recipeId
-  //   },
-  //   format: "json"
-  // }
-  // return http.getUrl(config.get('remote.url') + 'foodProcess/processSearchByRecipeId', options);
-  return db;
+    format: "json"
+  }
+  return http.getUrl(config.get('remote.url') + 'foodProcess/processSearchByRecipeId', options);
+  // return db;
 }

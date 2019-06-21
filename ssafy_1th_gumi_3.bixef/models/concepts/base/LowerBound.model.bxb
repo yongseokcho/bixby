@@ -1,0 +1,3 @@
+integer (LowerBound) {
+  description (하한값)
+}

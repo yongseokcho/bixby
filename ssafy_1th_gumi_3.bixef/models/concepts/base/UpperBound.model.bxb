@@ -1,0 +1,3 @@
+integer (UpperBound) {
+  description (상한값)
+}

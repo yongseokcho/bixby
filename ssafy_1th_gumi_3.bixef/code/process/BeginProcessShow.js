@@ -1,12 +1,14 @@
 var tool = require('lib/tool.js');
 
-module.exports.function = function beginProcessShow (recipeId) {
-  var recipes = tool.GetProcessesByRecipeId(recipeId);
+module.exports.function = function beginProcessShow (recipeId, recipeName) {
+  var processes = tool.GetProcessesByRecipeId(recipeId);
+  processes = tool.ConvertProcess(processes);
   return {
     recipeId : recipeId,
-    totalStep : recipes.length,
+    recipeName : recipeName,
+    totalStep : processes.length,
     currentStep : 0,
     layoutType : "List",
-    processes : recipes
+    processes : processes
   };
 }

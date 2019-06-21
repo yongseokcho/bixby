@@ -1,3 +1,0 @@
-integer (CookingNo) {
-  description (COOKING_NO 요리설명순서)
-}

@@ -1,0 +1,13 @@
+result-view {
+  match : RecipeSortedStructure(result){
+    min (Required) max (Many)
+  }
+
+  //message (평점순으로 검색한 결과입니다.)
+
+  render {
+    layout {
+      
+    }
+  }
+}
