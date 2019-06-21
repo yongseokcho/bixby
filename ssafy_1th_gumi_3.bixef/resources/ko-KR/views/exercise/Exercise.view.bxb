@@ -15,6 +15,7 @@ result-view {
     prompt {
       dialog ("요리과정으로 이동하시겠습니까?")
       on-confirm {
+        
         if (false) {
           message (I see...)
         } else {

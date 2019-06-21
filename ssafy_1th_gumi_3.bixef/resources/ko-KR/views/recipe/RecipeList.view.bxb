@@ -9,7 +9,7 @@ result-view{
         content{
           for-each(result){
             as(item){
-              layout-macro (RecipeSummaryLarge){
+              layout-macro (RecipeSummary){
                 param(recipeBasicStructure){
                   expression (item)
                 }

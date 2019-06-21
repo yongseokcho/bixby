@@ -40,8 +40,8 @@ endpoints {
     }
     
     action-endpoint (GetRecipeByCalories) {
-      accepted-inputs (upperBound, upperBoundRangeOption, )
-      local-endpoint (recipe/GetRecipeByName.js)
+      accepted-inputs (upperBound, upperBoundRangeOption, lowerBound, lowerBoundRangeOption)
+      local-endpoint (recipe/GetRecipeByCalories.js)
     }
 
   }

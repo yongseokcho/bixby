@@ -10,5 +10,5 @@ action (CommitProcessShow) {
   confirm{
     by(Confirmation)
   }
-  output (LastProcess)
+  output (UrlBody)
 }

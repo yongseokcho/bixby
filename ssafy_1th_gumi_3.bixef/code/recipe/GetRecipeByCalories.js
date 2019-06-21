@@ -1,6 +1,7 @@
 var fail = require('fail');
 var http = require('http');
 var config = require('config');
+var tool = require('lib/tool.js');
 
 module.exports.function = function getRecipeByCalories (lowerBound, lowerBoundRangeOption, upperBound, upperBoundRangeOption) {
   if(lowerBound != undefined && lowerBoundRangeOption == undefined){
@@ -35,5 +36,7 @@ module.exports.function = function getRecipeByCalories (lowerBound, lowerBoundRa
       max : upperBound
     };
   }
-  return http.getUrl(config.get('remote.url') + uri, options);
+  let db = http.getUrl(config.get('remote.url') + uri, options);
+  db = tool.ConvertRecipeBasicStructure(db);
+  return db;
 }

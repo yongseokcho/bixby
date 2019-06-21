@@ -13,6 +13,7 @@ layout-macro-def(ProcessImage) {
         image-card {
           image-url ("#{value(process.imgUrl)}")
           aspect-ratio (21:9)
+          image-object-fit (Cover)
           text-position (Overlay)
           title-area {
             slot1 {

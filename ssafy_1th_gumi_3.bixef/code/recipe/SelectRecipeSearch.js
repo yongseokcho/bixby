@@ -6,6 +6,22 @@ module.exports.function = function selectRecipeSearch (recipeBasicStructure, rec
   // var hit = http.getUrl(config.get('remote.url') + 'hits/searchByRecipeId');
   // var score = http.getUrl(config.get('remote.url') + 'score/searchByRecipeId');
   // var comments = http.getUrl(config.get('remote.url') + 'comment/searchByRecipeId');
+  let options = {
+    query : {
+      recipeId : recipeBasicStructure.recipeId
+    },
+    format : "json"
+  };
+  
+  var db = http.getUrl(config.get('remote.url') + 'foodMaterial/searchByRecipeId', options);
+  var materials = [];
+  
+  for (var i = 0; i < db.length; i++) {
+    materials.push(db[i].irdnt_nm);
+  }
+  
+  recipeBasicStructure.materials = materials;
+  
   
   
   return {

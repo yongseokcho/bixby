@@ -16,12 +16,6 @@ result-view{
           expression (result)
         }
       }
-
-      layout-macro (RecipeOneReview){
-        param(recipeBasicStructure){
-          expression (result)
-        }
-      }
     }
   }
   conversation-drivers{

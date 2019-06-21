@@ -1,4 +1,4 @@
-layout-macro-def(RecipeSummaryLarge) {
+layout-macro-def(RecipeSummary) {
   params {
     param (recipeBasicStructure) {
       type (RecipeBasicStructure)
@@ -11,28 +11,7 @@ layout-macro-def(RecipeSummaryLarge) {
     image-card{
       on-click{
         intent{
-          goal: CommitRecipeSearch
-          route: SelectRecipeSearch
-          value: RecipeBasicStructure{
-            recipeId: $expr(recipeBasicStructure.recipeId)
-            recipeName: $expr(recipeBasicStructure.recipeName)
-              calorie: $expr(recipeBasicStructure.calorie)
-              cookingTime: $expr(recipeBasicStructure.cookingTime)
-              detailedUrl: $expr(recipeBasicStructure.detailedUrl)
-              ingredientCode: $expr(recipeBasicStructure.ingredientCode)
-              level: $expr(recipeBasicStructure.level)
-              nationCode: $expr(recipeBasicStructure.nationCode)
-              nationName: $expr(recipeBasicStructure.nationName)
-              price: $expr(recipeBasicStructure.price)
-              quantity: $expr(recipeBasicStructure.quantity)
-              summary: $expr(recipeBasicStructure.summary)
-              typeCode: $expr(recipeBasicStructure.typeCode)
-              typeName: $expr(recipeBasicStructure.typeName)
-              materials: $expr(recipeBasicStructure.materials)
-              hit: $expr(recipeBasicStructure.hit)
-              rating: $expr(recipeBasicStructure.rating)
-              images: $expr(recipeBasicStructure.images)
-            }
+          goal : RecipeBasicStructure
         }
       }
       text-position (Below)

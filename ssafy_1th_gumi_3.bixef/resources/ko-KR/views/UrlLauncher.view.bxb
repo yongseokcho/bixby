@@ -1,7 +1,7 @@
 result-view{
   match :  UrlBody(this)
   
-  message("웹으로 이동합니다.")
+  message("유튜브로 이동합니다.")
   render{
     layout{
       section{
@@ -29,10 +29,7 @@ result-view{
       }
     }
   }
-  // app-launch{
-  //   payload-uri("https://bixbydevelopers.com/dev/docs/reference/type/result-view.app-launch")
-  // }
   app-launch{
-    payload-uri()
+    payload-uri("#{value(this.url)}")
   }
 }
