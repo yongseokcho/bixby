@@ -1,6 +1,5 @@
 var http = require('http');
 var config = require('config');
-var db = require('lib/database.js');
 
 // Database의 scheme을 Bixby structure로 변환시켜줌
 module.exports.ConvertRecipeBasicStructure = function(db){
@@ -26,17 +25,7 @@ module.exports.ConvertRecipeBasicStructure = function(db){
       typeName: db[i].ty_nm,
       materials: ['기본값'],
       hit: 10,
-      rating: db[i].sumScore,
-      comments: [
-        {
-          commentId : 1038489,
-          content: '정말 맛있군요. 진짜진짜 한 번 먹고나면 천국갈만한 맛이에요 크으으으으으으 진짜 짱짱맨이다아요오오오오',
-          commentDate: '2019-09-04',
-          recipeId : 2382,
-          userId : 'dbsrhksdnd',
-          rating : 4.5
-        }
-      ]
+      rating: db[i].sumScore
     };
     result.push(obj);
   }
@@ -94,9 +83,11 @@ module.exports.GetProcessesByRecipeId = function(recipeId){
   // return db;
 }
 
-// module.exports.GetSportsCalory = function(calory){
-//   let sports = db.sports;
-//   for(let i=0; i<sports.length; i++){
-//     sports.workoutTime = 
-//   }
-// }
+module.exports.GetSportsCalory = function(calory){
+  let db = require('lib/database.js');
+  let sports = db.sports;
+  for(let i=0; i<sports.length; i++){
+    sports.time = calory / (sports.calorie / 60);
+  }
+  return sports;
+}

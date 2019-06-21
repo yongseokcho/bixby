@@ -89,9 +89,4 @@ structure (RecipeBasicStructure) {
     type(RatingScore)
     min (Required) max (One)
   }
-
-  property (comments){
-    type(Comment)
-    min (Optional) max (Many)
-  }
 }

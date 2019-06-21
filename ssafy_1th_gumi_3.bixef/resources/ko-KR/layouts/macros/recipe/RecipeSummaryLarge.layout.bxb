@@ -31,12 +31,8 @@ layout-macro-def(RecipeSummaryLarge) {
               materials: $expr(recipeBasicStructure.materials)
               hit: $expr(recipeBasicStructure.hit)
               rating: $expr(recipeBasicStructure.rating)
-              comments: $expr(recipeBasicStructure.comments)
               images: $expr(recipeBasicStructure.images)
             }
-          subplan{
-            goal: AccessVivContext
-          }
         }
       }
       text-position (Below)
