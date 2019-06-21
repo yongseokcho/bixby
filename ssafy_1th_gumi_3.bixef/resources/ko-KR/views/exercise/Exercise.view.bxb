@@ -1,0 +1,13 @@
+result-view {
+  match: Exercise (result)
+
+  render {
+    layout {
+      layout-macro (ExerciseList) {
+        param (exercise) {
+          expression (result)
+        }
+      }
+    }
+  }
+}
