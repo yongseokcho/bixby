@@ -1,7 +1,7 @@
 var http = require('http');
 var config = require('config');
 var console = require('console');
-var main = require('lib/tool.js');
+var tool = require('lib/tool.js');
 
 // 검색된 요리에서 필터링
 module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIngredient, removeIngredient, layoutType) {
@@ -16,8 +16,8 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
   }
   if(layoutType != undefined){
     if(layoutType == '뒤로'){
-      let db = main.GetRecipesByMaterials(recipeCommitState.ingredients);
-      db = main.ConvertRecipeBasicStructure(db);
+      let db = tool.GetRecipesByMaterials(recipeCommitState.ingredients);
+      db = tool.ConvertRecipeBasicStructure(db);
       recipeCommitState.recipeBasicStructures = db;
       changed = true;
     }else if(layoutType == '다음'){

@@ -1,0 +1,7 @@
+result-view{
+  match: LastProcess(result)
+  message("마지막 요리과정입니다.")
+  render{
+    
+  }
+}

@@ -1,0 +1,8 @@
+structure (LastProcess) {
+  description (마지막 요리과정에 대한 구조체)
+  property (recipeId) {
+    type (RecipeId)
+    min (Required) max (One)
+  }
+  extends(Process)
+}

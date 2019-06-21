@@ -1,0 +1,11 @@
+action (CommitProcessShow) {
+  type(Commit)
+  description (요리과정 트랜잭션 완료)
+  collect {
+    input (processCommitState) {
+      type (ProcessCommitState)
+      min (Required) max (One)
+    }
+  }
+  output (LastProcess)
+}

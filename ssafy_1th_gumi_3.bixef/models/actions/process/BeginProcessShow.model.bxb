@@ -1,0 +1,11 @@
+action (BeginProcessShow) {
+  type(BeginTransaction)
+  description (요리과정을 보여준다.)
+  collect {
+    input (recipeId) {
+      type (RecipeId)
+      min (Required) max (One)
+    }
+  }
+  output (ProcessCommitState)
+}

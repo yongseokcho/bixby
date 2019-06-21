@@ -65,3 +65,13 @@ module.exports.GetRecipesByMaterials = function(ingredients){
   };
   return http.getUrl(config.get('remote.url') + 'foodBasic/searchByMaterial', options);
 }
+
+module.exports.GetProcessesByRecipeId = function(recipeId){
+  let options = {
+    query : {
+      recipeId : recipeId
+    },
+    format: "json"
+  }
+  return http.getUrl(config.get('remote.url') + 'foodProcess/processSearchByRecipeId', options);
+}

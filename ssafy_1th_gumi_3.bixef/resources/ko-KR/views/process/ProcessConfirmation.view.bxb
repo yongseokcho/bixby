@@ -1,0 +1,12 @@
+confirmation-view{
+  match: Confirmation{
+    confirming : CommitProcessShow(action)
+  }
+  message{
+    template ("요리과정에 대한 것입니다.")
+  }
+  mode (Transactional)
+  render{
+    
+  }
+}

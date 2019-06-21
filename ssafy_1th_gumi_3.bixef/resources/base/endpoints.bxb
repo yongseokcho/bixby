@@ -8,27 +8,42 @@ endpoints {
       accepted-inputs (recipeCommitState, addIngredient, removeIngredient, layoutType)
       local-endpoint (recipe/UpdateRecipeSearch.js)
     }
-    
+
     action-endpoint (CommitRecipeSearch) {
       accepted-inputs (recipeCommitState, userIdentifier)
       local-endpoint (recipe/CommitRecipeSearch.js)
     }
-    
+
     action-endpoint (SelectRecipeSearch) {
       accepted-inputs (recipeBasicStructure, recipeCommitState)
       local-endpoint (recipe/SelectRecipeSearch.js)
     }
+
+    action-endpoint (BeginProcessShow) {
+      accepted-inputs (recipeId)
+      local-endpoint (process/BeginProcessShow.js)
+    }
     
+    action-endpoint (UpdateProcessShow) {
+      accepted-inputs (layoutType, processCommitState)
+      local-endpoint (process/UpdateProcessShow.js)
+    }
+    
+    action-endpoint (CommitProcessShow) {
+      accepted-inputs (processCommitState)
+      local-endpoint (process/CommitProcessShow.js)
+    }
+
     action-endpoint (LaunchWebSite) {
       accepted-inputs (recipeBasicStructure, userIdentifier)
       local-endpoint (base/LanchWebSite.js)
     }
-    
+
     action-endpoint (GetRecipeByName) {
       accepted-inputs (recipeName)
       local-endpoint (recipe/GetRecipeByName.js)
     }
-    
+
     action-endpoint (AccessVivContext) {
       accepted-inputs ($vivContext)
       local-endpoint (base/AccessVivContext.js)
