@@ -29,7 +29,10 @@ result-view{
       }
     }
   }
+  // app-launch{
+  //   payload-uri("https://bixbydevelopers.com/dev/docs/reference/type/result-view.app-launch")
+  // }
   app-launch{
-    payload-uri("https://bixbydevelopers.com/dev/docs/reference/type/result-view.app-launch")
+    payload-uri()
   }
 }
