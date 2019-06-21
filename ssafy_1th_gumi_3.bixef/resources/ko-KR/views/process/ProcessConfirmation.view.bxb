@@ -6,7 +6,44 @@ confirmation-view{
     template ("요리과정에 대한 것입니다.")
   }
   mode (Transactional)
-  render{
-    
+  confirm-options{
+    label("YES")
   }
+  render{
+    layout{
+      if(action.processCommitState.layoutType == 'List'){
+        for-each (action.processCommitState.processes){
+          as (item){
+            layout-macro (ProcessSummary){
+              param (process){
+                expression (item)
+              }
+            }
+          }
+        }  
+      }else{
+        layout-macro (ProcessDetail){
+          param (process){
+            expression (action.processCommitState.processes[action.processCommitState.currentStep])
+          }
+        }
+      }
+      
+    }
+  }
+  
+  conversation-drivers{
+    conversation-driver{
+      if(action.processCommitState.layoutType == 'List'){
+        template ("요리과정 상세보기")  
+      }else{
+        if(action.processCommitState.currentStep < action.processCommitState.totalStep - 1){
+          template ("다음")  
+        }
+        template ("이전")
+      }
+    }
+  }
+  
+  
 }

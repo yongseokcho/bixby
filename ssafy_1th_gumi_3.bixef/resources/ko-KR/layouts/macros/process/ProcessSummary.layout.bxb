@@ -1,0 +1,20 @@
+layout-macro-def(ProcessSummary) {
+  params {
+    param (process) {
+      type (Process)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {  // this macro returns a "section"
+      content {
+        paragraph {
+          value ("#{value(process.description)}")
+          style (Detail_M)
+        }
+      }
+    }
+  }
+}

@@ -67,11 +67,32 @@ module.exports.GetRecipesByMaterials = function(ingredients){
 }
 
 module.exports.GetProcessesByRecipeId = function(recipeId){
-  let options = {
-    query : {
-      recipeId : recipeId
+  let db = [
+    {
+      currentStep : 1,
+      description : "맥도날드는 맛있을 것 같긴 하지만..",
+      tip : "맥도날드는 콜라를 사용한다.",
+      imgUrl : "url임"
     },
-    format: "json"
-  }
-  return http.getUrl(config.get('remote.url') + 'foodProcess/processSearchByRecipeId', options);
+    {
+      currentStep : 2,
+      description : "롯데리아가 더 맛있을까?",
+      tip : "맥도날드는 사이다를 사용한다.",
+      imgUrl : "url임"
+    },
+    {
+      currentStep : 3,
+      description : "버거킹도 맛있겟다",
+      tip : "버거킹은 미란다를 사용한다.",
+      imgUrl : "url임"
+    }
+  ];
+  // let options = {
+  //   query : {
+  //     recipeId : recipeId
+  //   },
+  //   format: "json"
+  // }
+  // return http.getUrl(config.get('remote.url') + 'foodProcess/processSearchByRecipeId', options);
+  return db;
 }

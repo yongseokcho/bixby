@@ -6,7 +6,7 @@ module.exports.function = function beginProcessShow (recipeId) {
     recipeId : recipeId,
     totalStep : recipes.length,
     currentStep : 0,
-    layoutType : "",
+    layoutType : "List",
     processes : recipes
   };
 }

@@ -7,5 +7,8 @@ action (CommitProcessShow) {
       min (Required) max (One)
     }
   }
+  confirm{
+    by(Confirmation)
+  }
   output (LastProcess)
 }
