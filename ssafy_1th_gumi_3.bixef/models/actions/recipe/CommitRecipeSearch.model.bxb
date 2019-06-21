@@ -14,5 +14,5 @@ action (CommitRecipeSearch) {
   confirm{
     by(Confirmation)
   }
-  output (UrlBody)
+  output (RecipeBasicStructure)
 }

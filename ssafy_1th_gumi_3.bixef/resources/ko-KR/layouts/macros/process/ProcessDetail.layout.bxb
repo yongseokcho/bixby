@@ -5,6 +5,11 @@ layout-macro-def(ProcessDetail) {
       min (Required)
       max (One)
     }
+    param(recipeName){
+      type(RecipeName)
+      min (Required)
+      max (One)
+    }
   }
 
   content {
@@ -27,7 +32,7 @@ layout-macro-def(ProcessDetail) {
               content {
                 single-line {
                   text {
-                    value ("#{value(process.currentStep)}")
+                    value ("#{value(recipeName)}")
                     style (Title_L)
                   }
                 }
@@ -64,7 +69,7 @@ layout-macro-def(ProcessDetail) {
               content {
                 single-line {
                   text {
-                    value ("1 단계")
+                    value ("#{value(process.currentStep)} 단계")
                     style (Title_S)
                   }
                 }

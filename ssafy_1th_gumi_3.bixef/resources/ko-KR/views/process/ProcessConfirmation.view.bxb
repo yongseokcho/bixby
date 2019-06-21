@@ -31,6 +31,9 @@ confirmation-view{
           param (process){
             expression (action.processCommitState.processes[action.processCommitState.currentStep])
           }
+          param(recipeName){
+            expression (action.processCommitState.recipeName)
+          }
         }
       }
       

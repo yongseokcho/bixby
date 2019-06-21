@@ -20,7 +20,7 @@ endpoints {
     }
 
     action-endpoint (BeginProcessShow) {
-      accepted-inputs (recipeId, recipeName)
+      accepted-inputs (processParameter)
       local-endpoint (process/BeginProcessShow.js)
     }
     

@@ -1,5 +1,6 @@
 var http = require('http');
 var config = require('config');
+var db = require('lib/database.js');
 
 // Database의 scheme을 Bixby structure로 변환시켜줌
 module.exports.ConvertRecipeBasicStructure = function(db){
@@ -92,3 +93,10 @@ module.exports.GetProcessesByRecipeId = function(recipeId){
   return http.getUrl(config.get('remote.url') + 'foodProcess/processSearchByRecipeId', options);
   // return db;
 }
+
+// module.exports.GetSportsCalory = function(calory){
+//   let sports = db.sports;
+//   for(let i=0; i<sports.length; i++){
+//     sports.workoutTime = 
+//   }
+// }

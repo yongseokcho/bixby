@@ -17,7 +17,7 @@ layout-macro-def(ProcessImage) {
           title-area {
             slot1 {
               text {
-                value ("#{value(process.currentStep)}")
+                value ("##{value(process.currentStep)}")
               }
             }
           }
