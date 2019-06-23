@@ -1,7 +1,7 @@
 endpoints {
   action-endpoints {
     action-endpoint (BeginRecipeSearch) {
-      accepted-inputs (ingredients)
+      accepted-inputs (ingredients, recipeKeyword, searchKeyword)
       local-endpoint (recipe/BeginRecipeSearch.js)
     }
     action-endpoint (UpdateRecipeSearch) {

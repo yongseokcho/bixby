@@ -1,4 +1,4 @@
 enum (LowerBoundRangeOption) {
   description (하한 경계에 대한 옵션)
-  role-of (RangeOption)
+  role-of (LowerRangeOption)
 }

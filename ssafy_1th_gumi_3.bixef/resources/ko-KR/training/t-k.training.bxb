@@ -1,0 +1,5 @@
+train (t-kkcr3hlgxh2052sb5r6vb6wc4) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] 내가 지금 (김치)[v:Ingredient]랑 (마요네즈)[v:Ingredient]랑 (호박)[v:Ingredient]이랑 (생수)[v:Ingredient]랑 (건블루베리)[v:Ingredient]랑 (후추)[v:Ingredient]랑 (새우젓)[v:Ingredient]이랑 (갑오징어)[v:Ingredient]랑 (피조개)[v:Ingredient]랑 (돼지고기)[v:Ingredient]가 있는데 뭘 만들 수 있을지 (검색해줘)[v:SearchKeyword:검색]")
+  plan (7ZG7DoJAEEWvIj54qL9gYqENifEPNBbGTj6A4DLAFoBZlgh/7wKJidEt7Zybqe6Z0wyW2JRlGDfBTqZBUmU82Hs3XlPsnWoSjJfkS1ExWQnCVkMeiyzj8kqM38mnULBUK+2h/sCXoSQteaCE52/OlYY854mgiFMu/8hPkbUG6f9zoeZRiAgLDDCEgRFMjDHBFDNYsOHAxVy1ePWfMVSHbp0vacdVrdlZLWV3lLu12sprAE8=)
+  last-modified (1561304198887)
+}

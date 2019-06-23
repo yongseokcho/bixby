@@ -1,0 +1,7 @@
+enum (LowerRangeOption) {
+  
+  description (하한범위를 위한 enumeration)
+  
+  symbol (이상)
+  symbol (초과)
+}

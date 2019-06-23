@@ -2,7 +2,7 @@ var tool = require('lib/tool.js');
 var console = require('console');
 
 // 전체 요리 데이터베이스에서 검색
-module.exports.function = function BeginRecipeSearch (ingredients) {
+module.exports.function = function BeginRecipeSearch (ingredients, recipeKeyword, searchKeyword) {
   var db = tool.GetRecipesByMaterials(ingredients);
   db = tool.ConvertRecipeBasicStructure(db);
   return {
