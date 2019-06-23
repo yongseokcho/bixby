@@ -1,5 +1,15 @@
 train (t-r0yy5r8seif2oooaf6snza2p4) {
   utterance ("[g:CommitProcessShow:continue,r:UpdateProcessShow] (이전)[v:LayoutType]")
-  plan (Y2BjUCouTkyrjDcsyYhPL83NjDfWS8qsSE3T80ksLgkoyk9OLS5m0MChxjk/NzcTpio4I7+cQROHSqgaiIbgksSSVJyGhhakAKWRDVXE6cTK/NKSkMqCVFLsZWVgZGBiYGZgAbIYoGxmIM0AxiAA4rEASQYA)
-  last-modified (1561121752231)
+  plan (Y2BjkCsuTkyrjDcsyYhPL83NjDfWS8qsSE3TCy3KccpPqWTQwCHvnJ+bm1kSUJSfnFpcHJyRX86giUMlVA1EQ3BJYkkqTkNDC1KA0siGKuJQ6ZNYmV9aElJZkEqKvawMjAxMDMwMLEAWA5TNDKQZwBgEQDwWIMkAAA==)
+  last-modified (1561300125600)
+}
+train (t-r1lgdwb49z0uhn2e0evykbtqy) {
+  utterance ("[g:RecipeBasicStructure] (500)[v:LowerBound]보다 {[g:LowerBoundRangeOption] (큰 거)[v:RangeOption:이상]} 찾아줘")
+  plan (Y2Bl0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUpl0MKh2D21BKq+0jkxJ78oM7WYQRGHWp/88tQip/zSvBQGHYJKghLz0lP9C0oy8/MYlHC5FEkNCwMjAxMDM5BmALIYgSxGBhBggWKIHFAcAA==)
+  last-modified (1561298083041)
+}
+train (t-rx05s06rommtxrh8icfelf8i6) {
+  utterance ("[g:RecipeBasicStructure] (600)[v:LowerBound]칼로리 {[g:LowerBoundRangeOption] (이상)[v:RangeOption:이상]} 레시피 보여줘")
+  plan (Y2Bl0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUpl0MKh2D21BKq+0jkxJ78oM7WYQRGHWp/88tQip/zSvBQGHYJKghLz0lP9C0oy8/MYlHC5FEkNCwMjAxMDM5BmALIYgSxGBhBggWKIHFAcAA==)
+  last-modified (1561300129624)
 }

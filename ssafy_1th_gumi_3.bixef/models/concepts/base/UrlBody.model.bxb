@@ -4,14 +4,6 @@ structure (UrlBody) {
     type (Url)
     min (Required) max (One)
   }
-  property (userIdentifier){
-    type(UserIdentifier)
-    min (Required) max (One)
-  }
-  property (recipeId){
-    type(RecipeId)
-    min (Required) max (One)
-  }
   property (recipeName){
     type(RecipeName)
     min (Required) max (One)

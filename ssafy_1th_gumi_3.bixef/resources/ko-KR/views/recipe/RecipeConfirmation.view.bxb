@@ -56,12 +56,6 @@ confirmation-view{
             expression (action.recipeCommitState.recipeBasicStructures[0])
           }
         }
-
-        layout-macro (RecipeOneReview){
-          param(recipeBasicStructure){
-            expression (action.recipeCommitState.recipeBasicStructures[0])
-          }
-        }
       }
 
     }  

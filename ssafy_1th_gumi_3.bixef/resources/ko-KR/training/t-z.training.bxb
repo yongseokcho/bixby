@@ -1,0 +1,5 @@
+train (t-z4w9lgpkxk0fqemressxadi7z) {
+  utterance ("[g:CommitRecipeSearch:continue,r:BeginRecipeSearch] (김치)[v:Ingredient] (돼지고기)[v:Ingredient] (동태)[v:Ingredient] (무)[v:Ingredient] (복어)[v:Ingredient] (다진고추)[v:Ingredient] (베이컨)[v:Ingredient] (인삼)[v:Ingredient] (파뿌리)[v:Ingredient] (로즈마리)[v:Ingredient] 있는데 뭐 만들 수 있을까?")
+  plan (7Yw9DoJAEEY/RBTw7wx22pAYb6CxsJUDEFwHmAI0y5Dg7V0hMTFkSzvzdfPePKywqes0eyY7KZK8KTnZR1duKYtOLWnFNcWiGyWNJmwt5vFeliwXUvygmFKtCmu0l/qHWFIhq3mgnKuv5tpinqtc042pkr/yU2UJByO4GMPDBFP4CBBihjkWhuFDh3M6CmMO9746puKZYmi6vmkFXdMFXg==)
+  last-modified (1561295316088)
+}

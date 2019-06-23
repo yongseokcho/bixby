@@ -15,3 +15,9 @@ template-macro-def (UNKNOWN_ERROR){
    template("예기치 못한 오류가 발생했습니다.") 
   }
 }
+
+template-macro-def (CONNECT_YOUTUBE){
+  content{
+   template("유튜브 영상보기") 
+  }
+}

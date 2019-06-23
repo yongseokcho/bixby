@@ -1,0 +1,5 @@
+train (t-5f9lzpk880o48x2lj3yycwjyy) {
+  utterance ("[g:CommitRecipeSearch:continue,r:BeginRecipeSearch] 뭐 만들 수 있을까? (김치)[v:Ingredient]랑 (파프리카)[v:Ingredient]랑 (바게트)[v:Ingredient]랑 (새우살)[v:Ingredient]랑 (대파)[v:Ingredient]랑 (설탕)[v:Ingredient]랑 (흰떡)[v:Ingredient]랑 (토마토케찹)[v:Ingredient]랑 (골뱅이)[v:Ingredient]랑 (돼지고기)[v:Ingredient]  있어")
+  plan (7Y09DoJAEIUf/qGgeAY7bUiMN9BY2MoBCC4DTAGaZUjw9i6SmBiypZ153bzvfYM1tnWdZM94L0WcNyXHh/DGLWXhuSWtuKZIdKOk0YSdhTzdy5LlSoofFFGiVWGV9lA/iCQRspJHyrn6cm4s5KXKNaVMlfyRnyIBHIwwxgRTzOBijgU8+FhiZTp82mGcdwtDDtNdHeMLjK8zucbqmw+eceEF)
+  last-modified (1561294956692)
+}

@@ -160,7 +160,7 @@ layout-macro-def(ProcessDetail) {
           value {
             template ("#{value(process.description)}")
           }
-          style (Title_M)
+          style (Title_S)
         }
       }
     }

@@ -3,11 +3,15 @@ confirmation-view{
     confirming : CommitProcessShow(action)
   }
   message{
-    template ("요리과정에 대한 것입니다.")
+    if(action.processCommitState.layoutType == 'List'){
+      template ("전체 요리과정입니다.")
+    }else-if(action.processCommitState.totalStep - 1 == action.processCommitState.currentStep){
+      template ("이제 마지막 과정입니다.")
+    }
   }
   mode (Transactional)
   confirm-options{
-    label("YES")
+    label("유튜브 동영상 보기")
   }
   render{
     layout{
@@ -47,6 +51,8 @@ confirmation-view{
       }else{
         if(action.processCommitState.currentStep < action.processCommitState.totalStep - 1){
           template ("다음")  
+        }else{
+          template (CONNECT_YOUTUBE)  
         }
         template ("이전")
       }

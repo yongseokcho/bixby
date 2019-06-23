@@ -19,6 +19,7 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
       let db = tool.GetRecipesByMaterials(recipeCommitState.ingredients);
       db = tool.ConvertRecipeBasicStructure(db);
       recipeCommitState.recipeBasicStructures = db;
+      console.log(db);
       changed = true;
     }else if(layoutType == '다음'){
       if(recipeCommitState.maxPageNumber > recipeCommitState.pageNumber){ 
@@ -34,9 +35,9 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
       recipeCommitState.layoutType = layoutType;  
     }
   }
-  if(changed){
-    GetIngredient(recipeCommitState);  
-  }
+  // if(changed){
+  //   GetIngredient(recipeCommitState);  
+  // }
   return recipeCommitState;
 }
 
@@ -68,20 +69,20 @@ function Remove(state, removeIngredient){
   }
 }
 
-function GetIngredient(state){
-  console.log("UpdateRecipeSearch GetIngredient function called");
-  let newRecipes = [];
-  for(let i=0; i<state.recipeBasicStructures.length; i++){
-    for(let j=0; j<state.recipeBasicStructures[i].materials.length; j++){
-      for(let k=0; k<state.ingredients.length; k++){
-        if(state.recipeBasicStructures[i].materials[j] == state.ingredients[k]){
-          newRecipes.push(state.recipeBasicStructures[i]);
-          j = state.recipeBasicStructures[i].materials.length;
-          break;
-        }
-      }  
-    }
-  }
-  state.recipeBasicStructures = newRecipes;
-}
+// function GetIngredient(state){
+//   console.log("UpdateRecipeSearch GetIngredient function called");
+//   let newRecipes = [];
+//   for(let i=0; i<state.recipeBasicStructures.length; i++){
+//     for(let j=0; j<state.recipeBasicStructures[i].materials.length; j++){
+//       for(let k=0; k<state.ingredients.length; k++){
+//         if(state.recipeBasicStructures[i].materials[j] == state.ingredients[k]){
+//           newRecipes.push(state.recipeBasicStructures[i]);
+//           j = state.recipeBasicStructures[i].materials.length;
+//           break;
+//         }
+//       }  
+//     }
+//   }
+//   state.recipeBasicStructures = newRecipes;
+// }
 

@@ -1,0 +1,10 @@
+train (t-chxii5dfl3zezbt8lzmjd8ymh) {
+  utterance ("[g:RecipeBasicStructure] (400)[v:UpperBound]보다 {[g:UpperBoundRangeOption] (작은거)[v:RangeOption:이하]} 띄워")
+  plan (Y2Bl0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUpl0MKh2D21BKq+0jkxJ78oM7WYQRGH2tCCgtQip/zSvBQGHYJKghLz0lP9C0oy8/MYlHC5FEkNCwMjAxMDM5BmALIYgSxGBhBggWKIHFAcAA==)
+  last-modified (1561299704994)
+}
+train (t-cwz6h6cuu6gdgxn2c95x80zt2) {
+  utterance ("[g:RecipeBasicStructure] (300)[v:LowerBound]칼로리 {[g:LowerBoundRangeOption] (이상)[v:RangeOption:이상]} (500)[v:UpperBound]칼로리 {[g:UpperBoundRangeOption] (미만)[v:RangeOption:미만]} 레시피 보여줘")
+  plan (lc5NCsIwEAXg11qr19ClSkG8QV24EYSK6xLrtAY0CflBe3sTEHUTioEMPPKFN5hiaQxr+3ptr3Xn7rzeFGf+pLaoqOGKSmZ4c7TaNdZpwiKCd2Tfvt+ym9ScDGYRu5cP0qV04oLVIKmY6OigLJcC89imPyZWelJqqPRL/i2dIEGKETKMkfsEnxOfw8z9DSf7zPCeehl80OFn/gI=)
+  last-modified (1561300162844)
+}

@@ -1,10 +1,10 @@
 layout-macro-def(ExerciseList) {
 
   params {
-    param (exercise) {
-      type (Exercise)
+    param (exerciseStructure) {
+      type (ExerciseStructure)
       min (Required)
-      max (Many)
+      max (One)
     }
 
   }
@@ -12,7 +12,13 @@ layout-macro-def(ExerciseList) {
   content {
     section {
       content {
-        for-each (exercise) {
+        title-area{
+          halign (Center)
+          slot1{
+            text("#{value(exerciseStructure.recipeName)}에 대한 결과입니다.")
+          }
+        }
+        for-each (exerciseStructure.exercises) {
           as (item) {
             thumbnail-card {
               title-area {

@@ -1,0 +1,5 @@
+train (t-eef143dijvref2bms1hthv70g) {
+  utterance ("[g:CommitRecipeSearch:continue,r:BeginRecipeSearch] (김치)[v:Ingredient]랑 (마른새우)[v:Ingredient]랑 (미역)[v:Ingredient]랑 (상추)[v:Ingredient]랑 (피자치즈)[v:Ingredient]랑 (국간장)[v:Ingredient]랑 (정수물)[v:Ingredient]랑 (빵가루)[v:Ingredient]랑 (호두)[v:Ingredient]랑 (우엉)[v:Ingredient]가 있는데 이걸로 뭐 만들 수 있을까?")
+  plan (7YzNCoJQEIWP/Wj2Y8/QrjZC9AZFi7b5AGLXUWehxXUEe/uuCUHIXbaLszgw55sPa2zrOsme8V6KOG9Kjg/hjVvKwnNLWnFNkehGSaMJOwt5upcly5UUPyiiRKvCKu2h/iGSRMhKHinn6su5sZCXKteUMlXyR36KBHAwwhgTTOHCwww+5lhgiZXZ8FmHcd4rDDlMd3WMKzDtG5Nn7J3VNS68AA==)
+  last-modified (1561296105002)
+}

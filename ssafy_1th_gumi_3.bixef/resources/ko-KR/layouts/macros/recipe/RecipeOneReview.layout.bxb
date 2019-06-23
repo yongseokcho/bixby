@@ -6,8 +6,6 @@ layout-macro-def(RecipeOneReview) {
       max (One)
     }
   }
-
-
   content {
     section {
       content {
@@ -37,61 +35,9 @@ layout-macro-def(RecipeOneReview) {
                 }
               }
             }
-            for-each (recipeBasicStructure.comments) {
-              as (comment) {
-                title-area{
-                  halign (Start)
-                  slot1{
-                    single-line{
-                      text{
-                        value("#{value(comment.userId)}")
-                        style (Detail_M_Soft)
-                      }
-                    }
-                  }
-                  slot2{
-                    single-line{
-                      text{
-                       value("#{value(comment.content)}")
-                       style(Title_XS)
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         }
       }
     }
   }
 }
-
-// hbox {
-//   content {
-//     vbox {
-//       content {
-//         single-line {
-//           text {
-//             value ("#{value(comment.userId)}")
-//             style (Detail_L_Soft)
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// hbox {
-//   content {
-//     vbox {
-//       content {
-//         single-line {
-//           text {
-//             value ("#{value(comment.content)}")
-//             style (Detail_L_Soft)
-//           }
-//         }
-//       }
-//     }
-//   }
-// }

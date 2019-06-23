@@ -1,0 +1,5 @@
+train (t-lwu4vowqifpua75l0m1s8q28w) {
+  utterance ("[g:RecipeBasicStructure] (100)[v:LowerBound]{[g:LowerBoundRangeOption] (이상)[v:RangeOption:이상]} (900)[v:UpperBound]{[g:UpperBoundRangeOption] (이하)[v:RangeOption:이하]} 검색")
+  plan (lc5NCsIwEAXg11qr19ClSkG8QV24EYSK6xLrtAY0CflBe3sTEHUTioEMPPKFN5hiaQxr+3ptr3Xn7rzeFGf+pLaoqOGKSmZ4c7TaNdZpwiKCd2Tfvt+ym9ScDGYRu5cP0qV04oLVIKmY6OigLJcC89imPyZWelJqqPRL/i2dIEGKETKMkfsEnxOfw8z9DSf7zPCeehl80OFn/gI=)
+  last-modified (1561297298836)
+}

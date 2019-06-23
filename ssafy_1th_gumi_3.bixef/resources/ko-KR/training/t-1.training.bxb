@@ -1,0 +1,5 @@
+train (t-1chbllvz8e2pmu9a17c1lmymw) {
+  utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch] {[g:RemoveIngredient] (김치)[v:Ingredient]} 빼고 {[g:AddIngredient] (미역)[v:Ingredient]} 넣어서 검색해줘")
+  plan (Y+Bi0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5g0ERh1LPvPSi1JTM1LwSYpTgchrEKoi1wSWJJbidFlqQApRGcRrxhhoSbWhdKViomEEFhxbHlBQkf6njdEJuflkqkkJ2BkYGFgZWBjYgi4OBk4EBymcF8kFyDGAMA2xAHitQHTNQJRMQAnUAAA==)
+  last-modified (1561294160398)
+}

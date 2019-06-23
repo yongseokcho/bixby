@@ -1,0 +1,3 @@
+integer (IngredientTypeCode) {
+  description (IRDNT_TY_CODE)
+}

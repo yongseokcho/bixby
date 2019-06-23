@@ -1,0 +1,23 @@
+result-view{
+  match: RecipeBasicStructure(result){
+    min (Required) max (Many)
+  }
+
+  render{
+    layout{
+      section{
+        content{
+          for-each(result){
+            as(item){
+              layout-macro (RecipeSummary){
+                param(recipeBasicStructure){
+                  expression (item)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+train (t-y2d7ftll9fzxdr5a24u0zmmy1) {
+  utterance ("[g:CommitRecipeSearch:continue,r:BeginRecipeSearch] (애호박)[v:Ingredient]이랑 (참깨)[v:Ingredient] 레시피 알려줘")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYhDpWdeelFqSmZqXgmVlLAxMDIwMTAzsDCwAtkMcB4LkMUAxjxAyADmg1QwMzAAAA==)
+  last-modified (1561296272544)
+}

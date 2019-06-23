@@ -31,12 +31,8 @@ layout-macro-def(RecipeSummaryLarge) {
               materials: $expr(recipeBasicStructure.materials)
               hit: $expr(recipeBasicStructure.hit)
               rating: $expr(recipeBasicStructure.rating)
-              comments: $expr(recipeBasicStructure.comments)
               images: $expr(recipeBasicStructure.images)
             }
-          subplan{
-            goal: AccessVivContext
-          }
         }
       }
       text-position (Below)
@@ -68,10 +64,26 @@ layout-macro-def(RecipeSummaryLarge) {
               style(Detail_M_Soft)
             }
             spacer
-            image{
-              shape(Circle)
-              style(Detail_M_Soft)
-              url("./calories.png")
+            if (recipeBasicStructure.level == '초보환영') {
+              image{
+                shape(Circle)
+                style(Detail_M_Soft)
+                url(img/level1.png)
+              }
+            }
+            else-if (recipeBasicStructure.level == '보통') {
+              image{
+                shape(Circle)
+                style(Detail_M_Soft)
+                url(img/level2.png)
+              }
+            }
+            else {
+              image{
+                shape(Circle)
+                style(Detail_M_Soft)
+                url(img/level3.png)
+              }
             }
             spacer
             text{

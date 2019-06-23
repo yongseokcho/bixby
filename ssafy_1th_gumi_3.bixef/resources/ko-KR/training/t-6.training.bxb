@@ -1,10 +1,5 @@
-train (t-622bnitou3wki7i6ytohkwc6c) {
-  utterance ("[g:CommitRecipeSearch,r:AccessVivContext,r:BeginRecipeSearch] (김치)[v:Ingredient]로 만들 수 있는거 알려줘")
-  plan (fcyxDoJAEATQQVC/w8KoMSExfoFQ0Uq0JeexwBaAuVsM/r0XobE4m8lO8maxxtFaVb2LkzRFPbRcnOMHj1TFV9L8pERZ1rmYQctgCAcPTvu2ZZkmOSmjG+z//p0GuSghr0yo5u7n58Yjs642VDJ1gq2H3CyZrHSCKyaDnYddtCZr7/xK+05oFKwQYIEQEZbuxtwC14Jvw5yRy8iJEPgA)
-  last-modified (1561136628967)
-}
-train (t-6gz6s4igekoe8eftt7x62ly66) {
-  utterance ("[g:CommitRecipeSearch,r:AccessVivContext,r:BeginRecipeSearch] (페투치네)[v:Ingredient]랑 (피망)[v:Ingredient] 요리 뭐있어?")
-  plan (rcy9CsJADAfwv59V8CUcREUQxCewTl0tupZ6TdsMvcpdKvXtPS0IDuckISEJvwRTbKxN80eykzIpmoqT/fbKLeXbEym+UZhaVrGYRkljCGsPPtZVxdKdxJQaVWL18293EEsq5JUhFay/fs49MtKFoYxJy5/IwkPOlkyUOcE5k8HSww5KkbUXvh9rLdQKJuihjwGGGGGMwM34bIauC1zinTMXXTdy9aUnTuEJ)
-  last-modified (1561136735354)
+train (t-6df0adyz27q00zdjm7ss5zpyh) {
+  utterance ("[g:CommitRecipeSearch:continue,r:BeginRecipeSearch] 내가 지금 (김치)[v:Ingredient]랑 (파인애플)[v:Ingredient]랑 (양송이버섯)[v:Ingredient]랑 (치커리)[v:Ingredient]랑 (아보카도)[v:Ingredient]랑 (찬물)[v:Ingredient]랑 (크림치즈)[v:Ingredient]랑 (삶은계란)[v:Ingredient]랑 (플레인요구르트)[v:Ingredient]랑 (돼지고기)[v:Ingredient] 있는데 뭘 만들 수 있을지 검색해줘")
+  plan (7cw9DoJAEIbhD39BEM9gpw2J8QYaC1s5AMFlgClAsywJ3t5REhNDtrQz0+337oMVNk2T5o9kZ8qkaCtO9tGVO8qjU0dacUOx0a0yrSZsLeXxVlVsLqT4TjGlWpVWtI/6D7FJDVnLAxVcf5lrS3muC00ZU23+yU+TEA5GGGOCKWaYw4WHBXwEWMqGzzo8571CyuG9Xh0RfFFDUQMxXfE9sfAE)
+  last-modified (1561295373162)
 }

@@ -1,5 +1,5 @@
-train (t-mnch82o6f0v5hai3j1msd9prz) {
-  utterance ("[g:ssafy_1th_gumi_3.bixef.CommitRecipeSearch,r:ssafy_1th_gumi_3.bixef.AccessVivContext,r:ssafy_1th_gumi_3.bixef.BeginRecipeSearch] (곱창)[v:ssafy_1th_gumi_3.bixef.Ingredient]이랑 (대구)[v:ssafy_1th_gumi_3.bixef.Ingredient]로 뭐 먹을까")
-  plan (rcy9CsJADAfwv59V8CUcREUQxCewTl0tupZ6TdsMvcpdKvXtPS0IDuckISEJvwRTbKxN80eykzIpmoqT/fbKLeXbEym+UZhaVrGYRkljCGsPPtZVxdKdxJQaVWL18293EEsq5JUhFay/fs49MtKFoYxJy5/IwkPOlkyUOcE5k8HSww5KkbUXvh9rLdQKJuihjwGGGGGMwM34bIauC1zinTMXXTdy9aUnTuEJ)
-  last-modified (1561136878597)
+train (t-mu9n7yec4d07akuokg9jhyy2h) {
+  utterance ("[g:CommitRecipeSearch:continue,r:BeginRecipeSearch] (칵테일새우)[v:Ingredient]랑 (쌀가루)[v:Ingredient]랑 (녹차분말)[v:Ingredient]랑 (소고기)[v:Ingredient]랑 (콩가루)[v:Ingredient]랑 (들깨가루)[v:Ingredient]랑 (다진 소고기)[v:Ingredient]랑 (버섯)[v:Ingredient]랑 (버터)[v:Ingredient]랑 (참치)[v:Ingredient]으로 만들 수 있는 레시피 보여줘")
+  plan (7YzNCoJQEIWPlan92DO0q40QvUHRom0+gNh11Flocb2CvX1TQhByl+3iLA7M+ebDCpumSfNHsjNlUrQVJ/voyh3l0akjrbih2OhWmVYTthbyeKsqNhdSfKeYUq1Kq7SH+ofYpIas5IEKrr+cawt5rgtNGVNt/shPkRAORhhjAhdTePARYIY5FljKhs86jPNeIeQwr6sjHlc6FJMnRl/8gbjwBA==)
+  last-modified (1561296251480)
 }

@@ -1,0 +1,5 @@
+train (t-q0iabytn4t0dmgysqip7i1hv3) {
+  utterance ("[g:RecipeBasicStructure] 칼로리 범위가 (200)[v:LowerBound]{[g:LowerBoundRangeOption] (초과)[v:RangeOption:초과]} (700)[v:UpperBound]{[g:UpperBoundRangeOption] (미만)[v:RangeOption:미만]} 보여줘")
+  plan (lc5NCsIwEAXg11qr19ClSkG8QV24EYSK6xLrtAY0CflBe3sTEHUTioEMPPKFN5hiaQxr+3ptr3Xn7rzeFGf+pLaoqOGKSmZ4c7TaNdZpwiKCd2Tfvt+ym9ScDGYRu5cP0qV04oLVIKmY6OigLJcC89imPyZWelJqqPRL/i2dIEGKETKMkfsEnxOfw8z9DSf7zPCeehl80OFn/gI=)
+  last-modified (1561297193972)
+}
