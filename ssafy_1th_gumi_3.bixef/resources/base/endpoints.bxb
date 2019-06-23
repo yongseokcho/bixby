@@ -43,6 +43,11 @@ endpoints {
       accepted-inputs (upperBound, upperBoundRangeOption, lowerBound, lowerBoundRangeOption)
       local-endpoint (recipe/GetRecipeByCalories.js)
     }
+    
+    action-endpoint (GetExerciseStructureByRecipe) {
+      accepted-inputs (recipeBasicStructure) 
+      local-endpoint (exercise/GetExerciseStructureByRecipe.js)
+    }
 
   }
 }
