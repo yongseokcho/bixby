@@ -1,10 +1,9 @@
+var tool = require('lib/tool.js');
+
 module.exports.function = function commitProcessShow (processCommitState) {
-  let endIdx = processCommitState.totalStep - 1;
+  let result = tool.GetYoutubeUrl(processCommitState.recipeName);
   return {
-    recipeId : processCommitState.recipeId,
-    currentStep : processCommitState.processes[endIdx].currentStep,
-    description : processCommitState.processes[endIdx].description,
-    imgUrl : processCommitState.processes[endIdx].imgUrl,
-    tip : processCommitState.processes[endIdx].tip
-  }
+    keyword : processCommitState.recipeName,
+    url : result
+  };
 }

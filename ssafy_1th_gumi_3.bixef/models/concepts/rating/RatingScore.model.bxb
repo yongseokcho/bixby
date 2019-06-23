@@ -1,3 +1,0 @@
-decimal (RatingScore) {
-  description ("평가 점수 ex: 3.5/5.0")
-}

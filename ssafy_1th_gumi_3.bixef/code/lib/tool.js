@@ -87,8 +87,23 @@ module.exports.GetSportsCalory = function(calory){
   let db = require('lib/database.js');
   let sports = db.sports;
   for(let i=0; i<sports.length; i++){
-    sports.time = calory / (sports.calorie / 60);
+    sports[i].time = parseInt(calory / (sports[i].calorie / 60))
   }
   return sports;
+}
+
+module.exports.GetYoutubeUrl = function(word){
+  let options = {
+    query: {
+      keyword : word
+    },
+    format : "json"
+  };
+  let result = http.getUrl(config.get('remote.url') + 'youtube/searchKeyword', options);
+  console.log(result);
+  return {
+    keyword : word,
+    url : result.url
+  }
 }
 

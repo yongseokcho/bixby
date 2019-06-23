@@ -11,7 +11,7 @@ confirmation-view{
   }
   mode (Transactional)
   confirm-options{
-    label("유튜브 동영상 보기")
+    label("유튜브 보기")
   }
   render{
     layout{
@@ -51,12 +51,10 @@ confirmation-view{
       }else{
         if(action.processCommitState.currentStep < action.processCommitState.totalStep - 1){
           template ("다음")  
-        }else{
-          template (CONNECT_YOUTUBE)  
         }
-        template ("이전")
       }
     }
+   
   }
   
   

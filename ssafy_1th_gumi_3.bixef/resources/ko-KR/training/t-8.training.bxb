@@ -1,7 +1,7 @@
 train (t-8a5r6ae89cppye9vzvw7fb6bw) {
   utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch] (뒤로)[v:LayoutType]")
   plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSW4DQ0tSAFKk2moIdGG1pWChYoZFHFo8UmszC8tCaksSGVgY2BkYGJgZmBhYAWyGaA8ZiCPEcyDAWYgmw1IMgAA)
-  last-modified (1561136029021)
+  last-modified (1561294165258)
 }
 train (t-8h4371g7q4ed966j5uqqrxrbd) {
   utterance ("[g:RecipeBasicStructure] (500)[v:UpperBound]칼로리 {[g:UpperBoundRangeOption] (이하)[v:RangeOption:이하]} 레시피 보여줘")
