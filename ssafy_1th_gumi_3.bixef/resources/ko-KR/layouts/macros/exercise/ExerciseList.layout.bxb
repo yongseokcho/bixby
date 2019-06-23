@@ -1,0 +1,35 @@
+layout-macro-def(ExerciseList) {
+
+  params {
+    param (exercise) {
+      type (Exercise)
+      min (Required)
+      max (Many)
+    }
+
+  }
+
+  content {
+    section {
+      content {
+        for-each (exercise) {
+          as (item) {
+            thumbnail-card {
+              title-area {
+                slot1 { text { value ("#{value(item.title)}") } }
+                slot2 { single-line { text { value ("#{value(item.calorie)}") style (Title_XS) } } }
+                slot3 { single-line { text { value ("#{value(item.time)}분 운동해야 합니다") style (Title_XS) } } }
+              }
+              image-url { template ("#{value(item.url)}") }
+              image-background-color (Transparent) 
+              image-position (End)
+            }
+          }
+        }
+        
+        
+      }
+    }
+  }
+}
+

@@ -1,0 +1,19 @@
+template-macro-def (RecipeListMacro){
+  params{
+    param(recipeCommitState){
+      type(RecipeCommitState)
+    }
+  }
+
+  content{
+    if(size(recipeCommitState.recipeBasicStructures) > 1){
+      if(size(recipeCommitState.ingredients) > 0){
+        template("#{value(recipeCommitState.ingredients[0])} 외 #{integer(size(recipeCommitState.ingredients)-1)} 개의 재료로 검색한 결과입니다")
+      }else{
+        template("조건없이 검색한 결과입니다")
+      }  
+    }else{
+      template("선택한 레시피 정보입니다")
+    }
+  }
+}

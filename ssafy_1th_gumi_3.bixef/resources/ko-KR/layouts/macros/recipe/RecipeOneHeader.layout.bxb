@@ -1,0 +1,91 @@
+layout-macro-def(RecipeOneHeader) {
+  params {
+    param (recipeBasicStructure) {
+      type (RecipeBasicStructure)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {
+      content {
+        hbox {
+          content {
+            // vbox {
+            //   content {
+            //     single-line {
+            //       text {
+            //         value ("#{value(recipe.name)}")
+            //       }
+            //     }
+            //   }
+            // }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("조회수 #{value(recipeBasicStructure.hit)}")
+                    style (Title_XS)
+                  }
+                }
+              }
+            }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("평점 #{value(recipeBasicStructure.rating)}")
+                    style (Title_XS)
+                  }
+                }
+              }
+            }
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{value(recipeBasicStructure.recipeName)}")
+                    style (Title_L)
+                  }
+                }
+              }
+            }
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("재료 : 돼지고기, 김치, 고춧가루 등등")
+                    style (Detail_M)
+                  }
+                }
+              }
+            }
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("칼로리 : #{value(recipeBasicStructure.calorie)}cal")
+                    style (Detail_M_Soft)
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

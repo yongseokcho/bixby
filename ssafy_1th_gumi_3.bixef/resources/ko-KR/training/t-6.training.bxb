@@ -1,0 +1,10 @@
+train (t-622bnitou3wki7i6ytohkwc6c) {
+  utterance ("[g:CommitRecipeSearch,r:AccessVivContext,r:BeginRecipeSearch] (김치)[v:Ingredient]로 만들 수 있는거 알려줘")
+  plan (fcyxDoJAEATQQVC/w8KoMSExfoFQ0Uq0JeexwBaAuVsM/r0XobE4m8lO8maxxtFaVb2LkzRFPbRcnOMHj1TFV9L8pERZ1rmYQctgCAcPTvu2ZZkmOSmjG+z//p0GuSghr0yo5u7n58Yjs642VDJ1gq2H3CyZrHSCKyaDnYddtCZr7/xK+05oFKwQYIEQEZbuxtwC14Jvw5yRy8iJEPgA)
+  last-modified (1561136628967)
+}
+train (t-6gz6s4igekoe8eftt7x62ly66) {
+  utterance ("[g:CommitRecipeSearch,r:AccessVivContext,r:BeginRecipeSearch] (페투치네)[v:Ingredient]랑 (피망)[v:Ingredient] 요리 뭐있어?")
+  plan (rcy9CsJADAfwv59V8CUcREUQxCewTl0tupZ6TdsMvcpdKvXtPS0IDuckISEJvwRTbKxN80eykzIpmoqT/fbKLeXbEym+UZhaVrGYRkljCGsPPtZVxdKdxJQaVWL18293EEsq5JUhFay/fs49MtKFoYxJy5/IwkPOlkyUOcE5k8HSww5KkbUXvh9rLdQKJuihjwGGGGGMwM34bIauC1zinTMXXTdy9aUnTuEJ)
+  last-modified (1561136735354)
+}

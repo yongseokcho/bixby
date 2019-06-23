@@ -1,0 +1,4 @@
+name (RemoveIngredient) {
+  description (발화에서 재료를 삭제할 때 사용되는 model)
+  role-of (Ingredient)
+}

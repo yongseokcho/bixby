@@ -1,0 +1,48 @@
+layout-macro-def(RecipeSummaryMedium) {
+  params {
+    param (recipeBasicStructure) {
+      type (RecipeBasicStructure)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    image-card{
+      image-object-fit (Cover)
+      aspect-ratio(21:9)
+      image-url("#{value(recipeBasicStructure.images[0].url)}")
+      title-area{
+        halign (Start)
+        slot1{
+          single-line{
+            text{
+              value("#{value(recipeBasicStructure.recipeName)}")
+              style(Title_S)
+            }
+          }
+        }
+        slot3{
+          single-line{
+            text{
+              value("#{value(recipeBasicStructure.calorie)}")
+              style(Detail_M_Soft)
+            }
+            spacer
+            image{
+              shape(Circle)
+              style(Detail_M_Soft)
+              url("./calories.png")
+            }
+            spacer
+            text{
+              style(Detail_M_Soft)
+              value("#{value(recipeBasicStructure.level)}")
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}

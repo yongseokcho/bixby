@@ -1,0 +1,5 @@
+train (t-unyk7emry1ve39w2h6rp8wy4p) {
+  utterance ("[g:ssafy_1th_gumi_3.bixef.CommitRecipeSearch,r:ssafy_1th_gumi_3.bixef.AccessVivContext,r:ssafy_1th_gumi_3.bixef.BeginRecipeSearch] (돼지고기)[v:ssafy_1th_gumi_3.bixef.Ingredient]랑 (소고기)[v:ssafy_1th_gumi_3.bixef.Ingredient]로 뭐 만들 수 있을까?")
+  plan (rcy9CsJADAfwv59V8CUcREUQxCewTl0tupZ6TdsMvcpdKvXtPS0IDuckISEJvwRTbKxN80eykzIpmoqT/fbKLeXbEym+UZhaVrGYRkljCGsPPtZVxdKdxJQaVWL18293EEsq5JUhFay/fs49MtKFoYxJy5/IwkPOlkyUOcE5k8HSww5KkbUXvh9rLdQKJuihjwGGGGGMwM34bIauC1zinTMXXTdy9aUnTuEJ)
+  last-modified (1561136400297)
+}

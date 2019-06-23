@@ -1,0 +1,5 @@
+train (t-7cmbl6pqibu66xkp4d9sy9n9i) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch,r:AccessVivContext] 뭐 만들까 (대파)[v:Ingredient] (고구마)[v:Ingredient] 있어")
+  plan (rcy9CsJADAfwv59V8CUcREUQxCewTl0tupZ6TdsMvcpdKvXtPS0IDuckISEJvwRTbKxN80eykzIpmoqT/fbKLeXbEym+UZhaVrGYRkljCGsPPtZVxdKdxJQaVWL18293EEsq5JUhFay/fs49MtKFoYxJy5/IwkPOlkyUOcE5k8HSww5KkbUXvh9rLdQKJuihjwGGGGGMwM34bIauC1zinTMXXTdy9aUnTuEJ)
+  last-modified (1561136129237)
+}

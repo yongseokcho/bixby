@@ -1,0 +1,5 @@
+enum (SortingOption) {
+  description (정렬 옵션)
+  symbol (평점)
+  symbol (조회)
+}

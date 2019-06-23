@@ -1,0 +1,5 @@
+train (t-mnch82o6f0v5hai3j1msd9prz) {
+  utterance ("[g:ssafy_1th_gumi_3.bixef.CommitRecipeSearch,r:ssafy_1th_gumi_3.bixef.AccessVivContext,r:ssafy_1th_gumi_3.bixef.BeginRecipeSearch] (곱창)[v:ssafy_1th_gumi_3.bixef.Ingredient]이랑 (대구)[v:ssafy_1th_gumi_3.bixef.Ingredient]로 뭐 먹을까")
+  plan (rcy9CsJADAfwv59V8CUcREUQxCewTl0tupZ6TdsMvcpdKvXtPS0IDuckISEJvwRTbKxN80eykzIpmoqT/fbKLeXbEym+UZhaVrGYRkljCGsPPtZVxdKdxJQaVWL18293EEsq5JUhFay/fs49MtKFoYxJy5/IwkPOlkyUOcE5k8HSww5KkbUXvh9rLdQKJuihjwGGGGGMwM34bIauC1zinTMXXTdy9aUnTuEJ)
+  last-modified (1561136878597)
+}

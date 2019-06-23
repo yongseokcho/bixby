@@ -1,0 +1,5 @@
+train (t-f4ga44abdescj513plht4k547) {
+  utterance ("[g:RecipeBasicStructure] (김치찌개)[v:RecipeName] 레시피 보여줘")
+  plan (Y2Bm0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUplUMOh2D21BKq+0i8xN5VBEa+hYCVMDIxAzAAkGRlAgAmCAQ==)
+  last-modified (1560779415964)
+}

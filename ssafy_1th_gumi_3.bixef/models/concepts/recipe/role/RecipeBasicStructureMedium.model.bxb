@@ -1,0 +1,4 @@
+structure (RecipeBasicStructureMedium) {
+  description (food_basic_structure에서, medium view를 위한 )
+  role-of (RecipeBasicStructure)
+}

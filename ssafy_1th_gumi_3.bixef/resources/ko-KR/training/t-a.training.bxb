@@ -1,0 +1,5 @@
+train (t-axtir1ihcklvwd56i31917xaf) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch,r:AccessVivContext] (김치)[v:Ingredient]랑 (돼지고기)[v:Ingredient] 레시피 보여줘")
+  plan (rcy9CsJADAfwv59V8CUcREUQxCewTl0tupZ6TdsMvcpdKvXtPS0IDuckISEJvwRTbKxN80eykzIpmoqT/fbKLeXbEym+UZhaVrGYRkljCGsPPtZVxdKdxJQaVWL18293EEsq5JUhFay/fs49MtKFoYxJy5/IwkPOlkyUOcE5k8HSww5KkbUXvh9rLdQKJuihjwGGGGGMwM34bIauC1zinTMXXTdy9aUnTuEJ)
+  last-modified (1561136104821)
+}

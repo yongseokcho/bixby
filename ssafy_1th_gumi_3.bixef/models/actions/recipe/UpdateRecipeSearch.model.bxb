@@ -1,0 +1,31 @@
+action (UpdateRecipeSearch) {
+  description (요리 검색 업데이트)
+  type(UpdateTransaction)
+  collect {
+    input (recipeCommitState) {
+      type (RecipeCommitState)
+      min (Required) max (One)
+    }
+    input-group(updates){
+      requires(OneOrMoreOf)
+      collect{
+        input(addIngredient){
+          type(AddIngredient)
+          min (Optional)
+          max (Many)
+        }
+        input(removeIngredient){
+          type(RemoveIngredient)
+          min (Optional)
+          max (Many)
+        }
+        input(layoutType){
+          type(LayoutType)
+          min (Optional)
+          max (One)
+        }
+      }
+    }
+  }
+  output (RecipeCommitState)
+}

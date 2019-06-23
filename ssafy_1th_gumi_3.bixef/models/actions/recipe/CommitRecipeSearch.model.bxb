@@ -1,0 +1,18 @@
+action (CommitRecipeSearch) {
+  type(Commit)
+  description (요리 검색 완료)
+  collect {
+    input (recipeCommitState) {
+      type (RecipeCommitState)
+      min (Required) max (One)
+    }
+    input(userIdentifier){
+      type(UserIdentifier)
+      min (Required) max (One)
+    }
+  }
+  confirm{
+    by(Confirmation)
+  }
+  output (RecipeBasicStructure)
+}

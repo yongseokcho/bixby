@@ -1,0 +1,57 @@
+confirmation-view{
+  match: Confirmation{
+    confirming : CommitProcessShow(action)
+  }
+  message{
+    template ("요리과정에 대한 것입니다.")
+  }
+  mode (Transactional)
+  confirm-options{
+    label("YES")
+  }
+  render{
+    layout{
+      if(action.processCommitState.layoutType == 'List'){
+        for-each (action.processCommitState.processes){
+          as (item){
+            layout-macro (ProcessImage){
+              param (process){
+                expression (item)
+              }
+            }
+            layout-macro (ProcessDescription){
+              param (process){
+                expression (item)
+              }
+            }
+          }
+        }  
+      }else{
+        layout-macro (ProcessDetail){
+          param (process){
+            expression (action.processCommitState.processes[action.processCommitState.currentStep])
+          }
+          param(recipeName){
+            expression (action.processCommitState.recipeName)
+          }
+        }
+      }
+      
+    }
+  }
+  
+  conversation-drivers{
+    conversation-driver{
+      if(action.processCommitState.layoutType == 'List'){
+        template ("요리과정 상세보기")  
+      }else{
+        if(action.processCommitState.currentStep < action.processCommitState.totalStep - 1){
+          template ("다음")  
+        }
+        template ("이전")
+      }
+    }
+  }
+  
+  
+}

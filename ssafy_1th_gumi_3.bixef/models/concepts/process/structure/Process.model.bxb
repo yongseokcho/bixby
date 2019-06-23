@@ -1,0 +1,19 @@
+structure (Process) {
+  description (각 요리과정에 대한 구조체)
+  property (currentStep) {
+    type (CurrentStep)
+    min (Required) max (One)
+  }
+  property (description){
+    type(Description)
+    min (Required) max (One)
+  }
+  property (imgUrl){
+    type(ImgUrl)
+    min (Required) max (One)
+  }
+  property (tip){
+    type(Tip)
+    min (Optional) max (One)
+  }
+}

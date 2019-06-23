@@ -1,0 +1,54 @@
+result-view{
+  match: RecipeBasicStructure(result){
+    min (Required) max (One)
+  }
+  message("최종 결과입니다")
+  render{
+    layout{
+      layout-macro (RecipeOneImage){
+        param(recipeBasicStructure){
+          expression (result)
+        }
+      }
+
+      layout-macro (RecipeOneHeader){
+        param(recipeBasicStructure){
+          expression (result)
+        }
+      }
+
+      layout-macro (RecipeOneReview){
+        param(recipeBasicStructure){
+          expression (result)
+        }
+      }
+    }
+  }
+  followup {
+    prompt {
+      dialog ("요리과정으로 이동하시겠습니까?")
+      on-confirm {
+        if (false) {
+          message (I see...)
+        } else {
+          intent {
+            goal: CommitProcessShow
+            route : BeginProcessShow
+            value : ProcessParameter{
+              recipeId : $expr(result.recipeId)
+              recipeName : $expr(result.recipeName)
+              }
+          }
+        }
+      }
+      on-deny {
+        message ("그렇다면 어쩔 수 없죠")
+      }
+    }
+  }
+  conversation-drivers{
+    conversation-driver{
+      template("칼로리 보기")
+    }
+  }
+}

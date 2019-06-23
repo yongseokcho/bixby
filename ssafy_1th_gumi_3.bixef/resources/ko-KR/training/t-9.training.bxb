@@ -1,0 +1,5 @@
+train (t-994auodnag2bhj623gec1jew6) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch,r:AccessVivContext] (인삼)[v:Ingredient]과 (느타리버섯)[v:Ingredient]으로 할 수 있는거 뭐야?")
+  plan (rcy9CsJADAfwv59V8CUcREUQxCewTl0tupZ6TdsMvcpdKvXtPS0IDuckISEJvwRTbKxN80eykzIpmoqT/fbKLeXbEym+UZhaVrGYRkljCGsPPtZVxdKdxJQaVWL18293EEsq5JUhFay/fs49MtKFoYxJy5/IwkPOlkyUOcE5k8HSww5KkbUXvh9rLdQKJuihjwGGGGGMwM34bIauC1zinTMXXTdy9aUnTuEJ)
+  last-modified (1561136525620)
+}

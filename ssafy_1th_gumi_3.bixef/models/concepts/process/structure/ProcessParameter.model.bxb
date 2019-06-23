@@ -1,0 +1,11 @@
+structure (ProcessParameter) {
+  description (Process를 조회하고 시작하기 위한 파라메터 구조체)
+  property (recipeId) {
+    type (RecipeId)
+    min (Required) max (One)
+  }
+  property (recipeName) {
+    type (RecipeName)
+    min (Required) max (One)
+  }
+}

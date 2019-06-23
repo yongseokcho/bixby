@@ -1,0 +1,16 @@
+result-view{
+  match: LastProcess(result)
+  message("마지막 요리과정입니다.")
+  render{
+    layout{
+      section {  // this macro returns a "section"
+        content {
+          paragraph {
+            value ("#{value(result.description)} #{value(result.currentStep)}")
+            style (Detail_M)
+          }
+        }
+      }
+    }
+  }
+}

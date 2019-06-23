@@ -1,0 +1,34 @@
+structure (RecipeCommitState) {
+  description (요리 검색 상태)
+  features{
+    transaction
+  }
+  property (ingredients) {
+    type (Ingredient)
+    min (Optional) max (Many)
+  }
+  property (layoutType){
+    type(LayoutType)
+    min (Required) max (One)
+  }
+  
+  property (maxPageNumber){
+    type(MaxPageNumber)
+    min (Required) max (One)
+  }
+
+  property(pageNumber){
+    type(PageNumber)
+    min (Required) max (One)
+  }
+  
+  property (recipesPerPage){
+    type(RecipesPerPage)
+    min (Required) max (One)
+  }
+  
+  property (recipeBasicStructures){
+    type(RecipeBasicStructure)
+    min (Required) max (Many)
+  }
+}

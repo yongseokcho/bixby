@@ -1,0 +1,3 @@
+integer (TypeCode) {
+  description (음식분류코드)
+}

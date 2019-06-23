@@ -1,0 +1,17 @@
+template-macro-def (NOT_FOUND_RECIPE_BY_NAME){
+  content{
+   template("해당하는 이름의 레시피가 존재하지 않습니다. 다시 검색해주세요.")  
+  }
+}
+
+template-macro-def (INVALID_PARAMETER_CALORIES){
+  content{
+   template("500칼로리 이하의 레시피 찾아줘와 같이 말해주세요")  
+  }
+}
+
+template-macro-def (UNKNOWN_ERROR){
+  content{
+   template("예기치 못한 오류가 발생했습니다.") 
+  }
+}

@@ -1,0 +1,3 @@
+integer (TotalStep) {
+  description (전체 요리과정 수)
+}

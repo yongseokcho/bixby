@@ -1,0 +1,7 @@
+enum (RangeOption) {
+  description (범위를 위한 enumeration)
+  symbol (이하)
+  symbol (이상)
+  symbol (초과)
+  symbol (미만)
+}

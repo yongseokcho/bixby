@@ -1,0 +1,20 @@
+structure (Exercise) {
+  property (time) {
+    type (ExerciseTime)
+    min (Required) max (One)
+  }
+  
+  property (title) {
+    type (ExerciseTitle)
+    min (Required) max (One)
+  }
+  
+  property (calorie) {
+    type (Calorie)
+    min (Required) max (One)
+  }
+  property (url) {
+    type (Url)
+    min (Required) max (One)
+  }
+}
