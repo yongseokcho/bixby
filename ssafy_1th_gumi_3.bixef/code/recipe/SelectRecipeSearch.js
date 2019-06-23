@@ -3,9 +3,6 @@ var config = require('config')
 
 module.exports.function = function selectRecipeSearch (recipeBasicStructure, recipeCommitState) {
   
-  // var hit = http.getUrl(config.get('remote.url') + 'hits/searchByRecipeId');
-  // var score = http.getUrl(config.get('remote.url') + 'score/searchByRecipeId');
-  // var comments = http.getUrl(config.get('remote.url') + 'comment/searchByRecipeId');
   let options = {
     query : {
       recipeId : recipeBasicStructure.recipeId
@@ -14,14 +11,20 @@ module.exports.function = function selectRecipeSearch (recipeBasicStructure, rec
   };
   
   var db = http.getUrl(config.get('remote.url') + 'foodMaterial/searchByRecipeId', options);
+  let materialStr = "";
   var materials = [];
   
   for (var i = 0; i < db.length; i++) {
     materials.push(db[i].irdnt_nm);
+    if(i == 0){
+      materialStr += db[i].irdnt_nm;
+    }else{
+      materialStr += ", "+ db[i].irdnt_nm;
+    }
   }
   
   recipeBasicStructure.materials = materials;
-  
+  recipeBasicStructure.materialStr = materialStr;
   
   
   return {

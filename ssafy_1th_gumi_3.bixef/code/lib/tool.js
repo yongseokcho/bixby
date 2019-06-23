@@ -1,5 +1,6 @@
 var http = require('http');
 var config = require('config');
+var console = require('console');
 
 // Database의 scheme을 Bixby structure로 변환시켜줌
 module.exports.ConvertRecipeBasicStructure = function(db){
@@ -25,7 +26,8 @@ module.exports.ConvertRecipeBasicStructure = function(db){
       typeName: db[i].ty_nm,
       materials: ['기본값'],
       hit: 10,
-      rating: db[i].sumScore
+      rating: db[i].sumScore,
+      materialStr : "기본값"
     };
     result.push(obj);
   }
@@ -100,7 +102,6 @@ module.exports.GetYoutubeUrl = function(word){
     format : "json"
   };
   let result = http.getUrl(config.get('remote.url') + 'youtube/searchKeyword', options);
-  console.log(result);
   return {
     keyword : word,
     url : result.url

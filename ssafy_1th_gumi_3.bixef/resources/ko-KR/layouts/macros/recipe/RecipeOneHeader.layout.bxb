@@ -31,16 +31,6 @@ layout-macro-def(RecipeOneHeader) {
                 }
               }
             }
-            vbox {
-              content {
-                single-line {
-                  text {
-                    value ("평점 #{value(recipeBasicStructure.rating)}")
-                    style (Title_XS)
-                  }
-                }
-              }
-            }
           }
         }
         hbox {
@@ -57,19 +47,9 @@ layout-macro-def(RecipeOneHeader) {
             }
           }
         }
-        hbox {
-          content {
-            vbox {
-              content {
-                single-line {
-                  text {
-                    value ("재료 : 돼지고기, 김치, 고춧가루 등등")
-                    style (Detail_M)
-                  }
-                }
-              }
-            }
-          }
+        paragraph{
+          value("재료 : #{value(recipeBasicStructure.materialStr)}")
+          style(Detail_M)
         }
         hbox {
           content {

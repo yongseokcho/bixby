@@ -10,12 +10,10 @@ layout-macro-def(RecipeOneImage) {
   content {
     section {
       content {
-        // image {
-        //   aspect-ratio (21:9)
-        //   url ("[#{value(recipe.image.url)}]")
-        // }
-        image-carousel {
-          images (recipeBasicStructure.images)
+        image {
+          aspect-ratio (1:1)
+          url ("#{value(recipeBasicStructure.images[0].url)}")
+          object-fit (Contain)
         }
       }
     }

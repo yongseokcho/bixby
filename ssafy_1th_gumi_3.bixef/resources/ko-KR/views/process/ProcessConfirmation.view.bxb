@@ -7,6 +7,8 @@ confirmation-view{
       template ("전체 요리과정입니다.")
     }else-if(action.processCommitState.totalStep - 1 == action.processCommitState.currentStep){
       template ("이제 마지막 과정입니다.")
+    }else{
+      template(" ")
     }
   }
   mode (Transactional)
@@ -54,7 +56,11 @@ confirmation-view{
         }
       }
     }
-   
+    conversation-driver{
+      if(action.processCommitState.currentStep > 0){
+        template("이전")
+      }
+    }
   }
   
   

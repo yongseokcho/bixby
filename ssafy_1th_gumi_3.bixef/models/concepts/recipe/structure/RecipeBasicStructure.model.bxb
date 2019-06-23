@@ -89,4 +89,9 @@ structure (RecipeBasicStructure) {
     type(RatingScore)
     min (Required) max (One)
   }
+  
+  property (materialStr){
+    type(MaterialStr)
+    min (Required) max (One)
+  }
 }
