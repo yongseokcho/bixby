@@ -1,0 +1,7 @@
+hints {
+  uncategorized{
+    utterance (돼지고기랑 김치 레시피 보여줘)
+    utterance (미역이랑 소고기 요리법 찾아줘)
+    utterance (다진마늘이랑 돼지고기 있는데 뭘 만들 수 있을지 검색해줘)
+  }
+}

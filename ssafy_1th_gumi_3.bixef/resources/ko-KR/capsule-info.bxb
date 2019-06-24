@@ -1,0 +1,7 @@
+capsule-info {
+  display-name (Bixef)
+  developer-name (SSAFY Bixef)
+  dispatch-name (빅쉐프)
+  icon-asset("img/logo.png")
+  description ("요리를 효과적으로 검색하고 해당하는 레시피를 제공합니다.")
+}
