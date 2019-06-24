@@ -1,5 +1,5 @@
 train (t-cwz6h6cuu6gdgxn2c95x80zt2) {
-  utterance ("[g:RecipeBasicStructure] (300)[v:LowerBound]칼로리 (이상)[v:LowerRangeOption:이상] (500)[v:UpperBound]칼로리 (미만)[v:UpperRangeOption:이하] 레시피 보여줘")
-  plan (Y2BjUC8uTkyrjDcsyYhPL83NjDfWS8qsSE3T88kvTy0KSsxLT/UvKMnMz2PQxqEwKDU5syDVKbE4Mzm4pKg0uaS0KJVBC4di99QSqPpK58Sc/KLM1GIGRXwucMovzUvBqSS0oACmRB2fEmR/MDMwATELAyOQZgKSIMDIwArEzEAWC5DFAAA=)
-  last-modified (1561337229658)
+  utterance ("[g:RecipeBasicStructure,r:WrapBoundaryOption] (300)[v:LowerBound]칼로리 (이상)[v:LowerBoundKeyword:이상] (500)[v:UpperBound]칼로리 (미만)[v:UpperBoundKeyword:이하] (레시피)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
+  plan (jY/NCsIwEIRHrVr1KRQP/oBQfIN68KAgKOKxxLragJqQpGgvPrvxJ+AlaiBhd/hmJ4sWhlqzfZFEJksO+Ykn49GWX2k/WlLKJcVM83RlVJ6aXBEGHnhK5s0XE3YUipNGx8PGIj/vFtJwcUb0/7zb9uHTaHssc3Eh9ZyN7teVZlRchPJTK2IqzRzli1tL6eL6HmSjmHwSTBXvfXs/P+9yez9zHdlECWVUEKCKGuoI0bAarFqy6ustWzW01edxXWhvYD0vd/PR3wE=)
+  last-modified (1561341151911)
 }

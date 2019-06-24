@@ -1,0 +1,15 @@
+action (WrapBoundaryOption) {
+  type(Constructor)
+  description (경계값 옵션 만들기)
+  collect {
+    input (lowerBoundKeyword) {
+      type (LowerBoundKeyword)
+      min (Optional) max (One)
+    }
+    input (upperBoundKeyword) {
+      type (UpperBoundKeyword)
+      min (Optional) max (One)
+    }
+  }
+  output (BoundOption)
+}

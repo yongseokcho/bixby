@@ -15,7 +15,19 @@ layout-macro-def(ExerciseList) {
         title-area{
           halign (Center)
           slot1{
-            text("#{value(exerciseStructure.recipeName)}에 대한 결과입니다.")
+            text{
+              value("이동하시려면 응/그래를 말해주세요")
+              style (Title_XS)
+            }
+          }
+          slot2{
+            single-line{
+              text{
+                value("#{value(exerciseStructure.recipeName)}에 대한 결과")
+                style (Detail_M_Soft)
+
+              }  
+            }
           }
         }
         for-each (exerciseStructure.exercises) {
@@ -32,8 +44,8 @@ layout-macro-def(ExerciseList) {
             }
           }
         }
-        
-        
+
+
       }
     }
   }

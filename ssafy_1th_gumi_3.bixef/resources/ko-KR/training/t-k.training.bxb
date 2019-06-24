@@ -3,3 +3,8 @@ train (t-kkcr3hlgxh2052sb5r6vb6wc4) {
   plan (7ZG7DoJAEEWvIj54qL9gYqENifEPNBbGTj6A4DLAFoBZlgh/7wKJidEt7Zybqe6Z0wyW2JRlGDfBTqZBUmU82Hs3XlPsnWoSjJfkS1ExWQnCVkMeiyzj8kqM38mnULBUK+2h/sCXoSQteaCE52/OlYY854mgiFMu/8hPkbUG6f9zoeZRiAgLDDCEgRFMjDHBFDNYsOHAxVy1ePWfMVSHbp0vacdVrdlZLWV3lLu12sprAE8=)
   last-modified (1561304198887)
 }
+train (t-ktl8nn79ykvc0uswie8hw8by9) {
+  utterance ("[g:RecipeBasicStructure,r:WrapBoundaryOption] (700)[v:LowerBound]칼로리 (이상)[v:LowerBoundKeyword:이상] (레시피)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
+  plan (jY/LCsIwEEWnWlv9DMWFDygU/6AuXCgIduGypHFqA9qUJKVm47cb+8BV1IEMk8m5dzIwgbWUJNNJqPLkWt1ZsglS9sAsOCFlJUZEMhorUVFVCYSVBd6h6ni9JTcuGEqYWdiIV8XlWCrGCwj/93umb52EqUVy4DWKxhvmX1fao665sFMxEkHznlpaqLMgZTONCN0ts/j5s950DA4MYAgujMAD39zBdBzTcZoX3+RPtLVnjmvIVgEv)
+  last-modified (1561341086995)
+}

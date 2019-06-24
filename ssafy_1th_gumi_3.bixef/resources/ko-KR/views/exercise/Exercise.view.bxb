@@ -1,6 +1,6 @@
 result-view {
   match: ExerciseStructure (result)
-
+  message("요리과정으로 이동하시겠습니까?")
   render {
     layout {
       layout-macro (ExerciseList) {
@@ -13,7 +13,7 @@ result-view {
   
   followup {
     prompt {
-      dialog ("요리과정으로 이동하시겠습니까?")
+      dialog (" ")
       on-confirm {
         
         if (false) {

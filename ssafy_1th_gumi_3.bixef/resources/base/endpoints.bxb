@@ -15,7 +15,7 @@ endpoints {
     }
 
     action-endpoint (SelectRecipeSearch) {
-      accepted-inputs (recipeBasicStructure, recipeCommitState)
+      accepted-inputs (recipeBasicStructure, recipeCommitState, $vivContext)
       local-endpoint (recipe/SelectRecipeSearch.js)
     }
 
@@ -40,8 +40,13 @@ endpoints {
     }
     
     action-endpoint (GetRecipeByCalories) {
-      accepted-inputs (upperBound, upperBoundRangeOption, lowerBound, lowerBoundRangeOption)
+      accepted-inputs (upperBound, lowerBound, boundOption, recipeKeyword, searchKeyword)
       local-endpoint (recipe/GetRecipeByCalories.js)
+    }
+    
+    action-endpoint (WrapBoundaryOption) {
+      accepted-inputs (upperBoundKeyword, lowerBoundKeyword)
+      local-endpoint (base/WrapBoundaryOption.js)
     }
     
     action-endpoint (GetExerciseStructureByRecipe) {

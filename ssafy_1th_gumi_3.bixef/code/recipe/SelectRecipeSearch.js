@@ -1,7 +1,8 @@
-var http = require('http')
-var config = require('config')
+var http = require('http');
+var config = require('config');
+var console = require('console');
 
-module.exports.function = function selectRecipeSearch (recipeBasicStructure, recipeCommitState) {
+module.exports.function = function selectRecipeSearch (recipeBasicStructure, recipeCommitState, $vivContext) {
   
   let options = {
     query : {
@@ -26,6 +27,16 @@ module.exports.function = function selectRecipeSearch (recipeBasicStructure, rec
   recipeBasicStructure.materials = materials;
   recipeBasicStructure.materialStr = materialStr;
   
+  options = {
+    query: {
+      user_id : $vivContext.userId,
+      recipe_id : recipeBasicStructure.recipeId,
+      cnt : 4      
+    }
+  }
+  
+  let hitstatus = http.getUrl(config.get('remote.url') + 'hits/insert', options);
+  console.log(hitstatus);
   
   return {
     ingredients: recipeCommitState.ingredients,
