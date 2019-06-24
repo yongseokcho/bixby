@@ -1,0 +1,3 @@
+vocab(LowerRangeOption){
+  "이상" {"이하", "초과"}
+}

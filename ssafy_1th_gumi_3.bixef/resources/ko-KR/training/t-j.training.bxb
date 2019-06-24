@@ -1,0 +1,5 @@
+train (t-jzqag5dwvj7tjx7ec74yrx8cp) {
+  utterance ("[g:RecipeBasicStructure] (600)[v:UpperBound]칼로리 (이하)[v:UpperRangeOption:이하] 레시피 보여줘")
+  plan (Y2Bh0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUpl0MKh2D21BKq+0jkxJ78oM7WYQRGH2tCCgtQip/zSvBQGdXxKghLz0lP9C0oy8/MYmBgYgZgBSDIygAAzEDOBSAA=)
+  last-modified (1561337392909)
+}

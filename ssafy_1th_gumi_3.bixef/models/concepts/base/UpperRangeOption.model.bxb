@@ -2,6 +2,5 @@ enum (UpperRangeOption) {
   
   description (상한범위를 위한 enumeration)
   
-  symbol (미만)
   symbol (이하)
 }
