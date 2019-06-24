@@ -1,0 +1,5 @@
+train (t-on37l0grkveun28hw4y877k5j) {
+  utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch] {[g:AddIngredient] (마요네즈)[v:Ingredient]} 넣어줘")
+  plan (Y+Bg0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSW4DQ0tSAFKk2moIdGG1pWChYoZVHBocUxJ8cxLL0pNyUzNK2FQxKEKSQk7AyMDEwMzAwsDKwMbkMcA5TOD+YxgPgSwgDEjUIYNrIsNAA==)
+  last-modified (1561359628151)
+}

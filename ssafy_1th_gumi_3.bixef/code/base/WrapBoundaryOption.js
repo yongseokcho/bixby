@@ -3,7 +3,7 @@ module.exports.function = function wrapBoundaryOption (lowerBoundKeyword, upperB
     lowerBoundFlag : false,
     upperBoundFlag : false
   }
-  if(lowerBoundKeyword != undefined){
+  if(lowerBoundKeyword != undefined && lowerBoundKeyword != ""){
     result.lowerBoundFlag = true;
   }
   if(upperBoundKeyword != undefined){
