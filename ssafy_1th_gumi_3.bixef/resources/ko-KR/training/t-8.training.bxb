@@ -1,7 +1,7 @@
 train (t-87qtpuv7qxee7v9qehk46zf06) {
-  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (김치)[v:Ingredient]랑 (마요네즈)[v:Ingredient]랑 (호박)[v:Ingredient]이랑 (생수)[v:Ingredient]랑 (건블루베리)[v:Ingredient]랑 (후추)[v:Ingredient]랑 (새우젓)[v:Ingredient]이랑 (갑오징어)[v:Ingredient]랑 (피조개)[v:Ingredient]랑 (돼지고기)[v:Ingredient] 으로 만들 수 있는 (레시피)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
-  plan (7ZE9DoJAEIUfooIC/hzBxEIbEuMNNBbGTg5AEAbYAjDLEuH2bkRNDFk7O+eV8803xcMcq7IM4sbfiNRPqoz5W/fCaordQ008ZCV5glehqDhhrSD3RZYxcaaQXcmjgIepUtpC7YEnAkFKckcJyz+cCwV5zBNOEaNc/JGfIsuvpZ6ouRU8UlJtiy9qBg096OhjgCEMmBhhDAs2HEwwlXu8iW50Ge1BQF50085E7i1pNeQPR/pt+cl82nXgDg==)
-  last-modified (1561305450577)
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (김치)[v:Ingredient]랑 (마요네즈)[v:Ingredient]랑 (호박)[v:Ingredient]이랑 (생수)[v:Ingredient]랑 (마늘)[v:Ingredient]이랑 (후추)[v:Ingredient]랑 (새우젓)[v:Ingredient]이랑 (갑오징어)[v:Ingredient]랑 (피조개)[v:Ingredient]랑 (돼지고기)[v:Ingredient] 으로 만들 수 있는 (레시피)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
+  plan (7ZExDoJAEEW/IqIoqEcwsdDGxHgDjYWxkwMQxBG2AMyyRLi9o0QTQ9bOzvnlf/OmGEwwz/PgUvkrFftRkQh/vTyJki7LXUkyFDl5ShahKiRhoSG3WZIIdaRQXMmjQIaxVlpD9YKnAkVackORSD+cUw25TyNJZ0Gp+iM/RWZfn3qg6pbJs5aqv/iixmihDQMdmOjCQg992BhgCAcuRtzjTTRjcFpPArzRTD0u9zZ7Hbab7Lb4ksvtw24Adw==)
+  last-modified (1561340389408)
 }
 train (t-8a5r6ae89cppye9vzvw7fb6bw) {
   utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch] (뒤로)[v:LayoutType]")

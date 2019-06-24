@@ -3,8 +3,3 @@ train (t-r0yy5r8seif2oooaf6snza2p4) {
   plan (Y2BjUCkuTkyrjDcsyYhPL83NjDfWS8qsSE3Ti8wvLSlNSg1KLS7NKWHQwKHKOT83N7MkoCg/ObW4ODgjv5xBE4dKqBqIhuCSxJJUnIaGFqQApZENVcSh0iexEujMkMqCVFLsZWVgZGBiYGZgAbIYoGxmIM0AxiAA4rEASQYA)
   last-modified (1561296592058)
 }
-train (t-rx05s06rommtxrh8icfelf8i6) {
-  utterance ("[g:RecipeBasicStructure] (600)[v:LowerBound]칼로리 {[g:LowerBoundRangeOption] (이상)[v:RangeOption:이상]} 레시피 보여줘")
-  plan (Y2Bl0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUpl0MKh2D21BKq+0jkxJ78oM7WYQRGHWp/88tQip/zSvBQGHYJKghLz0lP9C0oy8/MYlHC5FEkNCwMjAxMDM5BmALIYgSxGBhBggWKIHFAcAA==)
-  last-modified (1561302916712)
-}
