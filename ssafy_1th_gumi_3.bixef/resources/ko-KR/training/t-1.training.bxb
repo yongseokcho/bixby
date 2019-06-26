@@ -1,5 +1,0 @@
-train (t-1f6656h48ftm6zby9us7ref4u) {
-  utterance ("[g:RecipeBasicStructure] (김치찌개)[v:RecipeName] (레시피)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
-  plan (Y2Bl0C4uTkyrjDcsyYhPL83NjDfWS8qsSE3TC0pNzixIdUoszkwOLikqTS4pLUplUMOh2D21BKq+0i8xN5VBBa+h3qmV5flFKQyKeFXhNSg4NbEoOQNmEAsDIwMTAzOQZgCyIBAGQGJQOQA=)
-  last-modified (1561550801510)
-}

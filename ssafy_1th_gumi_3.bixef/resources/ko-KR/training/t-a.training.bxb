@@ -1,5 +1,0 @@
-train (t-azsrg6tcfbrostkvi0apkjdjw) {
-  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (레시피)[v:RecipeKeyword:레시피] 중에 (김치)[v:Ingredient]랑 (마요네즈)[v:Ingredient]랑 (호박)[v:Ingredient]이랑 (생수)[v:Ingredient]랑 (마늘)[v:Ingredient]이랑 (후추)[v:Ingredient]랑 (새우젓)[v:Ingredient]이랑 (갑오징어)[v:Ingredient]랑 (피조개)[v:Ingredient]랑 (돼지고기)[v:Ingredient]로 만들 수 있는 것이 (있을까)[v:SearchKeyword:검색]?")
-  plan (7ZE9DoJAEIUfoigi/hzBxEIbE+MNNBbGTg5AEEfYAjDLEuH2jhJNDFk7O+c1M5lv3isGE8zzPLhU/krFflQkwl8vT6Kky3JXkgxFTp6SRagKSVhoyG2WJEIdKRRX8iiQYaw1raH6wFOBIi25oUikH55TDblPI0lnQan6Iz9FZl+feqDqlsmzlqq/+KLGMNCCiTY6sNBFDzb6cDCAiyFGvMebaMpkGU8CfNFUXUPeWzzZ3PU5x+UUh7Me7iZwBw==)
-  last-modified (1561473004624)
-}

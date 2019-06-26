@@ -1,4 +1,0 @@
-train (t-cwz6h6cuu6gdgxn2c95x80zt2) {
-  utterance ("[g:RecipeBasicStructure,r:WrapBoundaryOption] (300)[v:LowerBound]칼로리 (이상)[v:LowerBoundKeyword:이상] (500)[v:UpperBound]칼로리 (미만)[v:UpperBoundKeyword:이하] (레시피)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
-  last-modified (1561463198265)
-}

@@ -1,5 +1,0 @@
-train (t-tyf3f56ko8sc0kwz0iw0dixuz) {
-  utterance ("[g:CommitRecipeSearch:continue,r:UpdateRecipeSearch] {[g:RemoveIngredient] (돼지고기)[v:Ingredient]} 빼줘")
-  plan (nYyxDoIwEIavgtXXcFIXEsIjGAdXiTPBcsANBdJeDS4+u6R1cGlivOSG//7vPtjCwdq6fVY591XnNFVFdqcZ2+w8o1FksWTjFDuDcIyQp1Fr4isqmrDE2qg+Kg1QeCi55rj0NjVL/ac0/1n6cv5kYR+V6/GBl6Ez2BAODLsI+IVsQMAKEkhhDXJJ8MmJz8LnMKlfsTTSf8k3)
-  last-modified (1561359463473)
-}
