@@ -1,0 +1,5 @@
+train (t-fkywmorpqsurtzddu9sg5ph0l) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (김치)[v:Ingredient] (마요네즈)[v:Ingredient] (호박)[v:Ingredient] (생수)[v:Ingredient] (마늘)[v:Ingredient] (후추)[v:Ingredient] (새우젓)[v:Ingredient] (갑오징어)[v:Ingredient] (피조개)[v:Ingredient] (돼지고기)[v:Ingredient] (레시피)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
+  plan (7ZE9DoJAEIUfooB/qEcwsdCGxHgDjYWxkwMQhAG2AMyyRLi9i0QTQ9bOznnlfPNN8bDAuij8qPa2IvHiMmXezrmyiiLnWBEPWEGu4GUgSk7YKMhDnqZMXChgN3LJ50GilLZQe+AKX5CS3FPMsg/nUkGesphTyCgTf+SnyOprqWeq7zkPlVTb4ouaQ0MPOvoYwIAJC0OMMMYEU9iYyT3eRDe6jPYkIC+6aceWe1P6G6cl7Yb8YcsfjV0HHg==)
+  last-modified (1561472048123)
+}

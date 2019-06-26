@@ -1,3 +1,8 @@
+train (t-r0ypqoos3g895pir38991vxz3) {
+  utterance ("[g:CommitRecipeSearch] (레시피)[v:RecipeKeyword:레시피] 중에 (김치)[v:Ingredient] (마요네즈)[v:Ingredient] (호박)[v:Ingredient] (생수)[v:Ingredient] (마늘)[v:Ingredient] (후추)[v:Ingredient] (새우젓)[v:Ingredient] (갑오징어)[v:Ingredient] (피조개)[v:Ingredient] (돼지고기)[v:Ingredient]로 만들 수 있는 것이 (있을까)[v:SearchKeyword:검색]?")
+  plan (7ZE9DoJAEIUfIioi/hzBxEIbEuMNNBbGTg5AEAbYAjDLEuH2LhBNjFk7O+eV8803xcMC66Lwo9rbisSLy5R5O+fKKoqcY0U8YAW5gpeBKDlhoyAPeZoycaGA3cglnweJUtpB3YErfEFKck8xy96cSwV5ymJOIaNM/JGfIquvpZ6pvuc8VFJdi09qDg096OjDwABDjGBiDAsT2JhiJvd4EZ/RZbSWgLz4TDe23FvSZkizKT80fxp/a38A)
+  last-modified (1561473146110)
+}
 train (t-r0yy5r8seif2oooaf6snza2p4) {
   utterance ("[g:CommitProcessShow:continue,r:UpdateProcessShow] (이전)[v:LayoutType]")
   plan (Y2BjUCkuTkyrjDcsyYhPL83NjDfWS8qsSE3Ti8wvLSlNSg1KLS7NKWHQwKHKOT83N7MkoCg/ObW4ODgjv5xBE4dKqBqIhuCSxJJUnIaGFqQApZENVcSh0iexEujMkMqCVFLsZWVgZGBiYGZgAbIYoGxmIM0AxiAA4rEASQYA)

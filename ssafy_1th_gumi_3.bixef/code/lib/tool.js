@@ -108,3 +108,32 @@ module.exports.GetYoutubeUrl = function(word){
   }
 }
 
+module.exports.searchRecipeByName = function(recipeName){
+  let options = {
+    query : {
+      recipeName : recipeName
+    },
+    format : "json"
+  };
+  return http.getUrl(config.get('remote.url') + 'foodBasic/searchByRecipeName', options);
+}
+
+module.exports.wrapIngredients = function(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5){
+  let result = [];
+  if(ingredient1 != undefined){
+    result.push(ingredient1);  
+  }
+  if(ingredient2 != undefined){
+    result.push(ingredient2);  
+  }
+  if(ingredient3 != undefined){
+    result.push(ingredient3);  
+  }
+  if(ingredient4 != undefined){
+    result.push(ingredient4);  
+  }
+  if(ingredient5 != undefined){
+    result.push(ingredient5);  
+  }
+  return result;
+}

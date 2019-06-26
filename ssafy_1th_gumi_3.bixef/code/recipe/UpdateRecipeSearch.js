@@ -1,24 +1,29 @@
-var http = require('http');
-var config = require('config');
 var console = require('console');
 var tool = require('lib/tool.js');
 
 // 검색된 요리에서 필터링
-module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIngredient, removeIngredient, layoutType) {
-  
+module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIngredient, addIngredient2, addIngredient3, addIngredient4, addIngredient5, removeIngredient, removeIngredient2, removeIngredient3, removeIngredient4, removeIngredient5, addKeyword, removeKeyword, layoutType) {
+
   let changed = false;
-  
-  if(addIngredient != undefined && addIngredient != ""){
-
-    Add(recipeCommitState, addIngredient);
+  let criteria = tool.wrapIngredients(addIngredient,
+                                      addIngredient2,
+                                      addIngredient3,
+                                      addIngredient4,
+                                      addIngredient5);
+  if(criteria.length > 0){    
+    Add(recipeCommitState, criteria);
     changed = true;
   }
-  if(removeIngredient != undefined && removeIngredient != ""){
-
-    Remove(recipeCommitState, removeIngredient);
+  criteria = tool.wrapIngredients(removeIngredient,
+                                  removeIngredient2,
+                                  removeIngredient3,
+                                  removeIngredient4,
+                                  removeIngredient5);
+  if(criteria.length > 0){
+    Remove(recipeCommitState, criteria);
     changed = true;
   }
-  
+
   if(layoutType != undefined && layoutType != ""){
     if(layoutType == '뒤로'){
       changed = true;
@@ -37,15 +42,15 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
     }
   }
   if(changed){
-      let db = tool.GetRecipesByMaterials(recipeCommitState.ingredients);
-      db = tool.ConvertRecipeBasicStructure(db);
-      recipeCommitState.recipeBasicStructures = db;
+    let db = tool.GetRecipesByMaterials(recipeCommitState.ingredients);
+    db = tool.ConvertRecipeBasicStructure(db);
+    recipeCommitState.recipeBasicStructures = db;
   }
   return recipeCommitState;
 }
 
 function Add(state, addIngredient){
-  
+
   let flag;
   for(let i=0; i<addIngredient.length; i++){
     flag = true;

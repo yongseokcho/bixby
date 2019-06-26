@@ -1,0 +1,5 @@
+enum (AddKeyword) {
+  description (현재 선택한 재료 중에서 추가할 때 사용하는 model)
+  
+  symbol ("추가해줘")
+}

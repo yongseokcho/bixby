@@ -1,5 +1,4 @@
 train (t-jzqag5dwvj7tjx7ec74yrx8cp) {
   utterance ("[g:RecipeBasicStructure,r:WrapBoundaryOption] (600)[v:UpperBound]칼로리 (이하)[v:UpperBoundKeyword:이하] (레시피)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
-  plan (jc/JCsIwEADQ0WpbP0Px4AKF4h/UgwcPgkU8lrSd2oA2IQvai99u7IKnqAkhy7xMJjCBtZSkqJNQlclF32iyCVL6wCI4YkY5RkTSLFZCZ0oLhJUF71B1vt6SKxMUJcwsNmK6yg9cUVZB+H++Z/q+J2H+td491ncmcquKkYis7NXUok6co2jqhKWFnAXhjSCi7j6z+Jmtf9eHAQzBgRGMwQXP7MGctN0xEc/Mn9auXTNa75s4vAA=)
-  last-modified (1561341173372)
+  last-modified (1561463193681)
 }

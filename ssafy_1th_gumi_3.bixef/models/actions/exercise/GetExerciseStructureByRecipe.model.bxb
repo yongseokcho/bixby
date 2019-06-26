@@ -7,5 +7,26 @@ action (GetExerciseStructureByRecipe) {
       min (Required) max (One)
     }
   }
-  output (ExerciseStructure)
+  output (ExerciseStructure){
+    throws{
+      error (NotFoundExercises){
+        on-catch{
+          halt{
+            dialog{
+              template-macro (NOT_FOUND_EXERCISES)
+            }
+          }
+        }
+      }
+      unknown-error{
+        on-catch{
+          halt{
+            dialog{
+              template-macro (UNKNOWN_ERROR)
+            }
+          }
+        }
+      }
+    }
+  }
 }

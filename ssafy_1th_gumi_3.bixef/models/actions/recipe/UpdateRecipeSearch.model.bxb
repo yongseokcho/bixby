@@ -12,12 +12,65 @@ action (UpdateRecipeSearch) {
         input(addIngredient){
           type(AddIngredient)
           min (Optional)
-          max (Many)
+          max (One)
         }
+        input(addIngredient2){
+          type(AddIngredient2)
+          min (Optional)
+          max (One)
+        }
+        input(addIngredient3){
+          type(AddIngredient3)
+          min (Optional)
+          max (One)
+        }
+        input(addIngredient4){
+          type(AddIngredient4)
+          min (Optional)
+          max (One)
+        }
+        input(addIngredient5){
+          type(AddIngredient5)
+          min (Optional)
+          max (One)
+        }
+        ///////////////////////////////////////////////
+        //////////////RemoveIngredient/////////////////
         input(removeIngredient){
           type(RemoveIngredient)
           min (Optional)
-          max (Many)
+          max (One)
+        }
+        input(removeIngredient2){
+          type(RemoveIngredient2)
+          min (Optional)
+          max (One)
+        }
+        input(removeIngredient3){
+          type(RemoveIngredient3)
+          min (Optional)
+          max (One)
+        }
+        input(removeIngredient4){
+          type(RemoveIngredient4)
+          min (Optional)
+          max (One)
+        }
+        input(removeIngredient5){
+          type(RemoveIngredient5)
+          min (Optional)
+          max (One)
+        }
+        ///////////////////////////////////////////////
+        input (addKeyword) {
+          type (AddKeyword)
+          min (Optional)
+          max (One)
+        }
+        input (removeKeyword) {
+          type (RemoveKeyword)
+          min (Optional)
+          max (One)
         }
         input(layoutType){
           type(LayoutType)
@@ -25,7 +78,7 @@ action (UpdateRecipeSearch) {
           max (One)
         }
       }
-    }
+    } 
   }
   output (RecipeCommitState)
 }

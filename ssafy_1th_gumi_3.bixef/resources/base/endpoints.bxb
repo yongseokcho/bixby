@@ -5,7 +5,7 @@ endpoints {
       local-endpoint (recipe/BeginRecipeSearch.js)
     }
     action-endpoint (UpdateRecipeSearch) {
-      accepted-inputs (recipeCommitState, addIngredient, removeIngredient, layoutType)
+      accepted-inputs (recipeCommitState, addIngredient, addIngredient2, addIngredient3, addIngredient4, addIngredient5, removeIngredient, removeIngredient2, removeIngredient3, removeIngredient4, removeIngredient5, addKeyword, removeKeyword, layoutType)
       local-endpoint (recipe/UpdateRecipeSearch.js)
     }
 
@@ -35,7 +35,7 @@ endpoints {
     }
 
     action-endpoint (GetRecipeByName) {
-      accepted-inputs (recipeName)
+      accepted-inputs (recipeName, recipeKeyword, searchKeyword)
       local-endpoint (recipe/GetRecipeByName.js)
     }
     
@@ -53,6 +53,5 @@ endpoints {
       accepted-inputs (recipeBasicStructure) 
       local-endpoint (exercise/GetExerciseStructureByRecipe.js)
     }
-
   }
 }

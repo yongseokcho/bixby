@@ -1,5 +1,4 @@
 enum (SearchKeyword) {
   description (검색 키워드)
   symbol (검색)
-  symbol (레시피)
 }

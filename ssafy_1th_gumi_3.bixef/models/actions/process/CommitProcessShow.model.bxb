@@ -1,11 +1,14 @@
-action (LaunchWeb) {
-  type(Search)
-  description (유튜브 웹을 실행한다)
+action (CommitProcessShow) {
+  type(Commit)
+  description (요리과정 트랜잭션 완료)
   collect {
-    input (keyword) {
-      type (Keyword)
+    input (processCommitState) {
+      type (ProcessCommitState)
       min (Required) max (One)
     }
+  }
+  confirm{
+    by(Confirmation)
   }
   output (YoutubeResult){
     throws{
