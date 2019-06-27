@@ -1,0 +1,25 @@
+layout-macro-def(RecipeDetailSummary) {
+  params {
+    param (summary) {
+      type (Summary)
+      min (Required)
+    }
+  }
+
+  content {
+    hbox {
+      content {
+        vbox {
+          content {
+            single-line {
+              text{              
+                style(Detail_L)
+                value("#{value(summary)}")
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

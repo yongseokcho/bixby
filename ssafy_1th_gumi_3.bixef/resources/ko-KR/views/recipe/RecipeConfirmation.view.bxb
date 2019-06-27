@@ -33,6 +33,21 @@ confirmation-view{
                       expression (item)
                     }
                   }
+                  layout-macro (RecipeDetailName){
+                    param(name){
+                      expression (item.recipeName)
+                    }
+                  }
+                  layout-macro (RecipeDetailSummary){
+                    param(summary){
+                      expression (item.summary)
+                    }
+                  }
+                  layout-macro (RecipeDetailLevel){
+                    param(recipeBasicStructure){
+                      expression (item)
+                    }
+                  }
                 }else{
                   layout-macro (RecipeSummaryLarge){
                     param(recipeBasicStructure){

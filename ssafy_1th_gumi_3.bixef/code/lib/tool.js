@@ -6,6 +6,26 @@ var console = require('console');
 module.exports.ConvertRecipeBasicStructure = function(db){
   let result = [];
   for(let i=0; i<db.length; i++){
+    var options = {
+      query : {
+        recipeId : db[i].recipe_id
+      },
+      format : "json"
+    };
+
+    var data = http.getUrl(config.get('remote.url') + 'foodMaterial/searchByRecipeId', options);
+    var materialStr = "";
+    var materials = [];
+
+    for (var j = 0; j < data.length; j++) {
+      materials.push(data[j].irdnt_nm);
+      if(j == 0){
+        materialStr += data[j].irdnt_nm;
+      }else{
+        materialStr += ", "+ data[j].irdnt_nm;
+      }
+    }
+
     let obj = {
       recipeId: db[i].recipe_id,
       recipeName: db[i].recipe_nm_ko,
@@ -24,10 +44,11 @@ module.exports.ConvertRecipeBasicStructure = function(db){
       summary: db[i].sumry, 
       typeCode: db[i].ty_code,
       typeName: db[i].ty_nm,
-      materials: ['기본값'],
+      materials: materials,
       hit: 10,
       rating: db[i].sumScore,
-      materialStr : "기본값"
+      materialStr : materialStr,
+      materialShow : "기본값"
     };
     result.push(obj);
   }

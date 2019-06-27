@@ -1,4 +1,4 @@
-layout-macro-def(RecipeSummaryLarge) {
+layout-macro-def(RecipeListSummary) {
   params {
     param (recipeBasicStructure) {
       type (RecipeBasicStructure)
@@ -11,8 +11,7 @@ layout-macro-def(RecipeSummaryLarge) {
     image-card{
       on-click{
         intent{
-          goal: CommitRecipeSearch
-          route: SelectRecipeSearch
+          goal : RecipeBasicStructure
           value: RecipeBasicStructure{
             recipeId: $expr(recipeBasicStructure.recipeId)
             recipeName: $expr(recipeBasicStructure.recipeName)
@@ -38,18 +37,56 @@ layout-macro-def(RecipeSummaryLarge) {
         }
       }
       text-position (Below)
-      image-object-fit (Cover)
+      image-object-fit (Contain)
       aspect-ratio(16:9)
       image-url("#{value(recipeBasicStructure.images[0].url)}")
       title-area{
+        halign (Start)
         slot1{
-          text ("")
+          single-line{
+            text{
+              value("#{value(recipeBasicStructure.recipeName)}")
+              style(Title_S)
+            }
+          }
         }
         slot2{
-          paragraph ("")
+          single-line{
+            text{              
+              style(Detail_L)
+              value("#{value(recipeBasicStructure.summary)}")
+            }
+          }
         }
         slot3{
-          paragraph ("")
+          single-line{
+            if (recipeBasicStructure.level == '초보환영') {
+              image{
+                shape(Circle)
+                style(Detail_M_Soft)
+                url(img/level1.png)
+              }
+            }
+            else-if (recipeBasicStructure.level == '보통') {
+              image{
+                shape(Circle)
+                style(Detail_M_Soft)
+                url(img/level2.png)
+              }
+            }
+            else {
+              image{
+                shape(Circle)
+                style(Detail_M_Soft)
+                url(img/level3.png)
+              }
+            }
+            spacer
+            text{
+              style(Detail_M_Soft)
+              value("#{value(recipeBasicStructure.level)}")
+            }
+          }
         }
       }
     }

@@ -5,31 +5,6 @@ var fail = require('fail');
 
 module.exports.function = function selectRecipeSearch (recipeBasicStructure, recipeCommitState, $vivContext) {
   
-  let options = {
-    query : {
-      recipeId : recipeBasicStructure.recipeId
-    },
-    format : "json"
-  };
-  
-  var db = http.getUrl(config.get('remote.url') + 'foodMaterial/searchByRecipeId', options);
-  let materialStr = "";
-  var materials = [];
-  if(db == undefined){
-    throw fail.checkedError('There is no recipe','NotFoundRecipe',null);
-  }
-  for (var i = 0; i < db.length; i++) {
-    materials.push(db[i].irdnt_nm);
-    if(i == 0){
-      materialStr += db[i].irdnt_nm;
-    }else{
-      materialStr += ", "+ db[i].irdnt_nm;
-    }
-  }
-  
-  recipeBasicStructure.materials = materials;
-  recipeBasicStructure.materialStr = materialStr;
-  
   options = {
     query: {
       user_id : $vivContext.userId,

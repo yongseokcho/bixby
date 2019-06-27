@@ -32,6 +32,7 @@ layout-macro-def(RecipeSummary) {
               rating: $expr(recipeBasicStructure.rating)
               images: $expr(recipeBasicStructure.images)
               materialStr : $expr(recipeBasicStructure.materialStr)
+              materialShow : $expr(recipeBasicStructure.materialShow)
             }
         }
       }

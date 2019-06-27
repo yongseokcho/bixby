@@ -1,0 +1,3 @@
+text (MaterialShow) {
+  description (레시피 목록 화면에서의 재료 포함 갯수)
+}
