@@ -5,6 +5,11 @@ capsule-info {
   dispatch-aliases{
     alias (요리법)
   }
+  search-keywords{
+    keyword (요리)
+    keyword (요리법)
+    keyword (레시피)
+  }
   icon-asset("img/logo.png")
   description ("요리를 효과적으로 검색하고 해당하는 레시피를 제공합니다.")
 }
