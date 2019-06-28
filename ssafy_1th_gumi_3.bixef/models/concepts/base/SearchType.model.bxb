@@ -1,0 +1,3 @@
+text (SearchType) {
+  description (검색 유형)
+}

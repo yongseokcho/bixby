@@ -13,8 +13,15 @@ module.exports.function = function selectRecipeSearch (recipeBasicStructure, rec
     }
   }
   console.log(options);
-  let hitstatus = http.getUrl(config.get('remote.url') + 'hits/insert', options);
-  recipeBasicStructure.hit = hitstatus;
+  http.getUrl(config.get('remote.url') + 'hits/insert', options);
+  options = {
+    query: {
+      recipeId : recipeBasicStructure.recipeId
+    },
+    format : "json"
+  }
+  let hitstatus = http.getUrl(config.get('remote.url') + 'hits/searchByRecipeId', options);
+  recipeBasicStructure.hit = hitstatus.cnt;
   
   return {
     ingredients: recipeCommitState.ingredients,

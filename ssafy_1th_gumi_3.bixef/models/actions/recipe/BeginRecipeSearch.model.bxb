@@ -7,6 +7,11 @@ action (BeginRecipeSearch) {
       min (Optional) max (Many)
     }
     
+    input (recipeName) {
+      type(RecipeName)
+      min (Optional) max (One)
+    }
+    
     input(recipeKeyword){
       type(RecipeKeyword)
       min (Optional) max (One)
