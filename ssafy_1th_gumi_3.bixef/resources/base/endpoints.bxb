@@ -1,7 +1,7 @@
 endpoints {
   action-endpoints {
     action-endpoint (BeginRecipeSearch) {
-      accepted-inputs (ingredients, recipeName, recipeKeyword, searchKeyword)
+      accepted-inputs (ingredients, recipeName, recipeKeyword, searchKeyword, boundOption)
       local-endpoint (recipe/BeginRecipeSearch.js)
     }
     action-endpoint (UpdateRecipeSearch) {
@@ -45,7 +45,7 @@ endpoints {
     }
     
     action-endpoint (WrapBoundaryOption) {
-      accepted-inputs (upperBoundKeyword, lowerBoundKeyword)
+      accepted-inputs (upperBound, lowerBound, upperBoundKeyword, lowerBoundKeyword)
       local-endpoint (base/WrapBoundaryOption.js)
     }
     

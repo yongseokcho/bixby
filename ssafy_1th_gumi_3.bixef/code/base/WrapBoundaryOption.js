@@ -1,17 +1,23 @@
-module.exports.function = function wrapBoundaryOption (lowerBoundKeyword, upperBoundKeyword) {
+module.exports.function = function wrapBoundaryOption (lowerBound, upperBound, lowerBoundKeyword, upperBoundKeyword) {
   let result = {
     lowerBoundFlag : false,
-    upperBoundFlag : false
+    upperBoundFlag : false,
+    upperBound : 2000,
+    lowerBound : 0,
   }
-  if(lowerBoundKeyword != undefined && lowerBoundKeyword != ""){
+  if(lowerBound != undefined && lowerBound != 0){
     result.lowerBoundFlag = true;
+    result.lowerBound = lowerBound;
   }
-  if(upperBoundKeyword != undefined){
+  if(upperBound != undefined && upperBound != 0){
     result.upperBoundFlag = true;
+    result.lowerBound = upperBound;
   }
   if(upperBoundKeyword == undefined && lowerBoundKeyword == undefined){
     result.lowerBoundFlag = true;
     result.upperBoundFlag = true;
+    result.lowerBound = lowerBound;
+    result.lowerBound = upperBound;
   }
   return result;
 }

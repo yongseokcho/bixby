@@ -4,8 +4,16 @@ structure (BoundOption) {
     type(UpperBoundFlag)
     min (Required) max (One)
   }
+  property(upperBound){
+    type(UpperBound)
+    min (Required) max (One)
+  }
   property (lowerBoundFlag){
     type(LowerBoundFlag)
+    min (Required) max (One)
+  }
+  property (lowerBound){
+    type(LowerBound)
     min (Required) max (One)
   }
 }

@@ -12,6 +12,11 @@ action (BeginRecipeSearch) {
       min (Optional) max (One)
     }
     
+    input(boundOption){
+      type(BoundOption)
+      min (Optional) max (One)
+    }
+    
     input(recipeKeyword){
       type(RecipeKeyword)
       min (Optional) max (One)

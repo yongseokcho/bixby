@@ -3,7 +3,7 @@
   var fail = require('fail');
 
   // 전체 요리 데이터베이스에서 검색
-  module.exports.function = function BeginRecipeSearch (ingredients, recipeName, recipeKeyword, searchKeyword) {
+  module.exports.function = function BeginRecipeSearch (ingredients, recipeName, recipeKeyword, searchKeyword, boundOption) {
     var db;
     let searchType = "INGREDIENT";
     if(recipeName != undefined && recipeName != ""){
