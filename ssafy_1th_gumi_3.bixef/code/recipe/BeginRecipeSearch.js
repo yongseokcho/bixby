@@ -5,11 +5,12 @@
   // 전체 요리 데이터베이스에서 검색
   module.exports.function = function BeginRecipeSearch (ingredients, recipeName, recipeKeyword, searchKeyword) {
     var db;
-    let searchType = "INGERDIENT";
+    let searchType = "INGREDIENT";
     if(recipeName != undefined && recipeName != ""){
       db = tool.searchRecipeByName(recipeName);
       searchType = "RECIPENAME";
     }else{
+      recipeName = " ";
       db = tool.GetRecipesByMaterials(ingredients);  
     }
     if(db == undefined || db.length == 0){
@@ -19,7 +20,7 @@
 
     for (var i = 0; i < db.length; i++) {
       var count = 0;
-      var MaterialShow = "";
+      var MaterialShow = " ";
       for (var j = 0; j < ingredients.length; j++) {
         if (db[i].materialStr.indexOf(ingredients[j]) != -1) {
           if (count == 0) {

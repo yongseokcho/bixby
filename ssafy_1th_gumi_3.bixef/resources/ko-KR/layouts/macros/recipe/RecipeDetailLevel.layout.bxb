@@ -41,12 +41,14 @@ layout-macro-def(RecipeDetailLevel) {
             }
           }
         }
-        vbox {
+        vbox { 
           content {
-            single-line {
-              text{
-                style(Detail_M_Soft)
-                value("#{value(recipeBasicStructure.materialShow)}")
+            if (recipeBasicStructure.materialShow != '  포함'){
+              single-line {
+                text{
+                  style(Detail_M_Soft)
+                  value("#{value(recipeBasicStructure.materialShow)}")
+                }
               }
             }
           }

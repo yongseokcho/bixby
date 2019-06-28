@@ -27,7 +27,7 @@ confirmation-view{
           content{
             for-each(action.recipeCommitState.recipeBasicStructures){
               as(item){
-                if(action.recipeCommitState.layoutType == 'LARGE'){
+                // if(action.recipeCommitState.layoutType == 'LARGE'){
                   layout-macro (RecipeSummaryLarge){
                     param(recipeBasicStructure){
                       expression (item)
@@ -48,13 +48,7 @@ confirmation-view{
                       expression (item)
                     }
                   }
-                }else{
-                  layout-macro (RecipeSummaryLarge){
-                    param(recipeBasicStructure){
-                      expression (item)
-                    }
-                  }
-                }
+                // }
               }
             }
           }

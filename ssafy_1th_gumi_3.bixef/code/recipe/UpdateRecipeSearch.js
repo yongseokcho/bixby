@@ -3,71 +3,69 @@ var tool = require('lib/tool.js');
 
 // 검색된 요리에서 필터링
 module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIngredient, addIngredient2, addIngredient3, addIngredient4, addIngredient5, removeIngredient, removeIngredient2, removeIngredient3, removeIngredient4, removeIngredient5, addKeyword, removeKeyword, layoutType) {
-
-  let changed = false;
-  let criteria = tool.wrapIngredients(addIngredient,
-                                      addIngredient2,
-                                      addIngredient3,
-                                      addIngredient4,
-                                      addIngredient5);
-  if(criteria.length > 0){    
-    Add(recipeCommitState, criteria);
-    changed = true;
-  }
-  criteria = tool.wrapIngredients(removeIngredient,
-                                  removeIngredient2,
-                                  removeIngredient3,
-                                  removeIngredient4,
-                                  removeIngredient5);
-  if(criteria.length > 0){
-    Remove(recipeCommitState, criteria);
-    changed = true;
-  }
-
-  if(layoutType != undefined && layoutType != ""){
-    if(layoutType == '뒤로'){
-      changed = true;
-    }else if(layoutType == '다음'){
-      if(recipeCommitState.maxPageNumber > recipeCommitState.pageNumber){ 
-        recipeCommitState.pageNumber++;
-        changed = true;        
-      }
-    }else if(layoutType == '이전'){
-      if(recipeCommitState.pageNumber > 0){
-        recipeCommitState.pageNumber--;  
-        changed = true;
-      }
-    }else{
-      recipeCommitState.layoutType = layoutType;  
+  if(recipeCommitState.searchType == 'INGREDIENT'){
+    let criteria = tool.wrapIngredients(addIngredient,
+                                        addIngredient2,
+                                        addIngredient3,
+                                        addIngredient4,
+                                        addIngredient5);
+    if(criteria.length > 0){    
+      Add(recipeCommitState, criteria);
     }
-  }
-  if(changed){
-    let db = tool.GetRecipesByMaterials(recipeCommitState.ingredients);
-    db = tool.ConvertRecipeBasicStructure(db);
+    criteria = tool.wrapIngredients(removeIngredient,
+                                    removeIngredient2,
+                                    removeIngredient3,
+                                    removeIngredient4,
+                                    removeIngredient5);
+    if(criteria.length > 0){
+      Remove(recipeCommitState, criteria);
+    }
 
-    for (var i = 0; i < db.length; i++) {
-      var count = 0;
-      var MaterialShow = "";
-      for (var j = 0; j < recipeCommitState.ingredients.length; j++) {
-        if (db[i].materialStr.indexOf(recipeCommitState.ingredients[j]) != -1) {
-          if (count == 0) {
-            MaterialShow += recipeCommitState.ingredients[j];
-          }
-          else if (count == 1) {
-            MaterialShow += ", " + recipeCommitState.ingredients[j];
-          }
-          count++;
+    if(layoutType != undefined && layoutType != ""){
+      if(layoutType == '다음'){
+        if(recipeCommitState.maxPageNumber > recipeCommitState.pageNumber){ 
+          recipeCommitState.pageNumber++;
         }
+      }else if(layoutType == '이전'){
+        if(recipeCommitState.pageNumber > 0){
+          recipeCommitState.pageNumber--;  
+        }
+      }else{
+        recipeCommitState.layoutType = layoutType;  
       }
-      if (count > 2) {
-        MaterialShow += " 외 " + (count - 2) + "개";
-      }
-      MaterialShow += " 포함";
-      db[i].materialShow = MaterialShow;
-    }
-
-    recipeCommitState.recipeBasicStructures = db;
+    }      
   }
+
+
+  let db;
+  if(recipeCommitState.searchType == 'INGREDIENT'){
+    db = tool.GetRecipesByMaterials(recipeCommitState.ingredients);  
+  }else{
+    db = tool.searchRecipeByName(recipeCommitState.recipeName);  
+  }
+  db = tool.ConvertRecipeBasicStructure(db);
+
+  for (var i = 0; i < db.length; i++) {
+    var count = 0;
+    var MaterialShow = " ";
+    for (var j = 0; j < recipeCommitState.ingredients.length; j++) {
+      if (db[i].materialStr.indexOf(recipeCommitState.ingredients[j]) != -1) {
+        if (count == 0) {
+          MaterialShow += recipeCommitState.ingredients[j];
+        }
+        else if (count == 1) {
+          MaterialShow += ", " + recipeCommitState.ingredients[j];
+        }
+        count++;
+      }
+    }
+    if (count > 2) {
+      MaterialShow += " 외 " + (count - 2) + "개";
+    }
+    MaterialShow += " 포함";
+    db[i].materialShow = MaterialShow;
+  }
+  recipeCommitState.recipeBasicStructures = db;
   return recipeCommitState;
 }
 

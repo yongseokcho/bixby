@@ -9,7 +9,7 @@ module.exports.function = function selectRecipeSearch (recipeBasicStructure, rec
     query: {
       user_id : $vivContext.userId,
       recipe_id : recipeBasicStructure.recipeId,
-      cnt : 4      
+      cnt : 4
     }
   }
   console.log(options);
@@ -24,6 +24,8 @@ module.exports.function = function selectRecipeSearch (recipeBasicStructure, rec
   recipeBasicStructure.hit = hitstatus.cnt;
   
   return {
+    searchType : recipeCommitState.searchType,
+    recipeName : recipeCommitState.recipeName,
     ingredients: recipeCommitState.ingredients,
     recipeBasicStructures : [recipeBasicStructure],
     maxPageNumber : 1,
