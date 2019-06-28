@@ -18,7 +18,7 @@ module.exports.ConvertRecipeBasicStructure = function(db){
     var materials = [];
 
     for (var j = 0; j < data.length; j++) {
-      materials.push(data[j].irdnt_nm);
+      materials.push(data[j].irdnt_nm + " " + data[j].irdnt_cpcty);
       if(j == 0){
         materialStr += data[j].irdnt_nm;
       }else{
