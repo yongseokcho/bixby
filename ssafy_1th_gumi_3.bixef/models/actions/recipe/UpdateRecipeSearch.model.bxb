@@ -7,7 +7,7 @@ action (UpdateRecipeSearch) {
       min (Required) max (One)
     }
     input-group(updates){
-      requires(OneOrMoreOf)
+      requires(ZeroOrMoreOf)
       collect{
         input(addIngredient){
           type(AddIngredient)

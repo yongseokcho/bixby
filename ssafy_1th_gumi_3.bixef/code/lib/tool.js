@@ -158,3 +158,29 @@ module.exports.wrapIngredients = function(ingredient1, ingredient2, ingredient3,
   }
   return result;
 }
+
+module.exports.getRecipeByCalories = function (boundOption) {  
+  let options = {
+    format : "json"
+  }
+  let uri = "foodBasic/";
+
+  if(boundOption.upperBoundFlag && boundOption.lowerBoundFlag){
+    uri = uri + "lessCalorie"; 
+    options.query = {
+      min : boundOption.lowerBound,
+      max : boundOption.upperBound
+    };
+  }else if(boundOption.upperBoundFlag){
+    uri = uri + "lessMoreCalorie"; 
+    options.query = {
+      max : boundOption.upperBound
+    };
+  }else if(boundOption.lowerBoundFlag){
+    uri = uri + "moreCalorie"; 
+    options.query = {
+      min : boundOption.lowerBound
+    };
+  }
+  return http.getUrl(config.get('remote.url') + uri, options);
+}

@@ -11,13 +11,13 @@ module.exports.function = function wrapBoundaryOption (lowerBound, upperBound, l
   }
   if(upperBound != undefined && upperBound != 0){
     result.upperBoundFlag = true;
-    result.lowerBound = upperBound;
+    result.upperBound = upperBound;
   }
   if(upperBoundKeyword == undefined && lowerBoundKeyword == undefined){
     result.lowerBoundFlag = true;
     result.upperBoundFlag = true;
     result.lowerBound = lowerBound;
-    result.lowerBound = upperBound;
+    result.upperBound = upperBound;
   }
   return result;
 }

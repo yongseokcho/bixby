@@ -19,27 +19,27 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
                                     removeIngredient5);
     if(criteria.length > 0){
       Remove(recipeCommitState, criteria);
-    }
-
-    if(layoutType != undefined && layoutType != ""){
-      if(layoutType == '다음'){
-        if(recipeCommitState.maxPageNumber > recipeCommitState.pageNumber){ 
-          recipeCommitState.pageNumber++;
-        }
-      }else if(layoutType == '이전'){
-        if(recipeCommitState.pageNumber > 0){
-          recipeCommitState.pageNumber--;  
-        }
-      }else{
-        recipeCommitState.layoutType = layoutType;  
-      }
     }      
   }
-
+  if(layoutType != undefined && layoutType != ""){
+    if(layoutType == '다음'){
+      if(recipeCommitState.maxPageNumber > recipeCommitState.pageNumber){ 
+        recipeCommitState.pageNumber++;
+      }
+    }else if(layoutType == '이전'){
+      if(recipeCommitState.pageNumber > 0){
+        recipeCommitState.pageNumber--;  
+      }
+    }else{
+      recipeCommitState.layoutType = layoutType;  
+    }
+  }
 
   let db;
   if(recipeCommitState.searchType == 'INGREDIENT'){
     db = tool.GetRecipesByMaterials(recipeCommitState.ingredients);  
+  }else if(recipeCommitState.searchType == 'CALORY'){
+    db = tool.getRecipeByCalories(recipeCommitState.boundOption);
   }else{
     db = tool.searchRecipeByName(recipeCommitState.recipeName);  
   }

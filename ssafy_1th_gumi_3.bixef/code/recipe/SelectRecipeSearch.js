@@ -27,6 +27,7 @@ module.exports.function = function selectRecipeSearch (recipeBasicStructure, rec
     searchType : recipeCommitState.searchType,
     recipeName : recipeCommitState.recipeName,
     ingredients: recipeCommitState.ingredients,
+    boundOption : recipeCommitState.boundOption,
     recipeBasicStructures : [recipeBasicStructure],
     maxPageNumber : 1,
     pageNumber : 1,

@@ -49,7 +49,7 @@ confirmation-view{
   conversation-drivers{
     conversation-driver{
       if(action.processCommitState.layoutType == 'List'){
-        template ("요리과정 상세보기")  
+        template ("상세보기")  
       }else{
         if(action.processCommitState.currentStep < action.processCommitState.totalStep - 1){
           template ("다음")  

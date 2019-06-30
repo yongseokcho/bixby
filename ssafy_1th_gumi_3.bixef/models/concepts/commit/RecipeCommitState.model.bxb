@@ -15,6 +15,10 @@ structure (RecipeCommitState) {
     type(RecipeName)
     min (Optional) max (One)
   }
+  property (boundOption) {
+    type(BoundOption)
+    min (Optional) max (One)
+  }
   property (layoutType){
     type(LayoutType)
     min (Required) max (One)

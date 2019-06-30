@@ -9,6 +9,9 @@
     if(recipeName != undefined && recipeName != ""){
       db = tool.searchRecipeByName(recipeName);
       searchType = "RECIPENAME";
+    }else if(boundOption != undefined && boundOption != ""){
+      db = tool.getRecipeByCalories(boundOption);
+      searchType = "CALORY";                   
     }else{
       recipeName = " ";
       db = tool.GetRecipesByMaterials(ingredients);  
@@ -43,6 +46,7 @@
       searchType : searchType,
       recipeName : recipeName,
       ingredients : ingredients,
+      boundOption : boundOption,
       recipeBasicStructures : db,
       maxPageNumber : 1,
       pageNumber : 1,
