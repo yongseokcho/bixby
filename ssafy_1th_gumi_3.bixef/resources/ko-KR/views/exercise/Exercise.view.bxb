@@ -10,12 +10,11 @@ result-view {
       }
     }
   }
-  
+
   followup {
     prompt {
       dialog (" ")
       on-confirm {
-        
         if (false) {
           message (I see...)
         } else {
@@ -23,15 +22,26 @@ result-view {
             goal: CommitProcessShow
             route : BeginProcessShow
             value : ProcessParameter{
-                recipeId : $expr(result.recipeId)
-                recipeName : $expr(result.recipeName)
-            }
+              recipeId : $expr(result.recipeId)
+              recipeName : $expr(result.recipeName)
+              }
           }
         }
       }
       on-deny {
-        message ("그렇다면 어쩔 수 없죠")
+        intent{
+          goal : GuideStructure
+        }
       }
+    }
+  }
+
+  conversation-drivers{
+    conversation-driver{
+      template ("그래")
+    }
+    conversation-driver{
+      template ("아니")
     }
   }
 }

@@ -53,5 +53,10 @@ endpoints {
       accepted-inputs (recipeBasicStructure) 
       local-endpoint (exercise/GetExerciseStructureByRecipe.js)
     }
+    
+    action-endpoint (ShowGuideLine) {
+      accepted-inputs (guideKeyword) 
+      local-endpoint (guide/ShowGuideLine.js)
+    }
   }
 }

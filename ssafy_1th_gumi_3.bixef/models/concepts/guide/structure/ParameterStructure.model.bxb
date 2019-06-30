@@ -1,0 +1,11 @@
+structure (ParameterStructure) {
+  description (파라메터를 위한 구조체)
+  property (parameterName) {
+    type (ParameterName)
+    min (Required) max (One)
+  }
+  property (parameterDescription){
+    type(ParameterDescription)
+    min (Required) max (One)
+  }
+}

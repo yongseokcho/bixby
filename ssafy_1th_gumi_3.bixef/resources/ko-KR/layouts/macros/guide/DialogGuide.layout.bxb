@@ -1,0 +1,48 @@
+layout-macro-def(DialogGuide) {
+  params {
+    param (guideStructure) {
+      type (GuideStructure)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {  // this macro returns a "section"
+      content {
+        title-area{
+          halign (Center)
+          slot1{
+            single-line{
+              text{
+                value("#{value(guideStructure.dialogDescription)}")
+                style(Title_S)
+              }
+            }  
+          }
+        }
+        for-each (guideStructure.parameterStructures){
+          as (parameterStructure){
+            title-area{
+              halign (Center)
+              slot1{
+                single-line{
+                  text{
+                    value("#{value(parameterStructure.parameterName)} #{value(parameterStructure.parameterDescription)}")
+                    style(Detail_M)
+                  }
+                }
+              }
+            }
+          }
+        }
+        single-line{
+          text{
+            value("#{value(guideStructure.dialogExample)}")
+            style(Detail_L)
+          }
+        }
+      }
+    }
+  }
+}

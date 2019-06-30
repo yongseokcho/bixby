@@ -1,0 +1,4 @@
+enum (GuideKeyword) {
+  description (가이드를 위한 키워드)
+  symbol (가이드)
+}

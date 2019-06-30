@@ -28,26 +28,26 @@ confirmation-view{
             for-each(action.recipeCommitState.recipeBasicStructures){
               as(item){
                 // if(action.recipeCommitState.layoutType == 'LARGE'){
-                  layout-macro (RecipeSummaryLarge){
-                    param(recipeBasicStructure){
-                      expression (item)
-                    }
+                layout-macro (RecipeSummaryLarge){
+                  param(recipeBasicStructure){
+                    expression (item)
                   }
-                  layout-macro (RecipeDetailName){
-                    param(name){
-                      expression (item.recipeName)
-                    }
+                }
+                layout-macro (RecipeDetailName){
+                  param(name){
+                    expression (item.recipeName)
                   }
-                  layout-macro (RecipeDetailSummary){
-                    param(summary){
-                      expression (item.summary)
-                    }
+                }
+                layout-macro (RecipeDetailSummary){
+                  param(summary){
+                    expression (item.summary)
                   }
-                  layout-macro (RecipeDetailLevel){
-                    param(recipeBasicStructure){
-                      expression (item)
-                    }
+                }
+                layout-macro (RecipeDetailLevel){
+                  param(recipeBasicStructure){
+                    expression (item)
                   }
+                }
                 // }
               }
             }
@@ -71,6 +71,14 @@ confirmation-view{
   }
 
   conversation-drivers{
+    if(action.recipeCommitState.searchType == 'INGREDIENT'){
+      conversation-driver{
+        template ("소고기랑 미역 추가해줘")   
+      }
+      conversation-driver{
+        template ("돼지고기랑 양파 빼줘")   
+      }      
+    }
     if(size(action.recipeCommitState.recipeBasicStructures) == 1){
       conversation-driver{
         template("뒤로")
