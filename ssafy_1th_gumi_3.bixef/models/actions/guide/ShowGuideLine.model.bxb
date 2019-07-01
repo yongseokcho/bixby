@@ -6,6 +6,10 @@ action (ShowGuideLine) {
       type (GuideKeyword)
       min (Optional) max (Many)
     }
+    input(searchKeyword){
+      type(SearchKeyword)
+      min (Optional) max (One)
+    }
   }
   output (GuideStructure)
 }

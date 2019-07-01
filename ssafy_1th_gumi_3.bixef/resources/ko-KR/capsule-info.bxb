@@ -1,9 +1,9 @@
 capsule-info {
-  display-name (Bixef)
+  display-name (요리보고)
   developer-name (SSAFY Bixef)
   dispatch-name (요리보고)
   dispatch-aliases{
-    alias (요리법)
+    alias (요리보고, 저리보고, 호이)
   }
   search-keywords{
     keyword (요리)
@@ -11,5 +11,5 @@ capsule-info {
     keyword (레시피)
   }
   icon-asset("img/logo.png")
-  description ("요리를 효과적으로 검색하고 해당하는 레시피를 제공합니다.")
+  description ("요리를 효과적으로 검색하고 해당하는 레시피에 대한 정보를 제공합니다.")
 }

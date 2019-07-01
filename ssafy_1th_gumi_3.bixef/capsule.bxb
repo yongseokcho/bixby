@@ -1,6 +1,6 @@
 capsule {
   id (ssafy_1th_gumi_3.bixef)
-  version (2.0.0)
+  version (2.1.1)
   format (3)
   targets {
     target (bixby-mobile-ko-KR)
