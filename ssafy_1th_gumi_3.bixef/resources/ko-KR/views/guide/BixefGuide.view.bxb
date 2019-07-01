@@ -3,24 +3,10 @@ result-view{
     min (Required) max (Many)
   }
 
-  message("요리보고 사용법을 가르쳐드릴께요")
+ message("요리보고의 다양한 활용법을 알려드릴께요")
 
   render{
-    layout{
-      section {
-        content {
-          paragraph {
-            value ("안녕하세요. 요리보고 사용법을 알려줄 창윤 킴 입니다. 요리보고의 사용법은 생각보다 쉬워요. 다음과 같이 한번 따라해 볼까요 ~??")
-          }
-          partitioned {
-            content {
-              paragraph ("　")
-              paragraph ("　")
-            }
-          }
-        }
-      }
-      
+    layout{      
       for-each (result){
         as (guide){
           layout-macro (DialogGuide){

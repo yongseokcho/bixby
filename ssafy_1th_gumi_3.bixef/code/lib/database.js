@@ -51,6 +51,16 @@ module.exports.sports = [
 
 module.exports.guides = [
   {
+    dialogDescription : "요리보고 대표발화",
+    parameterStructures : [
+      {
+        parameterName : "입력",
+        parameterDescription : "입력에 대한 설명"        
+      }
+    ],
+    dialogExample : "발화 예시"
+  },
+  {
     dialogDescription : "재료명을 이용한 레시피 검색",
     parameterStructures : [
       {

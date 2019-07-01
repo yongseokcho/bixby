@@ -23,7 +23,6 @@ layout-macro-def(DialogGuide) {
             }
           }
         }
-
         for-each (guideStructure.parameterStructures){
           as (parameterStructure){
             hbox {
@@ -50,15 +49,34 @@ layout-macro-def(DialogGuide) {
             }
           }
         }
-        hbox {
-          content {
-            vbox {
-              content {
-                text{
-                  value("#{value(guideStructure.dialogExample)}")
-                  style(Detail_L)
-                }
+        // hbox {
+        //   content {
+        //     vbox {
+        //       content {
+        //         text{
+        //           value("#{value(guideStructure.dialogExample)}")
+        //           style(Detail_L)
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
+        title-area{
+          halign (Center)
+          slot1{
+            single-line{
+              text{
+                style(Detail_L)
+                value("#{value(guideStructure.dialogExample)}")
               }
+            }
+          }
+        }
+        if(guideStructure.dialogDescription == '요리보고 대표발화'){
+          partitioned {
+            content {
+              paragraph ("　")
+              paragraph ("　")
             }
           }
         }
