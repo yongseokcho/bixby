@@ -68,7 +68,7 @@ module.exports.guides = [
         parameterDescription : "1~5개, 재료들을 구분해서 말해야한다"        
       }
     ],
-    dialogExample : "소고기랑 미역 레시피 보여줘"
+    dialogExample : "쇠고기랑 미역 레시피 보여줘"
   },
   {
     dialogDescription : "요리명을 이용한 레시피 검색",

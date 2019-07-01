@@ -19,7 +19,7 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
                                     removeIngredient5);
     if(criteria.length > 0){
       Remove(recipeCommitState, criteria);
-    }      
+    }
   }
   if(layoutType != undefined && layoutType != ""){
     if(layoutType == '다음'){

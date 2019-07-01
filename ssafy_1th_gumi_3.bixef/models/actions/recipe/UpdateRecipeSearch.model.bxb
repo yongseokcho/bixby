@@ -81,4 +81,26 @@ action (UpdateRecipeSearch) {
     }
   }
   output (RecipeCommitState)
+  // output (RecipeCommitState){
+  //   throws{
+  //     error (NoParameters){
+  //       on-catch{
+  //         halt{
+  //           dialog{
+  //             template-macro (NO_PARAMETER)
+  //           }
+  //         }
+  //       }
+  //     }
+  //     unknown-error{
+  //       on-catch{
+  //         halt{
+  //           dialog{
+  //             template-macro (UNKNOWN_ERROR)
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }

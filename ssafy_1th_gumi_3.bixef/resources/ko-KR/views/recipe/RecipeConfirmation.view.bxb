@@ -73,7 +73,7 @@ confirmation-view{
   conversation-drivers{
     if(action.recipeCommitState.searchType == 'INGREDIENT'){
       conversation-driver{
-        template ("소고기랑 미역 추가해줘")   
+        template ("쇠고기랑 미역 추가해줘")   
       }
       conversation-driver{
         template ("돼지고기랑 양파 빼줘")   

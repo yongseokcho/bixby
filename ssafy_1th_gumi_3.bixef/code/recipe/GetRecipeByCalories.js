@@ -10,13 +10,13 @@ module.exports.function = function getRecipeByCalories (lowerBound, upperBound, 
   let uri = "foodBasic/";
 
   if(boundOption.upperBoundFlag && boundOption.lowerBoundFlag){
-    uri = uri + "lessCalorie"; 
+    uri = uri + "lessMoreCalorie"; 
     options.query = {
       min : lowerBound,
       max : upperBound
     };
   }else if(boundOption.upperBoundFlag){
-    uri = uri + "lessMoreCalorie"; 
+    uri = uri + "lessCalorie"; 
     options.query = {
       max : upperBound
     };

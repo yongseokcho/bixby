@@ -1,6 +1,7 @@
 var http = require('http');
 var config = require('config');
 var console = require('console');
+var fail = require('fail');
 
 // Database의 scheme을 Bixby structure로 변환시켜줌
 module.exports.ConvertRecipeBasicStructure = function(db, ingredients){
@@ -88,6 +89,9 @@ module.exports.GetAllRecipes = function(){
 
 // 레시피를 재료명을 이용해 받아온다
 module.exports.GetRecipesByMaterials = function(ingredients){
+  /*if(ingredients == undefined || ingredients.length > 0){
+    throw fail.checkedError('There is no materials', 'NoParameters', null);
+  }*/
   let materials = ingredients[0];
   for(let i=1; i<ingredients.length; i++){
     materials += "," + ingredients[i];
