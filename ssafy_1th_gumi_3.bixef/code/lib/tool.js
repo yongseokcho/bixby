@@ -3,29 +3,40 @@ var config = require('config');
 var console = require('console');
 
 // Database의 scheme을 Bixby structure로 변환시켜줌
-module.exports.ConvertRecipeBasicStructure = function(db){
+module.exports.ConvertRecipeBasicStructure = function(db, ingredients){
   let result = [];
   for(let i=0; i<db.length; i++){
-    var options = {
-      query : {
-        recipeId : db[i].recipe_id
-      },
-      format : "json"
-    };
-
-    var data = http.getUrl(config.get('remote.url') + 'foodMaterial/searchByRecipeId', options);
     var materialStr = "";
     var materials = [];
-
-    for (var j = 0; j < data.length; j++) {
-      materials.push(data[j].irdnt_nm + " " + data[j].irdnt_cpcty);
+    for (var j = 0; j < db[i].materialName.length; j++) {
+      materials.push(db[i].materialName[j] + " " + db[i].materialAmount[j]);
       if(j == 0){
-        materialStr += data[j].irdnt_nm;
+        materialStr += db[i].materialName[j];
       }else{
-        materialStr += ", "+ data[j].irdnt_nm;
+        materialStr += ", "+ db[i].materialName[j];
       }
     }
-
+    var count = 0;
+    var MaterialShow = " ";
+    if (ingredients != undefined) {
+      for (var j = 0; j < ingredients.length; j++) {
+        if (materialStr.indexOf(ingredients[j]) != -1) {
+          if (count == 0) {
+            MaterialShow += ingredients[j];
+          }
+          else if (count == 1) {
+            MaterialShow += ", " + ingredients[j];
+          }
+          count++;
+        }
+      }
+      if (count > 2) {
+        MaterialShow += " 외 " + (count - 2) + "개";
+      }
+      if (count > 0) {
+        MaterialShow += " 포함";
+      }
+    }
     let obj = {
       recipeId: db[i].recipe_id,
       recipeName: db[i].recipe_nm_ko,
@@ -48,7 +59,7 @@ module.exports.ConvertRecipeBasicStructure = function(db){
       hit: 10,
       rating: db[i].sumScore,
       materialStr : materialStr,
-      materialShow : "기본값"
+      materialShow : MaterialShow
     };
     result.push(obj);
   }

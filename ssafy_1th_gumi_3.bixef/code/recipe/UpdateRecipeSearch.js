@@ -43,28 +43,7 @@ module.exports.function = function UpdateRecipeSearch (recipeCommitState, addIng
   }else{
     db = tool.searchRecipeByName(recipeCommitState.recipeName);  
   }
-  db = tool.ConvertRecipeBasicStructure(db);
-
-  for (var i = 0; i < db.length; i++) {
-    var count = 0;
-    var MaterialShow = " ";
-    for (var j = 0; j < recipeCommitState.ingredients.length; j++) {
-      if (db[i].materialStr.indexOf(recipeCommitState.ingredients[j]) != -1) {
-        if (count == 0) {
-          MaterialShow += recipeCommitState.ingredients[j];
-        }
-        else if (count == 1) {
-          MaterialShow += ", " + recipeCommitState.ingredients[j];
-        }
-        count++;
-      }
-    }
-    if (count > 2) {
-      MaterialShow += " 외 " + (count - 2) + "개";
-    }
-    MaterialShow += " 포함";
-    db[i].materialShow = MaterialShow;
-  }
+  db = tool.ConvertRecipeBasicStructure(db, recipeCommitState.ingredients);
   recipeCommitState.recipeBasicStructures = db;
   return recipeCommitState;
 }

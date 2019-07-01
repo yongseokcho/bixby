@@ -19,28 +19,28 @@
     if(db == undefined || db.length == 0){
       throw fail.checkedError('There is no process', 'NotFoundRecipes', null);
     }
-    db = tool.ConvertRecipeBasicStructure(db);
+    db = tool.ConvertRecipeBasicStructure(db, ingredients);
 
-    for (var i = 0; i < db.length; i++) {
-      var count = 0;
-      var MaterialShow = " ";
-      for (var j = 0; j < ingredients.length; j++) {
-        if (db[i].materialStr.indexOf(ingredients[j]) != -1) {
-          if (count == 0) {
-            MaterialShow += ingredients[j];
-          }
-          else if (count == 1) {
-            MaterialShow += ", " + ingredients[j];
-          }
-          count++;
-        }
-      }
-      if (count > 2) {
-        MaterialShow += " 외 " + (count - 2) + "개";
-      }
-      MaterialShow += " 포함";
-      db[i].materialShow = MaterialShow;
-    }
+    // for (var i = 0; i < db.length; i++) {
+    //   var count = 0;
+    //   var MaterialShow = " ";
+    //   for (var j = 0; j < ingredients.length; j++) {
+    //     if (db[i].materialStr.indexOf(ingredients[j]) != -1) {
+    //       if (count == 0) {
+    //         MaterialShow += ingredients[j];
+    //       }
+    //       else if (count == 1) {
+    //         MaterialShow += ", " + ingredients[j];
+    //       }
+    //       count++;
+    //     }
+    //   }
+    //   if (count > 2) {
+    //     MaterialShow += " 외 " + (count - 2) + "개";
+    //   }
+    //   MaterialShow += " 포함";
+    //   db[i].materialShow = MaterialShow;
+    // }
 
     return {
       searchType : searchType,
