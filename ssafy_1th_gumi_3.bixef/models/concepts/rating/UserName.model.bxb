@@ -1,3 +1,0 @@
-text (UserName) {
-  description ("평가한 유저의 이름")
-}

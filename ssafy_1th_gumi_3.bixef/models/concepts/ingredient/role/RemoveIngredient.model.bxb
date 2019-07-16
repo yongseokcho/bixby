@@ -1,4 +1,3 @@
 name (RemoveIngredient) {
-  description (재료 검색 발화에 재료를 삭제할 때 사용하는 model)
   role-of (Ingredient)
 }

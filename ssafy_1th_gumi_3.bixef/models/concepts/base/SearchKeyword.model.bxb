@@ -1,5 +1,4 @@
 enum (SearchKeyword) {
-  
-  description (검색명의 종류를 정의하는 enum입니다.)
+  description (검색 키워드)
   symbol (검색)
 }

@@ -1,4 +1,0 @@
-enum (UpperBoundRangeOption) {
-  description (상한선 범위에 관한 옵션)
-  role-of (RangeOption)
-}

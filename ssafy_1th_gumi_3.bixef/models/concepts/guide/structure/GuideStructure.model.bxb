@@ -1,0 +1,15 @@
+structure (GuideStructure) {
+  description (발화 가이드를 위한 구조체)
+  property (dialogDescription) {
+    type (DialogDescription)
+    min (Required) max (One)
+  }
+  property (parameterStructures){
+    type(ParameterStructure)
+    min (Optional) max (Many)
+  }
+  property (dialogExample){
+    type(DialogExample)
+    min (Optional) max (One)
+  }
+}

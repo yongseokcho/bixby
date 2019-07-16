@@ -3,30 +3,38 @@ structure (RecipeCommitState) {
   features{
     transaction
   }
+  property (searchType){
+    type(SearchType)
+    min (Optional) max (One)
+  }
   property (ingredients) {
     type (Ingredient)
     min (Optional) max (Many)
+  }
+  property (recipeName) {
+    type(RecipeName)
+    min (Optional) max (One)
+  }
+  property (boundOption) {
+    type(BoundOption)
+    min (Optional) max (One)
   }
   property (layoutType){
     type(LayoutType)
     min (Required) max (One)
   }
-  
   property (maxPageNumber){
     type(MaxPageNumber)
     min (Required) max (One)
   }
-
   property(pageNumber){
     type(PageNumber)
     min (Required) max (One)
   }
-  
   property (recipesPerPage){
     type(RecipesPerPage)
     min (Required) max (One)
   }
-  
   property (recipeBasicStructures){
     type(RecipeBasicStructure)
     min (Required) max (Many)

@@ -32,6 +32,8 @@ layout-macro-def(RecipeSummaryLarge) {
               hit: $expr(recipeBasicStructure.hit)
               rating: $expr(recipeBasicStructure.rating)
               images: $expr(recipeBasicStructure.images)
+              materialStr : $expr(recipeBasicStructure.materialStr)
+              materialShow : $expr(recipeBasicStructure.materialShow)
             }
         }
       }
@@ -40,57 +42,14 @@ layout-macro-def(RecipeSummaryLarge) {
       aspect-ratio(16:9)
       image-url("#{value(recipeBasicStructure.images[0].url)}")
       title-area{
-        halign (Start)
         slot1{
-          single-line{
-            text{
-              value("#{value(recipeBasicStructure.recipeName)}")
-              style(Title_S)
-            }
-          }
+          text ("")
         }
         slot2{
-          single-line{
-            text{              
-              style(Detail_L)
-              value("#{value(recipeBasicStructure.summary)}")
-            }
-          }
+          paragraph ("")
         }
         slot3{
-          single-line{
-            text{
-              value("#{value(recipeBasicStructure.calorie)}")
-              style(Detail_M_Soft)
-            }
-            spacer
-            if (recipeBasicStructure.level == '초보환영') {
-              image{
-                shape(Circle)
-                style(Detail_M_Soft)
-                url(img/level1.png)
-              }
-            }
-            else-if (recipeBasicStructure.level == '보통') {
-              image{
-                shape(Circle)
-                style(Detail_M_Soft)
-                url(img/level2.png)
-              }
-            }
-            else {
-              image{
-                shape(Circle)
-                style(Detail_M_Soft)
-                url(img/level3.png)
-              }
-            }
-            spacer
-            text{
-              style(Detail_M_Soft)
-              value("#{value(recipeBasicStructure.level)}")
-            }
-          }
+          paragraph ("")
         }
       }
     }

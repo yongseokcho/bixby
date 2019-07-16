@@ -7,11 +7,13 @@ confirmation-view{
       template ("전체 요리과정입니다.")
     }else-if(action.processCommitState.totalStep - 1 == action.processCommitState.currentStep){
       template ("이제 마지막 과정입니다.")
+    }else{
+      template(" ")
     }
   }
   mode (Transactional)
   confirm-options{
-    label("유튜브 동영상 보기")
+    label("유튜브 보기")
   }
   render{
     layout{
@@ -47,14 +49,16 @@ confirmation-view{
   conversation-drivers{
     conversation-driver{
       if(action.processCommitState.layoutType == 'List'){
-        template ("요리과정 상세보기")  
+        template ("상세보기")  
       }else{
         if(action.processCommitState.currentStep < action.processCommitState.totalStep - 1){
           template ("다음")  
-        }else{
-          template (CONNECT_YOUTUBE)  
         }
-        template ("이전")
+      }
+    }
+    conversation-driver{
+      if(action.processCommitState.currentStep > 0){
+        template("이전")
       }
     }
   }

@@ -1,3 +1,0 @@
-integer (CommentId) {
-  description (댓글을 위한 기본키)
-}

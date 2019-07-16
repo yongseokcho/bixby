@@ -1,0 +1,4 @@
+enum (UpperBoundKeyword) {
+  description (상한선)
+  symbol (이하)
+}

@@ -1,0 +1,65 @@
+train (t-01x6zzlryqwndh182vnfwqnu7) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (까르보나라스파게티)[v:RecipeName] (하는법)[v:RecipeKeyword:레시피] (있을까)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501781806)
+}
+train (t-04vpymtkv8zpecgfpjl98zacu) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (충무김밥)[v:RecipeName] (조리과정)[v:RecipeKeyword:레시피] (가르쳐줄래)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501977999)
+}
+train (t-05lf11sxkrgpb7d13lsvxxhns) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (얼음물)[v:Ingredient]이랑 (꽃소금)[v:Ingredient]이랑 (우스터소스)[v:Ingredient]랑 (시금치즙)[v:Ingredient]이랑 (광어)[v:Ingredient]랑 (멸치 다시물)[v:Ingredient] (하는법)[v:RecipeKeyword:레시피] (뭘)[v:SearchKeyword:검색]")
+  plan (3ZAxDoJAEEU/ooKohzCx0IbEeAONhbGTAxBcBtgCMMsQ4fZu3KCxWA/g/G7mzSs+ltg0TZL18Y6LOG9LGe/Dm+woC08dKSEbili1gltF2FrIY12Wkq8k5J0iSpQorFIDmYeIEyYreaBcVl/OlYU8V7miVFLFf4isfxZ5of5Rq9RKmeYGagEHI7gYY4IpPPiYIcBc7/G+fOLqOK8LNPGJmUDvPW3xtWuwuMAT)
+  last-modified (1562499245584)
+}
+train (t-0be26or5l05fs870g7h4rl5y4) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (돼지등갈비)[v:Ingredient]랑 (토마토 페이스트)[v:Ingredient] (레시피)[v:RecipeKeyword:레시피] (알려줘)[v:SearchKeyword:검색]")
+  plan (rY5BCsJADEW/tlYFLyG40E1BvIHiQtzZA5Q6TadZtJVpiu3tHRwquBhXJiTww8vnY4lt22bFkO6lTHVXcXqI79xTEZ97MopbSsR0SjpD2HnIU1NVLDdS/KCEMqNKr6mD3EMimZCXPJLm+stz7SEvtTaUM9XyJ2TzM/yVhmdjci/l0o7UAhNMESDEDBHmVuNzCe0OrMJ7VrZdRVaPdAC8AA==)
+  last-modified (1562483742578)
+}
+train (t-0djeuewtbgtifzht3ese635g0) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (흰생선)[v:Ingredient]이랑 (깨 소스)[v:Ingredient]랑 (깨소스)[v:Ingredient]랑 (돈까스 소스)[v:Ingredient]랑 (돈까스소스)[v:Ingredient]랑 (굴소스)[v:Ingredient] (만드는법)[v:RecipeKeyword:레시피] (찾아)[v:SearchKeyword:검색]")
+  plan (3ZA9DoJAEIUfIv6gHsLEQhsS4w00FsZODkBwGWALwCxDhNu7ulFisR7Aed3MN1/xsMC6ruO0i7acR1lTyGgXXGVLaXBsSQlZU8iqEdwowsZCHqqikHwhIW8UUqxEbpUayDyEHDNZyT1lsvxyLi3kqcwUJZJK/kNk9bPIM3X3SiVWyjT3puZwMICLITyMMMYEU/iY6T0+lz6ujvO6QBN9zPh67+n/kbb42vW0uMAD)
+  last-modified (1562498500916)
+}
+train (t-0evn3m6rjr1i14ws6wgk6raa2) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (오이 냉국)[v:RecipeName] (요리법)[v:RecipeKeyword:레시피] (조회해)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501219612)
+}
+train (t-0i9lj1wph6jk4tsumv3amjfdc) {
+  utterance ("[g:CommitRecipeSearch,r:WrapBoundaryOption,r:BeginRecipeSearch] (300)[v:LowerBound] 칼로리 (이상)[v:LowerBoundKeyword:이상] (700)[v:UpperBound] 칼로리 (미만)[v:UpperBoundKeyword:이하] (찾아줘)[v:SearchKeyword:검색]")
+  plan (lY9Ra8IwFIWPc9aq+xkbe1AEkf2BDZ82EFZkjyVtrzUPbcJtiuvLfvtiWxWFBs2FwD35zuEET5gWhdhW4cLswrTMZLicV4plpFI1X/0Sx7KgwHAZm5IJs274Q2WZNN8US00BCY53ruiGazyBEYZc8DulMr9IfnHAqsyTtTZS5XjtxpqgT6r2ihPXv35Y6DpTcNXGOqp+qT1xjR+jHfBG6yv47Z4ef1G74vmWQi7q3AQT9PCAPh4xgIchfIwwtipa/fDi1TOy06t1nO7j8e0+tu6BdfrW4wH/)
+  last-modified (1562502982584)
+}
+train (t-0pu7w8xlvqrlqqnvwox614in0) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (아욱국)[v:RecipeName] (요리)[v:RecipeKeyword:레시피] (알려줄래)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501285604)
+}
+train (t-0sve3zi4ku7cynf80de3pflm5) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (돈부리)[v:RecipeName] (음식)[v:RecipeKeyword:레시피] (알려)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562502298544)
+}
+train (t-0t76mtw24hva46ci12zn5bs9u) {
+  utterance ("  [g:CommitRecipeSearch,r:BeginRecipeSearch] (콩자반)[v:RecipeName] (조리과정)[v:RecipeKeyword:레시피] (가리켜줄래)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501973746)
+}
+train (t-0v6ylxrripwy6aq0yr7hq9ekr) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (가쓰오부시)[v:Ingredient]랑 (청포도)[v:Ingredient]랑 (귤)[v:Ingredient]이랑 (강낭콩)[v:Ingredient]이랑 (소주)[v:Ingredient]랑 (와인)[v:Ingredient] (하는법)[v:RecipeKeyword:레시피] (조회해줘)[v:SearchKeyword:검색]")
+  plan (3ZAxDoJAEEU/IgqohzCx0IbEeAONhbGTAxBchmULwCxLhNu7cVVisR7A+d3Mm1d8LLBumjTvk60qEt6WItlFV9FRHh07kkw0FCvZMtVKwsZCHuqyFOpCTNwoplSywio1kHmIVarISu6Ji+rLubSQp4pLygRV6g+R1c8iz9Tfa5lZKdPcm5rDwQguxvAwwRQ+AoSY6T0+lyGujvO8QBNDzIR672tHoE3ey+ICDw==)
+  last-modified (1562497427464)
+}
+train (t-0xs0kc034yvurcq1jzcf9o4u3) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (무말랭이 무침)[v:RecipeName] (요리법)[v:RecipeKeyword:레시피] (뭘)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501201026)
+}
+train (t-0z0oamimybpb2kgi8zuqztf1z) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (김치)[v:Ingredient]랑 (마요네즈)[v:Ingredient]랑 (호박)[v:Ingredient]이랑 (생수)[v:Ingredient]랑 (건블루베리)[v:Ingredient]랑 (후추)[v:Ingredient]랑 (새우젓)[v:Ingredient]이랑 (갑오징어)[v:Ingredient]랑 (피조개)[v:Ingredient]랑 (돼지고기)[v:Ingredient]랑 (검색)[v:SearchKeyword:검색]")
+  plan (7ZE9DoJAEIWf4h/Ij1cwsdCGxHgDjYWxkwMQXAbYAjDLEuH2LpKYGN3SzplMMXnfvFcMFlhXVZS04VZmYVrnPNz5V95Q4h8bEoxXFEhRM1kLwkZDHso85/JCjN8ooEiwTGvaQ/1BICNJWnJPKS/ePJca8lSkgmJOhfwjP0VWGqT/z5naeylieBhgCAMjjDHBFDOYsDCHDQeuUvHSP9tQGp5jf+muHKV2np2fqzZTZVgqyVO3eAA=)
+  last-modified (1561981440430)
+}

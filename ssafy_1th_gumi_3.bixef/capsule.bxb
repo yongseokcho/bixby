@@ -1,10 +1,12 @@
 capsule {
   id (ssafy_1th_gumi_3.bixef)
-  version (0.1.0)
+  version (2.3.3)
   format (3)
   targets {
-    target (bixby-mobile-en-US) {enabled (false)}
-    target (bixby-mobile-ko-KR) {enabled (true)}
+    target (bixby-mobile-ko-KR)
+  }
+  store-sections{
+    section (FoodAndDrink)
   }
   
   runtime-flags {
@@ -12,7 +14,7 @@ capsule {
     modern-prompt-rejection
     support-halt-effect-in-computed-inputs
   }
-  
+   
   capsule-imports {
     import (viv.core) { 
       as (core) 

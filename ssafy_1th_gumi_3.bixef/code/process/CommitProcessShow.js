@@ -1,10 +1,10 @@
+var tool = require('lib/tool.js');
+var fail = require('fail');
+
 module.exports.function = function commitProcessShow (processCommitState) {
-  let endIdx = processCommitState.totalStep - 1;
-  return {
-    recipeId : processCommitState.recipeId,
-    currentStep : processCommitState.processes[endIdx].currentStep,
-    description : processCommitState.processes[endIdx].description,
-    imgUrl : processCommitState.processes[endIdx].imgUrl,
-    tip : processCommitState.processes[endIdx].tip
+  let result = tool.GetYoutubeUrl(processCommitState.recipeName);
+  if(result.url == undefined){
+    throw fail.checkedError('Not enable to use Youtube API', 'NotAccessibleYoutubeAPI', null);
   }
+  return tool.GetYoutubeUrl(processCommitState.recipeName);
 }

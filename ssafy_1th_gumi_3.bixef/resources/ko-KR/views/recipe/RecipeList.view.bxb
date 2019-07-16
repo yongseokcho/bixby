@@ -2,22 +2,58 @@ result-view{
   match: RecipeBasicStructure(result){
     min (Required) max (Many)
   }
-
+  message("결과는 아래와 같습니다")
   render{
     layout{
-      section{
-        content{
-          for-each(result){
-            as(item){
-              layout-macro (RecipeSummary){
-                param(recipeBasicStructure){
-                  expression (item)
+      if(size(result) > 1){
+        section{
+          content{
+            for-each(result){
+              as(item){
+                layout-macro (RecipeListSummary){
+                  param(recipeBasicStructure){
+                    expression (item)
+                  }
+                }
+                layout-macro (RecipeDetailName){
+                  param(name){
+                    expression (item.recipeName)
+                  }
+                }
+                layout-macro (RecipeDetailSummary){
+                  param(summary){
+                    expression (item.summary)
+                  }
+                }
+                layout-macro (RecipeDetailLevel){
+                  param(recipeBasicStructure){
+                    expression (item)
+                  }
                 }
               }
             }
+          }  
+        }
+      }else{
+        layout-macro (RecipeOneImage){
+          param(recipeBasicStructure){
+            expression (result)
+          }
+        }
+        layout-macro (RecipeOneHeader){
+          param(recipeBasicStructure){
+            expression (result)
           }
         }
       }
+    }
+  }
+
+  conversation-drivers{
+    if(size(result) == 1){
+      conversation-driver{
+        template("칼로리 보여줘")
+      }      
     }
   }
 }

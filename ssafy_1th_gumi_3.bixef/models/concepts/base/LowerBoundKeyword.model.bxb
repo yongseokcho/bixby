@@ -1,0 +1,4 @@
+enum (LowerBoundKeyword) {
+  description (하한선 키워드)
+  symbol (이상)
+}

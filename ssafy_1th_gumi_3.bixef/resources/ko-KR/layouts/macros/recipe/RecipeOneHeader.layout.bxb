@@ -10,80 +10,96 @@ layout-macro-def(RecipeOneHeader) {
   content {
     section {
       content {
-        hbox {
+        paragraph {
+          value ("#{value(recipeBasicStructure.recipeName)}")
+          style (Title_L)
+        }
+        partitioned {
           content {
-            // vbox {
-            //   content {
-            //     single-line {
-            //       text {
-            //         value ("#{value(recipe.name)}")
-            //       }
-            //     }
-            //   }
-            // }
-            vbox {
+            hbox {
               content {
-                single-line {
-                  text {
-                    value ("조회수 #{value(recipeBasicStructure.hit)}")
-                    style (Title_XS)
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("칼로리 #{value(recipeBasicStructure.calorie)}cal")
+                        style (Detail_M)
+                      }
+                    }
+                  }
+                }
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("조회수 #{value(recipeBasicStructure.hit)}")
+                        style (Detail_M_Soft)
+                      }
+                    }
                   }
                 }
               }
             }
-            vbox {
+            hbox {
               content {
-                single-line {
-                  text {
-                    value ("평점 #{value(recipeBasicStructure.rating)}")
-                    style (Title_XS)
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("재료 ")
+                        style (Title_M)
+                      }
+                    }
                   }
                 }
               }
             }
           }
         }
-        hbox {
+        for-each (recipeBasicStructure.materials) {
+          as (item) {
+            single-line {
+              text {
+                value ("#{value(item)}")
+                style (Detail_M)
+              }
+            }
+          }
+        }
+        partitioned {
           content {
-            vbox {
+            hbox {
               content {
-                single-line {
-                  text {
-                    value ("#{value(recipeBasicStructure.recipeName)}")
-                    style (Title_L)
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("　")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            hbox {
+              content {
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("설명 ")
+                        style (Title_M)
+                      }
+                    }
                   }
                 }
               }
             }
           }
         }
-        hbox {
-          content {
-            vbox {
-              content {
-                single-line {
-                  text {
-                    value ("재료 : 돼지고기, 김치, 고춧가루 등등")
-                    style (Detail_M)
-                  }
-                }
-              }
-            }
-          }
-        }
-        hbox {
-          content {
-            vbox {
-              content {
-                single-line {
-                  text {
-                    value ("칼로리 : #{value(recipeBasicStructure.calorie)}cal")
-                    style (Detail_M_Soft)
-                  }
-                }
-              }
-            }
-          }
+        paragraph {
+          value ("#{value(recipeBasicStructure.summary)}")
+          style (Detail_M)
         }
       }
     }

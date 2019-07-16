@@ -31,11 +31,13 @@ layout-macro-def(RecipeSummary) {
               hit: $expr(recipeBasicStructure.hit)
               rating: $expr(recipeBasicStructure.rating)
               images: $expr(recipeBasicStructure.images)
+              materialStr : $expr(recipeBasicStructure.materialStr)
+              materialShow : $expr(recipeBasicStructure.materialShow)
             }
         }
       }
       text-position (Below)
-      image-object-fit (Cover)
+      image-object-fit (Contain)
       aspect-ratio(16:9)
       image-url("#{value(recipeBasicStructure.images[0].url)}")
       title-area{
@@ -58,11 +60,6 @@ layout-macro-def(RecipeSummary) {
         }
         slot3{
           single-line{
-            text{
-              value("#{value(recipeBasicStructure.calorie)}")
-              style(Detail_M_Soft)
-            }
-            spacer
             if (recipeBasicStructure.level == '초보환영') {
               image{
                 shape(Circle)

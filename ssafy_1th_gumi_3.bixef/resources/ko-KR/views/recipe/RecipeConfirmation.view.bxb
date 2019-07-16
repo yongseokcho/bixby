@@ -27,24 +27,33 @@ confirmation-view{
           content{
             for-each(action.recipeCommitState.recipeBasicStructures){
               as(item){
-                if(action.recipeCommitState.layoutType == 'LARGE'){
-                  layout-macro (RecipeSummaryLarge){
-                    param(recipeBasicStructure){
-                      expression (item)
-                    }
-                  }
-                }else{
-                  layout-macro (RecipeSummaryLarge){
-                    param(recipeBasicStructure){
-                      expression (item)
-                    }
+                // if(action.recipeCommitState.layoutType == 'LARGE'){
+                layout-macro (RecipeSummaryLarge){
+                  param(recipeBasicStructure){
+                    expression (item)
                   }
                 }
+                layout-macro (RecipeDetailName){
+                  param(name){
+                    expression (item.recipeName)
+                  }
+                }
+                layout-macro (RecipeDetailSummary){
+                  param(summary){
+                    expression (item.summary)
+                  }
+                }
+                layout-macro (RecipeDetailLevel){
+                  param(recipeBasicStructure){
+                    expression (item)
+                  }
+                }
+                // }
               }
             }
           }
         }
-      }else{        
+      }else-if(size(action.recipeCommitState.recipeBasicStructures) == 1){        
         layout-macro (RecipeOneImage){
           param(recipeBasicStructure){
             expression (action.recipeCommitState.recipeBasicStructures[0])
@@ -56,12 +65,35 @@ confirmation-view{
             expression (action.recipeCommitState.recipeBasicStructures[0])
           }
         }
-      }
-
-    }  
+      }else{
+        section{
+          content{
+            title-area{
+              halign (Start)
+              slot1{
+                single-line{
+                  text{
+                    value("결과가 없습니다")
+                    style(Title_M)
+                  }
+                }
+              }
+            }
+          } 
+        }
+      }  
+    }
   }
 
   conversation-drivers{
+    if(action.recipeCommitState.searchType == 'INGREDIENT'){
+      conversation-driver{
+        template ("쇠고기랑 미역 추가해줘")   
+      }
+      conversation-driver{
+        template ("돼지고기랑 양파 빼줘")   
+      }      
+    }
     if(size(action.recipeCommitState.recipeBasicStructures) == 1){
       conversation-driver{
         template("뒤로")

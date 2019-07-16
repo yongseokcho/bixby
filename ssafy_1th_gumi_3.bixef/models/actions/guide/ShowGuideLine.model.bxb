@@ -1,0 +1,15 @@
+action (ShowGuideLine) {
+  type(Search)
+  description (서비스 사용법을 보여준다)
+  collect {
+    input(guideKeyword){
+      type (GuideKeyword)
+      min (Optional) max (Many)
+    }
+    input(searchKeyword){
+      type(SearchKeyword)
+      min (Optional) max (One)
+    }
+  }
+  output (GuideStructure)
+}

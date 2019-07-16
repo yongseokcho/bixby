@@ -1,5 +1,5 @@
 result-view{
-  match :  UrlBody(this)
+  match :  YoutubeResult(this)
   
   message("유튜브로 이동합니다.")
   render{
@@ -11,7 +11,7 @@ result-view{
             slot2{
               single-line{
                 text{
-                  value("#{value(this.recipeName)}")
+                  value("#{value(this.keyword)}")
                   style (Title_M)
                 }
               }
@@ -19,7 +19,7 @@ result-view{
             slot3{
               single-line{
                 text{
-                  value("상세정보 페이지로 이동합니다")
+                  value("유튜브 동영상 링크로 넘어갑니다.")
                   style (Detail_L_Soft)
                 }
               }              

@@ -136,7 +136,8 @@ layout-macro-def(ProcessDetail) {
         // 요리과정 이미지 사진 1장
         image {
           url ("#{value(process.imgUrl)}")
-          aspect-ratio (16:9)
+          aspect-ratio (4:3)
+          object-fit (Cover)
         }
 
         partitioned {

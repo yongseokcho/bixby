@@ -3,38 +3,30 @@ var http = require('http');
 var config = require('config');
 var tool = require('lib/tool.js');
 
-module.exports.function = function getRecipeByCalories (lowerBound, lowerBoundRangeOption, upperBound, upperBoundRangeOption) {
-  if(lowerBound != undefined && lowerBoundRangeOption == undefined){
-    // exception throw
-    throw fail.checkedError('lower range option is required', 'InvalidParameterException', null);
-  }
-  if(upperBound != undefined && upperBoundRangeOption == undefined){
-    // exception throw
-    throw fail.checkedError('upper range option is required', 'InvalidParameterException', null);
-  }
-  
+module.exports.function = function getRecipeByCalories (lowerBound, upperBound, boundOption, recipeKeyword, searchKeyword) {  
   let options = {
     format : "json"
   }
-  
   let uri = "foodBasic/";
-  
-  if(lowerBoundRangeOption == undefined){
+
+  if(boundOption.upperBoundFlag && boundOption.lowerBoundFlag){
     uri = uri + "lessMoreCalorie"; 
+    options.query = {
+      min : lowerBound,
+      max : upperBound
+    };
+  }else if(boundOption.upperBoundFlag){
+    uri = uri + "lessCalorie"; 
     options.query = {
       max : upperBound
     };
-  }else if(upperBoundRangeOption == undefined){
+  }else if(boundOption.lowerBoundFlag){
     uri = uri + "moreCalorie"; 
     options.query = {
       min : lowerBound
     };
   }else{
-    uri = uri + "lessCalorie"; 
-    options.query = {
-      min : lowerBound,
-      max : upperBound
-    };
+    throw fail.checkedError('This error is not found exception', 'InvalidParameterException', null);
   }
   let db = http.getUrl(config.get('remote.url') + uri, options);
   db = tool.ConvertRecipeBasicStructure(db);

@@ -1,0 +1,3 @@
+text (MaterialStr) {
+  description (재료명 텍스트)
+}

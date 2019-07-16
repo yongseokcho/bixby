@@ -1,31 +1,33 @@
-var http = require('http')
-var config = require('config')
+var http = require('http');
+var config = require('config');
+var console = require('console');
+var fail = require('fail');
 
-module.exports.function = function selectRecipeSearch (recipeBasicStructure, recipeCommitState) {
+module.exports.function = function selectRecipeSearch (recipeBasicStructure, recipeCommitState, $vivContext) {
   
-  // var hit = http.getUrl(config.get('remote.url') + 'hits/searchByRecipeId');
-  // var score = http.getUrl(config.get('remote.url') + 'score/searchByRecipeId');
-  // var comments = http.getUrl(config.get('remote.url') + 'comment/searchByRecipeId');
-  let options = {
-    query : {
+  options = {
+    query: {
+      user_id : $vivContext.userId,
+      recipe_id : recipeBasicStructure.recipeId,
+      cnt : 4
+    }
+  }
+  console.log(options);
+  http.getUrl(config.get('remote.url') + 'hits/insert', options);
+  options = {
+    query: {
       recipeId : recipeBasicStructure.recipeId
     },
     format : "json"
-  };
-  
-  var db = http.getUrl(config.get('remote.url') + 'foodMaterial/searchByRecipeId', options);
-  var materials = [];
-  
-  for (var i = 0; i < db.length; i++) {
-    materials.push(db[i].irdnt_nm);
   }
-  
-  recipeBasicStructure.materials = materials;
-  
-  
+  let hitstatus = http.getUrl(config.get('remote.url') + 'hits/searchByRecipeId', options);
+  recipeBasicStructure.hit = hitstatus.cnt;
   
   return {
+    searchType : recipeCommitState.searchType,
+    recipeName : recipeCommitState.recipeName,
     ingredients: recipeCommitState.ingredients,
+    boundOption : recipeCommitState.boundOption,
     recipeBasicStructures : [recipeBasicStructure],
     maxPageNumber : 1,
     pageNumber : 1,

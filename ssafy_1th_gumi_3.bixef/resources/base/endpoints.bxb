@@ -1,21 +1,21 @@
 endpoints {
   action-endpoints {
     action-endpoint (BeginRecipeSearch) {
-      accepted-inputs (ingredients)
+      accepted-inputs (ingredients, recipeName, recipeKeyword, searchKeyword, boundOption)
       local-endpoint (recipe/BeginRecipeSearch.js)
     }
     action-endpoint (UpdateRecipeSearch) {
-      accepted-inputs (recipeCommitState, addIngredient, removeIngredient, layoutType)
+      accepted-inputs (recipeCommitState, addIngredient, addIngredient2, addIngredient3, addIngredient4, addIngredient5, removeIngredient, removeIngredient2, removeIngredient3, removeIngredient4, removeIngredient5, addKeyword, removeKeyword, layoutType)
       local-endpoint (recipe/UpdateRecipeSearch.js)
     }
 
     action-endpoint (CommitRecipeSearch) {
-      accepted-inputs (recipeCommitState, searchKeyword)
+      accepted-inputs (recipeCommitState)
       local-endpoint (recipe/CommitRecipeSearch.js)
     }
 
     action-endpoint (SelectRecipeSearch) {
-      accepted-inputs (recipeBasicStructure, recipeCommitState)
+      accepted-inputs (recipeBasicStructure, recipeCommitState, $vivContext)
       local-endpoint (recipe/SelectRecipeSearch.js)
     }
 
@@ -35,19 +35,28 @@ endpoints {
     }
 
     action-endpoint (GetRecipeByName) {
-      accepted-inputs (recipeName)
+      accepted-inputs (recipeName, recipeKeyword, searchKeyword)
       local-endpoint (recipe/GetRecipeByName.js)
     }
     
     action-endpoint (GetRecipeByCalories) {
-      accepted-inputs (upperBound, upperBoundRangeOption, lowerBound, lowerBoundRangeOption)
+      accepted-inputs (upperBound, lowerBound, boundOption, recipeKeyword, searchKeyword)
       local-endpoint (recipe/GetRecipeByCalories.js)
+    }
+    
+    action-endpoint (WrapBoundaryOption) {
+      accepted-inputs (upperBound, lowerBound, upperBoundKeyword, lowerBoundKeyword)
+      local-endpoint (base/WrapBoundaryOption.js)
     }
     
     action-endpoint (GetExerciseStructureByRecipe) {
       accepted-inputs (recipeBasicStructure) 
       local-endpoint (exercise/GetExerciseStructureByRecipe.js)
     }
-
+    
+    action-endpoint (ShowGuideLine) {
+      accepted-inputs (guideKeyword, searchKeyword) 
+      local-endpoint (guide/ShowGuideLine.js)
+    }
   }
 }

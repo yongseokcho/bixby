@@ -1,0 +1,40 @@
+train (t-g1ni4t8xrqqcei5141lammbcp) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (쇠고기)[v:Ingredient]랑 (미역)[v:Ingredient] (레시피)[v:RecipeKeyword:레시피] (찾아줄래)[v:SearchKeyword:검색]")
+  plan (rY5BCsJADEW/tlYFLyG40E1BvIHiQtzZA5Q6TadZtJVpiu3tHRwquBhXJiTww8vnY4lt22bFkO6lTHVXcXqI79xTEZ97MopbSsR0SjpD2HnIU1NVLDdS/KCEMqNKr6mD3EMimZCXPJLm+stz7SEvtTaUM9XyJ2TzM/yVhmdjci/l0o7UAhNMESDEDBHmVuNzCe0OrMJ7VrZdRVaPdAC8AA==)
+  last-modified (1561900322799)
+}
+train (t-gcg58tbftbkaw84m72cn2qv0u) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (얼갈이 열무 물김치)[v:RecipeName] (요리법)[v:RecipeKeyword:레시피] (가르쳐줘)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501218054)
+}
+train (t-gcu5l5im74epg0jpaz8f3mo1l) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (김치주먹밥)[v:RecipeName] (요리)[v:RecipeKeyword:레시피] (조회해)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501459070)
+}
+train (t-gsan1vztmsnowynmxlxngutu5) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (양파)[v:Ingredient]랑 (들기름)[v:Ingredient]이랑 (시래기)[v:Ingredient]랑 (무채)[v:Ingredient]랑 (꽃빵)[v:Ingredient]이랑 (고사리)[v:Ingredient] (레시피)[v:RecipeKeyword:레시피] (검색해)[v:SearchKeyword:검색]")
+  plan (3ZAxDoJAEEU/oqKohzCx0IbEeAONhbGTAxBcBtgCMMsQ4fYubtRYrAdwfjOZef8XHwus6zpOu2jLeZQ1hYx2wVW2lAbHlpSQNYWsGsGNImws5KEqCskXEvJGIcVK5NZQAxlDyDGTldxTJsuvzKWFPJWZokRSyX+IrH4WeabuXqnESpnmXtQcDgZwMcQIY3iYYAofM33H+/ORq+U8P9DER2Z8fe/9nt76tD7FBR4=)
+  last-modified (1562499846926)
+}
+train (t-gvjaiiq9t6ufor4m02o1xkyrt) {
+  utterance ("  [g:CommitRecipeSearch,r:BeginRecipeSearch] (대구탕)[v:RecipeName] (조리과정)[v:RecipeKeyword:레시피] (검색해)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501709626)
+}
+train (t-gvwip92axchapnet5y8yrn1dm) {
+  utterance ("  [g:CommitRecipeSearch,r:BeginRecipeSearch] (오징어채볶음)[v:RecipeName] (조리과정)[v:RecipeKeyword:레시피] (검색해줘)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501708017)
+}
+train (t-gwum4gumrb2yi14uew5p9hrib) {
+  utterance ("[g:CommitRecipeSearch,r:WrapBoundaryOption,r:BeginRecipeSearch] (300)[v:LowerBound] 칼로리 (이상)[v:LowerBoundKeyword:이상] (요리법)[v:RecipeKeyword:레시피] (찾아줘)[v:SearchKeyword:검색]")
+  plan (lZDNCsIwEIRH67+voXhQBBFfQPGkINiDxxLrWnNoU7Yp2ovPbkgr6MGohBB29tuZJOhjnGXiXAQzfQmiPJbBfFoolkcVqen6RhzKjHzNeahzJkw+wysVx1LvKZQp+SQ4vLisS66c8bXQ5IKXFMnkzXnogFWenHaplirB6NsFNlRcFZ9cYJn4BB0fcGCR2nDBRZXveNNWXYkt/rRe/GN9P1YlBr9koIca6vDQQBMttNFB12ioVM922mZ1jQK78XLCdGqG79hpz1R4AA==)
+  last-modified (1562503361390)
+}
+train (t-gxgta9pcde0nm7pp5vt01pof8) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (쇠고기 등심)[v:Ingredient]이랑 (새송이버섯)[v:Ingredient]을 이용한 (레시피)[v:RecipeKeyword:레시피] (검색해줘)[v:SearchKeyword:검색]")
+  plan (rY5BCsJADEW/tlYFLyG40E1BvIHiQtzZA5Q6TadZtJVpiu3tHRwquBhXJiTww8vnY4lt22bFkO6lTHVXcXqI79xTEZ97MopbSsR0SjpD2HnIU1NVLDdS/KCEMqNKr6mD3EMimZCXPJLm+stz7SEvtTaUM9XyJ2TzM/yVhmdjci/l0o7UAhNMESDEDBHmVuNzCe0OrMJ7VrZdRVaPdAC8AA==)
+  last-modified (1561982918919)
+}

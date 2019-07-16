@@ -1,0 +1,28 @@
+action (LaunchWeb) {
+  type(Search)
+  description (유튜브 웹을 실행한다)
+  collect {
+    input (keyword) {
+      type (Keyword)
+      min (Required) max (One)
+    }
+  }
+  output (YoutubeResult){
+    throws{
+      error (NotAccessibleYoutubeAPI){
+        on-catch{
+          halt{
+            dialog("유튜브 동영상 링크를 가져오는데 실패했습니다. 다시 시도해주세요,")
+          }
+        }
+      }
+      unknown-error{
+        on-catch{
+          halt{
+            dialog("예기치 못한 오류가 발생했습니다.")
+          }
+        }
+      }
+    }
+  }
+}

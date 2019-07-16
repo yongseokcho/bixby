@@ -44,49 +44,59 @@ structure (RecipeBasicStructure) {
     type (NationCode)
     min (Optional) max (One)
   }
-  
+
   property (nationName) {
     type (NationName)
     min (Optional) max (One)
   }
-  
+
   property (price) {
     type (Price)
     min (Optional) max (One)
   }
-  
+
   property (quantity) {
     type (Quantity)
     min (Optional) max (One)
   }
-  
+
   property (summary) {
     type (Summary)
     min (Optional) max (One)
   }
-  
+
   property (typeCode) {
     type (TypeCode)
     min (Optional) max (One)
   }
-  
+
   property (typeName) {
     type (TypeName)
     min (Optional) max (One)
   }
-  
+
   property (materials){
     type(Material)
     min (Optional) max (Many)
   }
-  
+
   property (hit){
     type(Hit)
     min (Required) max (One)
   }
-  
+
   property (rating){
     type(RatingScore)
+    min (Required) max (One)
+  }
+
+  property (materialStr){
+    type(MaterialStr)
+    min (Required) max (One)
+  }
+
+  property (materialShow){
+    type(MaterialShow)
     min (Required) max (One)
   }
 }
