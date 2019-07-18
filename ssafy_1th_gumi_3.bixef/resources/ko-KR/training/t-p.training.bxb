@@ -1,0 +1,55 @@
+train (t-p1l9rx0b5j6502pklt7n7bsfi) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (닭가슴살 호박말이)[v:RecipeName] (조리과정)[v:RecipeKeyword:레시피] (궁금)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501972835)
+}
+train (t-p1py2sjmgmzw6c2ttwhhihw4y) {
+  utterance ("[g:CommitProcessShow:continue,r:UpdateProcessShow] (상세보기)[v:LayoutType]")
+  plan (Y2BjUCkuTkyrjDcsyYhPL83NjDfWS8qsSE3Ti8wvLSlNSg1KLS7NKWHQwKHKOT83N7MkoCg/ObW4ODgjv5xBE4dKqBqIhuCSxJJUnIaGFqQApZENVcSh0iexEujMkMqCVFLsZWVgZGBiYGZgAbIYoGxmIM0AxiAA4rEASQYA)
+  last-modified (1561969179023)
+}
+train (t-p1qv6ljp0o8whv26vmhme5nes) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (트레비소)[v:Ingredient]랑 (계핏가루)[v:Ingredient]랑 (당면)[v:Ingredient]이랑 (토마토소스)[v:Ingredient]랑 (소잡뼈)[v:Ingredient]랑 (부침가루)[v:Ingredient] (조리법)[v:RecipeKeyword:레시피] (찾아줄래)[v:SearchKeyword:검색]")
+  plan (3ZAxDoJAEEU/ooKohzCx0IbEeAONhbGTAxBcBtgCMMsQ4faubtRYrAdwfjfz5hUfc6yaJsn6eMNFnLeljLfhRXaUhYeOlJANRaxawa0irC3kvi5LyWcS8koRJUoUVqmBzEPECZOV3FEuqy/nwkIeq1xRKqniP0SWP4s8UX+rVWqlTHMvagYHA7gYYoQxPPiYIMBU7/G+fOLqOM8LNPGJmUDvfe0JtMPTtofFBe4=)
+  last-modified (1562499163593)
+}
+train (t-p2j13yuvg7xvmehf19ar8qsij) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (닭가슴살 호박말이)[v:RecipeName] (조리법)[v:RecipeKeyword:레시피] (있을까)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562502306884)
+}
+train (t-p2vwd5fitp2lg85rhkz79wom8) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (다진 마늘)[v:Ingredient]이랑 (다진마늘)[v:Ingredient]이랑 (전어젓갈)[v:Ingredient]이랑 (엿기름)[v:Ingredient]이랑 (통마늘)[v:Ingredient]이랑 (사이다)[v:Ingredient] (하는법)[v:RecipeKeyword:레시피] (있을까)[v:SearchKeyword:검색]")
+  plan (3ZAxDoJAEEU/oiKohzCx0IbEeAONhbGTAxBcBtgCMMsQ4faubtRYrAdwfjfz5hUfc6yaJsn6eMNFnLeljLfhRXaUhYeOlJANRaxawa0irC3kvi5LyWcS8koRJUoUVqmBzEPECZOV3FEuqy/nwkIeq1xRKqniP0SWP4s8UX+rVWqlTHMvagYHA7gYYoQxPEzgI8BU7/G+fOLqOM8LNPGJmUDvA23wtMvXtofFBe4=)
+  last-modified (1562498352467)
+}
+train (t-paxovpnzz51tjcc13tmj9grfb) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (코다리찜)[v:RecipeName] (레시피)[v:RecipeKeyword:레시피] (뭘)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501051453)
+}
+train (t-pef32lnld1y3lz73vnjeflo72) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (오징어찌개)[v:RecipeName] (음식)[v:RecipeKeyword:레시피] (가르쳐줄래)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562502274037)
+}
+train (t-peotlj2u8sg7bpv2bqxsobz5k) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (순대)[v:Ingredient] (요리법)[v:RecipeKeyword:레시피] (보여줘)[v:SearchKeyword:검색]")
+  plan (fY2xDsIwDERdSuE7kBhgqYT4gyIGxEY+IAqp23pIihJHtH9PIXRgCL7lTnq+gzXsvFfNKA/cyTYYksfyTgM25XlAp8mjYBc0B4ewT5Cn3hjiG2p6oEDldJcsjVB8EKwYk2SFLdmfzk2CvNjWYU1oGbZ/Z684PntXJ6m4M1MryGABOSyhmDx801vZJ81XTD4yOcAL)
+  last-modified (1561980712662)
+}
+train (t-pfwvwld2f4ih6nvlxw00z8kqk) {
+  utterance ("  [g:CommitRecipeSearch,r:BeginRecipeSearch] (고구마줄기볶음)[v:RecipeName] (만드는법)[v:RecipeKeyword:레시피] (있을까)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501713553)
+}
+train (t-pk52lctqmm6kj655fspvjgfdx) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (김치 볶음밥)[v:RecipeName] (요리)[v:RecipeKeyword:레시피] (궁금한걸)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501470741)
+}
+train (t-pkyrjqiqceyarrto680w8yns4) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (어린잎채소)[v:Ingredient]랑 (말린 블루베리)[v:Ingredient]랑 (말린블루베리)[v:Ingredient]랑 (건 블루베리)[v:Ingredient]랑 (건블루베리)[v:Ingredient]랑 (홀 토마토)[v:Ingredient] (요리법)[v:RecipeKeyword:레시피] (조회해줘)[v:SearchKeyword:검색]")
+  plan (3ZAxDoJAEEU/ogiohzCx0IbEeAONhbGTAxBchmULwCxLhNu7ulFisR7A+c1k5s0rBgusmybN+2SrioS3pUh20VV0lEfHjiQTDcVKtky1krCxkIe6LIW6EBM3iimVrLBKDWQOYpUqspJ74qL6ci4t5KnikjJBlfpDZPXzkWfq77XMrJT53Juaw8EILsaYwMMUPgKEmOk5Ppshro7z2kATQ0yFeh5oh6c7X/ueFhd4AA==)
+  last-modified (1562497909558)
+}

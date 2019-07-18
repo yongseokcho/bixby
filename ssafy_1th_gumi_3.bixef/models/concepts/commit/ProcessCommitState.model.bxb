@@ -1,0 +1,30 @@
+structure (ProcessCommitState) {
+  description (요리과정을 위한 상태 구조체)
+  property (recipeId) {
+    type (RecipeId)
+    min (Required) max (One)
+  }
+  property (recipeName){
+    type(RecipeName)
+    min (Required) max (One)
+  }
+  property (totalStep){
+    type (TotalStep)
+    min (Required) max (One)
+  }
+  property (currentStep){
+    type(CurrentStep)
+    min (Required) max (One)
+  }
+  property (layoutType){
+    type(LayoutType)
+    min (Required) max (One)
+  }
+  property (processes){
+    type(Process)
+    min (Required) max (Many)
+  }
+  features{
+    transaction
+  }
+}

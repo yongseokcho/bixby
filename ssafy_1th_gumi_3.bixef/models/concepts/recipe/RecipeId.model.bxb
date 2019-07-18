@@ -1,0 +1,3 @@
+integer (RecipeId) {
+  description (레시피 코드)
+}

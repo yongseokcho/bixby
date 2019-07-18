@@ -1,0 +1,19 @@
+transaction-support {
+  match {
+    RecipeCommitState(this)
+  }
+
+  status-bar {
+    label {
+      // Text used in the status bar
+      template("Buy")
+    }
+    on-user-click{
+      intent{
+        goal{
+          CommitRecipeSearch
+        }
+      }
+    }
+  }
+}

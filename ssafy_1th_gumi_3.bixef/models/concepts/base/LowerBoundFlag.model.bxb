@@ -1,0 +1,3 @@
+boolean (LowerBoundFlag) {
+  description (하한 경계값 플래그)
+}

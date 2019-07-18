@@ -1,0 +1,25 @@
+layout-macro-def(RecipeDetailName) {
+  params {
+    param (name) {
+      type (RecipeName)
+      min (Required)
+    }
+  }
+
+  content {
+    hbox {
+      content {
+        vbox {
+          content {
+            single-line {
+              text{              
+                style(Title_S)
+                value("#{value(name)}")
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

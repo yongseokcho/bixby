@@ -1,8 +1,0 @@
-structure (Recipe) {
-  description ("레시피 구조체")
-  
-  property (recipeName) {
-    type (RecipeName)
-    min (Required) max (One)
-  }
-}

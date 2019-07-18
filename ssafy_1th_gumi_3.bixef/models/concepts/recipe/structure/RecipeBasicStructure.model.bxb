@@ -1,0 +1,102 @@
+structure (RecipeBasicStructure) {
+  description (FOOD_BASIC TABLE을 근본으로 한 음식 구조체)
+  property (recipeId) {
+    type (RecipeId)
+    min (Optional) max (One)
+  }
+
+  property (recipeName) {
+    type (RecipeName)
+    min (Optional) max (One)
+  }
+
+  property (calorie) {
+    type (Calorie)
+    min (Optional) max (One)
+  }
+
+  property (cookingTime) {
+    type (CookingTime)
+    min (Optional) max (One)
+  }
+
+  property (detailedUrl) {
+    type (DetailedUrl)
+    min (Optional) max (One)
+  }
+
+  property (images) {
+    type (viv.core.BaseImage)
+    min (Optional) max (Many)
+  }
+
+  property (ingredientCode) {
+    type (IngredientCode)
+    min (Optional) max (One)
+  }
+
+  property (level) {
+    type (Level)
+    min (Optional) max (One)
+  }
+
+  property (nationCode) {
+    type (NationCode)
+    min (Optional) max (One)
+  }
+
+  property (nationName) {
+    type (NationName)
+    min (Optional) max (One)
+  }
+
+  property (price) {
+    type (Price)
+    min (Optional) max (One)
+  }
+
+  property (quantity) {
+    type (Quantity)
+    min (Optional) max (One)
+  }
+
+  property (summary) {
+    type (Summary)
+    min (Optional) max (One)
+  }
+
+  property (typeCode) {
+    type (TypeCode)
+    min (Optional) max (One)
+  }
+
+  property (typeName) {
+    type (TypeName)
+    min (Optional) max (One)
+  }
+
+  property (materials){
+    type(Material)
+    min (Optional) max (Many)
+  }
+
+  property (hit){
+    type(Hit)
+    min (Required) max (One)
+  }
+
+  property (rating){
+    type(RatingScore)
+    min (Required) max (One)
+  }
+
+  property (materialStr){
+    type(MaterialStr)
+    min (Required) max (One)
+  }
+
+  property (materialShow){
+    type(MaterialShow)
+    min (Required) max (One)
+  }
+}

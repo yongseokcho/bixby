@@ -1,0 +1,15 @@
+action (UpdateProcessShow) {
+  type(UpdateTransaction)
+  description (요리과정을 업데이트함)
+  collect {
+    input (layoutType) {
+      type (LayoutType)
+      min (Optional) max (One)
+    }
+    input(processCommitState){
+      type(ProcessCommitState)
+      min (Required) max (One)
+    }
+  }
+  output (ProcessCommitState)
+}

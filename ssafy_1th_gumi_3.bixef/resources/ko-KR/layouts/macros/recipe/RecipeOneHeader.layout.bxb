@@ -1,0 +1,107 @@
+layout-macro-def(RecipeOneHeader) {
+  params {
+    param (recipeBasicStructure) {
+      type (RecipeBasicStructure)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {
+      content {
+        paragraph {
+          value ("#{value(recipeBasicStructure.recipeName)}")
+          style (Title_L)
+        }
+        partitioned {
+          content {
+            hbox {
+              content {
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("칼로리 #{value(recipeBasicStructure.calorie)}cal")
+                        style (Detail_M)
+                      }
+                    }
+                  }
+                }
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("조회수 #{value(recipeBasicStructure.hit)}")
+                        style (Detail_M_Soft)
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            hbox {
+              content {
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("재료 ")
+                        style (Title_M)
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        for-each (recipeBasicStructure.materials) {
+          as (item) {
+            single-line {
+              text {
+                value ("#{value(item)}")
+                style (Detail_M)
+              }
+            }
+          }
+        }
+        partitioned {
+          content {
+            hbox {
+              content {
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("　")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            hbox {
+              content {
+                vbox {
+                  content {
+                    single-line {
+                      text {
+                        value ("설명 ")
+                        style (Title_M)
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        paragraph {
+          value ("#{value(recipeBasicStructure.summary)}")
+          style (Detail_M)
+        }
+      }
+    }
+  }
+}

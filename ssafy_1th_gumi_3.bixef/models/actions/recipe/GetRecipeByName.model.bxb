@@ -1,0 +1,40 @@
+action (GetRecipeByName) {
+  type (Search)
+  description (레시피명을 이용하여 레시피를 받아옵니다.)
+  collect {
+    input (recipeName) {
+      type (RecipeName)
+      min (Required) max (One)
+    }
+    input (recipeKeyword) {
+      type(RecipeKeyword)
+      min (Optional) max (One)
+    }
+    input (searchKeyword){
+      type(SearchKeyword)
+      min (Required) max (One)
+    }
+  }
+  output (RecipeBasicStructure){
+    throws{
+      error(NotFoundRecipeByName){
+        on-catch{
+          halt{
+            dialog{
+              template-macro(NOT_FOUND_RECIPE_BY_NAME)
+            }            
+          }
+        }
+      }
+      unknown-error{
+        on-catch{
+          halt{
+            dialog{
+              template-macro (UNKNOWN_ERROR)
+            }
+          }
+        }
+      }
+    }
+  }
+}

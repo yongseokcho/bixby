@@ -1,0 +1,21 @@
+result-view{
+  match: GuideStructure(result){
+    min (Required) max (Many)
+  }
+
+ message("요리보고의 다양한 활용법을 알려드릴께요")
+
+  render{
+    layout{      
+      for-each (result){
+        as (guide){
+          layout-macro (DialogGuide){
+            param (guideStructure){
+              expression (guide)
+            }
+          }
+        }
+      }
+    }
+  }
+}

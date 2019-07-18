@@ -1,0 +1,67 @@
+confirmation-view{
+  match: Confirmation{
+    confirming : CommitProcessShow(action)
+  }
+  message{
+    if(action.processCommitState.layoutType == 'List'){
+      template ("전체 요리과정입니다.")
+    }else-if(action.processCommitState.totalStep - 1 == action.processCommitState.currentStep){
+      template ("이제 마지막 과정입니다.")
+    }else{
+      template(" ")
+    }
+  }
+  mode (Transactional)
+  confirm-options{
+    label("유튜브 보기")
+  }
+  render{
+    layout{
+      if(action.processCommitState.layoutType == 'List'){
+        for-each (action.processCommitState.processes){
+          as (item){
+            layout-macro (ProcessImage){
+              param (process){
+                expression (item)
+              }
+            }
+            layout-macro (ProcessDescription){
+              param (process){
+                expression (item)
+              }
+            }
+          }
+        }  
+      }else{
+        layout-macro (ProcessDetail){
+          param (process){
+            expression (action.processCommitState.processes[action.processCommitState.currentStep])
+          }
+          param(recipeName){
+            expression (action.processCommitState.recipeName)
+          }
+        }
+      }
+      
+    }
+  }
+  
+  conversation-drivers{
+    conversation-driver{
+      if(action.processCommitState.layoutType == 'List'){
+        template ("상세보기")  
+      }else{
+        if(action.processCommitState.currentStep < action.processCommitState.totalStep - 1){
+          template ("다음")  
+        }
+      }
+    }
+    conversation-driver{
+      if(action.processCommitState.currentStep > 0){
+        template("이전")
+      }
+    }
+  }
+  
+  
+}

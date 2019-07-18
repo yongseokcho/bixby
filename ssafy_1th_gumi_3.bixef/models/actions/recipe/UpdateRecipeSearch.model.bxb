@@ -1,0 +1,103 @@
+action (UpdateRecipeSearch) {
+  description (요리 검색 업데이트)
+  type(UpdateTransaction)
+  collect {
+    input (recipeCommitState) {
+      type (RecipeCommitState)
+      min (Required) max (One)
+    }
+    input-group(updates){
+      requires(ZeroOrMoreOf)
+
+      //////////////////AddIngredient//////////////////
+      collect{
+        input(addIngredient){
+          type(AddIngredient)
+          min (Optional)
+          max (One)
+        }
+        input(addIngredient2){
+          type(AddIngredient2)
+          min (Optional)
+          max (One)
+        }
+        input(addIngredient3){
+          type(AddIngredient3)
+          min (Optional)
+          max (One)
+        }
+        input(addIngredient4){
+          type(AddIngredient4)
+          min (Optional)
+          max (One)
+        }
+        input(addIngredient5){
+          type(AddIngredient5)
+          min (Optional)
+          max (One)
+        }
+        ///////////////////////////////////////////////
+        //////////////RemoveIngredient/////////////////
+        input(removeIngredient){
+          type(RemoveIngredient)
+          min (Optional)
+          max (One)
+        }
+        input(removeIngredient2){
+          type(RemoveIngredient2)
+          min (Optional)
+          max (One)
+        }
+        input(removeIngredient3){
+          type(RemoveIngredient3)
+          min (Optional)
+          max (One)
+        }
+        input(removeIngredient4){
+          type(RemoveIngredient4)
+          min (Optional)
+          max (One)
+        }
+        input(removeIngredient5){
+          type(RemoveIngredient5)
+          min (Optional)
+          max (One)
+        }
+        ///////////////////////////////////////////////
+        input (addKeyword) {
+          type (AddKeyword)
+          min (Optional)
+          max (One)
+        }
+        input (removeKeyword) {
+          type (RemoveKeyword)
+          min (Optional)
+          max (One)
+        }
+      }
+    }
+    input(layoutType){
+      type(LayoutType)
+      min (Optional)
+      max (One)
+    }
+  }
+  output (RecipeCommitState){
+    throws{
+      error (NoParameter){
+        on-catch{
+          halt{
+            dialog("죄송하지만, 다시 처음부터 말해주세요.")
+          }
+        }
+      }
+      unknown-error{
+        on-catch{
+          halt{
+            dialog("제대로 알아듣지 못했어요. 다시 말해주세요.")
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+structure (ExerciseStructure) {
+  description (운동 칼로리 정보를 보여주는 구조체)
+  
+  property (recipeId){
+    type(RecipeId)
+    min (Required) max (One)
+  }
+  
+  property (recipeName) {
+    type (RecipeName)
+    min (Required) max (One)
+  }
+  
+  property (exercises){
+    type(Exercise)
+    min (Required) max (Many)
+  }
+}

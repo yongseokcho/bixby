@@ -1,0 +1,54 @@
+action (GetRecipeByCalories) {
+  type(Search)
+  description (칼로리를 이용해 레시피를 가져온다)
+  collect {
+    input-group(bounds){
+      requires (OneOrMoreOf)
+      collect{
+        input (lowerBound) {
+          type (LowerBound)
+          min (Optional) max (One)
+        }
+        input(upperBound){
+          type(UpperBound)
+          min (Optional) max (One)
+        }    
+      }
+    }
+    input(boundOption){
+      type(BoundOption)
+      min (Required) max (One)
+    }
+    input(recipeKeyword){
+      type(RecipeKeyword)
+      min (Optional) max (One)
+    }
+
+    input(searchKeyword){
+      type(SearchKeyword)
+      min (Required) max (One)
+    }
+  }
+  output (RecipeBasicStructure){
+    throws{
+      error (InvalidParameterException){
+        on-catch{
+          halt{
+            dialog{
+              template (INVALID_PARAMETER_CALORIES)
+            }
+          }
+        }
+      }
+      unknown-error{
+        on-catch{
+          halt{
+            dialog{
+              template (UNKNOWN_ERROR)
+            }
+          }
+        }
+      }
+    }
+  }
+}

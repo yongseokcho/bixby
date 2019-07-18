@@ -1,0 +1,48 @@
+action (BeginRecipeSearch) {
+  description (요리 검색 시작)
+  type(BeginTransaction)
+  collect {
+    input (ingredients) {
+      type (Ingredient)
+      min (Optional) max (Many)
+    }
+    
+    input (recipeName) {
+      type(RecipeName)
+      min (Optional) max (One)
+    }
+    
+    input(boundOption){
+      type(BoundOption)
+      min (Optional) max (One)
+    }
+    
+    input(recipeKeyword){
+      type(RecipeKeyword)
+      min (Optional) max (One)
+    }
+    
+    input(searchKeyword){
+      type(SearchKeyword)
+      min (Required) max (One)
+    }
+  }
+  output (RecipeCommitState){
+    throws{
+      error (NotFoundRecipes){
+        on-catch{
+          halt{
+            dialog("레시피를 찾을 수 없습니다.")
+          }
+        }
+      }
+      unknown-error{
+        on-catch{
+          halt{
+            dialog("예기치 못한 오류가 발생했습니다.")
+          }
+        }
+      }
+    }
+  }
+}

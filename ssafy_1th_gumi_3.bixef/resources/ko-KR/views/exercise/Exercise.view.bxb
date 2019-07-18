@@ -1,0 +1,47 @@
+result-view {
+  match: ExerciseStructure (result)
+  message("요리과정으로 이동하시겠습니까?")
+  render {
+    layout {
+      layout-macro (ExerciseList) {
+        param (exerciseStructure) {
+          expression (result)
+        }
+      }
+    }
+  }
+
+  followup {
+    prompt {
+      dialog (" ")
+      on-confirm {
+        if (false) {
+          message (I see...)
+        } else {
+          intent {
+            goal: CommitProcessShow
+            route : BeginProcessShow
+            value : ProcessParameter{
+              recipeId : $expr(result.recipeId)
+              recipeName : $expr(result.recipeName)
+              }
+          }
+        }
+      }
+      on-deny {
+        intent{
+          goal : GuideStructure
+        }
+      }
+    }
+  }
+
+  conversation-drivers{
+    conversation-driver{
+      template ("그래")
+    }
+    conversation-driver{
+      template ("아니")
+    }
+  }
+}

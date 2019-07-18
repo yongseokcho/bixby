@@ -1,0 +1,28 @@
+action (BeginProcessShow) {
+  type(BeginTransaction)
+  description (요리과정을 보여준다.)
+  collect {
+    input (processParameter) {
+      type (ProcessParameter)
+      min (Required) max (One)
+    }
+  }
+  output (ProcessCommitState){
+    throws{
+      error (NotFoundProcesses){
+        on-catch{
+          halt{
+            dialog("요리과정을 불러오는데 실패했습니다. 다시 시도해주세요.")
+          }
+        }
+      }
+      unknown-error{
+        on-catch{
+          halt{
+            dialog("예기치 못한 오류가 발생했습니다.")
+          }
+        }
+      }
+    }
+  }
+}

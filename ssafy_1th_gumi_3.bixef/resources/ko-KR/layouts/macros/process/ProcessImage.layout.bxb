@@ -1,0 +1,29 @@
+layout-macro-def(ProcessImage) {
+  params {
+    param (process) {
+      type (Process)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section{
+      content{
+        image-card {
+          image-url ("#{value(process.imgUrl)}")
+          aspect-ratio (4:3)
+          image-object-fit (Contain)
+          text-position (Overlay)
+          title-area {
+            slot1 {
+              text {
+                value ("##{value(process.currentStep)}")
+              }
+            }
+          }
+        }        
+      }
+    }
+  }
+}

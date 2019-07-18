@@ -1,0 +1,22 @@
+layout-macro-def(ProcessDescription) {
+  params {
+    param (process) {
+      type (Process)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section{
+      content{
+        single-line {
+          text {
+            value ("#{value(process.description)}")
+            style (Detail_M)
+          }
+        }    
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+integer (ExerciseTime) {
+  description (운동시간)
+}

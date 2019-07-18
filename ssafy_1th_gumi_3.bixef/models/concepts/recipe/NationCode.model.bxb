@@ -1,0 +1,3 @@
+integer (NationCode) {
+  description (유형코드)
+}

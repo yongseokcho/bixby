@@ -1,0 +1,35 @@
+result-view{
+  match :  YoutubeResult(this)
+  
+  message("유튜브로 이동합니다.")
+  render{
+    layout{
+      section{
+        content{
+          title-area{
+            halign (Center)
+            slot2{
+              single-line{
+                text{
+                  value("#{value(this.keyword)}")
+                  style (Title_M)
+                }
+              }
+            }
+            slot3{
+              single-line{
+                text{
+                  value("유튜브 동영상 링크로 넘어갑니다.")
+                  style (Detail_L_Soft)
+                }
+              }              
+            }
+          }
+        }
+      }
+    }
+  }
+  app-launch{
+    payload-uri("#{value(this.url)}")
+  }
+}

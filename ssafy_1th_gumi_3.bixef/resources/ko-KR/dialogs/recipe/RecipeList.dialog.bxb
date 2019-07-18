@@ -1,0 +1,39 @@
+template-macro-def (RecipeListMacro){
+  params{
+    param(recipeCommitState){
+      type(RecipeCommitState)
+    }
+  }
+
+  content{
+    if(recipeCommitState.searchType == 'RECIPENAME'){
+      template("#{value(recipeCommitState.recipeName)}로 검색한 결과입니다.")
+    }else-if(recipeCommitState.searchType == 'CALORY'){
+      if(size(recipeCommitState.recipeBasicStructures) > 1){
+        if(recipeCommitState.boundOption.lowerBoundFlag && recipeCommitState.boundOption.upperBoundFlag){
+          template("#{value(recipeCommitState.boundOption.lowerBound)}칼로리 이상 #{value(recipeCommitState.boundOption.upperBound)}칼로리 이하 결과입니다,")
+        }else-if(recipeCommitState.boundOption.lowerBoundFlag){
+          template("#{value(recipeCommitState.boundOption.lowerBound)}칼로리 이상 결과입니다,")
+        }else-if(recipeCommitState.boundOption.upperBoundFlag){
+          template("#{value(recipeCommitState.boundOption.upperBound)}칼로리 이하 결과입니다,")
+        }else{
+          template("조건 없이 검색한 결과입니다.")
+        }  
+      }else{
+        template("선택한 레시피 정보입니다")
+      }
+    }else{
+      if(size(recipeCommitState.recipeBasicStructures) > 1){
+        if(size(recipeCommitState.ingredients) > 1){
+          template("#{value(recipeCommitState.ingredients[0])} 외 #{integer(size(recipeCommitState.ingredients)-1)} 개의 재료로 검색한 결과입니다")
+        }else-if(size(recipeCommitState.ingredients) == 1){
+          template("#{value(recipeCommitState.ingredients[0])}로 검색한 결과입니다")
+        }else{
+          template("조건없이 검색한 결과입니다")
+        }  
+      }else{
+        template("선택한 레시피 정보입니다")
+      } 
+    }
+  }
+}

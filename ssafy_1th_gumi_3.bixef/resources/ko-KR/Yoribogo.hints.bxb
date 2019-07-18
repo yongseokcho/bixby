@@ -1,0 +1,8 @@
+hints {
+  uncategorized{
+    utterance (사용법 가르쳐줘)
+    utterance (미역이랑 쇠고기 요리법 찾아줘)
+    utterance (보쌈김치 레시피 보여줘)
+    utterance (300칼로리 이상 레시피 보여줘)
+  }
+}
