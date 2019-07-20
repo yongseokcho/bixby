@@ -1,0 +1,45 @@
+train (t-12h8usqyze26cv24i9x70ieke) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (달래 굴 파전)[v:RecipeName] (조리과정)[v:RecipeKeyword:레시피] (가르쳐줘)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501978835)
+}
+train (t-12ojm1lm8dqqptiup28d7hzjk) {
+  utterance ("  [g:CommitRecipeSearch,r:BeginRecipeSearch] (감자 수프)[v:RecipeName] (만드는법)[v:RecipeKeyword:레시피] (가리켜)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501740871)
+}
+train (t-140gvsrnal24o05ie4s9usq6t) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (시금치된장국)[v:RecipeName] (요리)[v:RecipeKeyword:레시피] (검색해줘)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1562501472795)
+}
+train (t-18z77618y4ugmydveu2pm8nyo) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (꿩)[v:Ingredient]이랑 (오트밀)[v:Ingredient]이랑 (토마토 페스트)[v:Ingredient]랑 (무지개 고추)[v:Ingredient]랑 (녹차)[v:Ingredient]랑 (복어)[v:Ingredient] (음식)[v:RecipeKeyword:레시피] (가르쳐)[v:SearchKeyword:검색]")
+  plan (3ZAxDoJAEEU/IoqohzCx0IbEeAONhbGTAxBchmULwCxLhNu7uFFisR7A+d3Mm1d8LLGp6yTr4p3KY94UIt6HN9FSFp5akkzUFCnZMNVIwtZCHquiEOpKTNwpokSy3Co1kHmIVKLISh6Ii/LLubKQ55JLSgWV6g+R9c8iL9Q9KplaKdPcm1rAwQguxvAwwRQ+Zggw13t8LkNcHed1gSaGmAn03teW3uBpV29xgSc=)
+  last-modified (1562497394886)
+}
+train (t-1bitj9b01tlzhk477rgcinxs0) {
+  utterance ("[g:CommitRecipeSearch,r:WrapBoundaryOption,r:BeginRecipeSearch] (200)[v:LowerBound]에서 (300)[v:UpperBound] 칼로리 (찾아줘)[v:SearchKeyword:검색]")
+  plan (jY+9CsIwFIWPf636FoqDLgX1DRQnBcEijiVtb9sMbUKaol18dtMfB4eAgYR7D9/5IJhjXZYsqYOtzoK0ynmw90L+osQ7vUhFvCRfqyrSlSJsLORR5DnXN4q4JJ+YijKrtIO6gq+ZJit5oJQXP86ljRRVEV+l5qLAysJ0ijPVT6Fi60ceisnWxlTdC3d/o++wX7GwdC7iSaotWZG7lF9khgGGGGGMCRy4mJoEfdakTeaaHe39vs1xzDw1rZnhHOAD)
+  last-modified (1563628827999)
+}
+train (t-1feg36ldrxrezrf37g0wenjap) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (단호박구이)[v:RecipeName] (음식)[v:RecipeKeyword:레시피] (조회해줘)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1563628928113)
+}
+train (t-1h38eu1zdnt3bd49ij0al4avd) {
+  utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (삼계탕)[v:RecipeName] (조리과정)[v:RecipeKeyword:레시피] (검색해줘)[v:SearchKeyword:검색]")
+  plan (Y2Bn0CguTkyrjDcsyYhPL83NjDfWS8qsSE3Tc61ILUrOLE4NLikqTS4pLUpl0MSh0jk/NzezJCg1ObMgNTg1sSg5A6ehEEUQDcEliSWpOFU6paZn5qGYqYLXTO/UyvL8ohQGRbyq/BJzU3EaBLEHZhAbAyMDEwMzAwsDK5DNAOWBICOYBwOsQDZEDTMDAwA=)
+  last-modified (1563628984184)
+}
+train (t-1o56ags85y3fsu7qhjzlgihiz) {
+  utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (가재새우)[v:Ingredient]랑 (피클)[v:Ingredient]이랑 (다진양파)[v:Ingredient]랑 (굵은파)[v:Ingredient]랑 (오렌지)[v:Ingredient]랑 (케이퍼)[v:Ingredient] (조리법)[v:RecipeKeyword:레시피] (검색해줘)[v:SearchKeyword:검색]")
+  plan (3ZAxDoJAEEU/IiqohzCx0IbEeAONhbGTAxBcBpgCMMsS4fZu2KixWA/g/G7mzSs+ltg0TZL18U4Vcd6WHO/DG3eUhaeOpOCGIiVboVpJ2FrIY12WrK4k+E4RJVIUVqmBzEOkEkVW8kA5V1/OlYU8V7mklKlSf4isfxZ5of5Ry9RKmeZe1AIORnAxhocJppjBR4C53uN9+cTVcYYLNPGJmUDv/cESaI83WFzgCQ==)
+  last-modified (1562499197616)
+}
+train (t-1pbzgtdw9dlv5ne3byygvr3p5) {
+  utterance ("[g:CommitRecipeSearch,r:WrapBoundaryOption,r:BeginRecipeSearch] (200)[v:LowerBound]에서 (800)[v:UpperBound] 칼로리 사이 (찾아줘)[v:SearchKeyword:검색]")
+  plan (jY+9CsIwFIWPf636FoqDLgX1DRQnBcEijiVtb9sMbUKaol18dtMfB4eAgYR7D9/5IJhjXZYsqYOtzoK0ynmw90L+osQ7vUhFvCRfqyrSlSJsLORR5DnXN4q4JJ+YijKrtIO6gq+ZJit5oJQXP86ljRRVEV+l5qLAysJ0ijPVT6Fi60ceisnWxlTdC3d/o++wX7GwdC7iSaotWZG7lF9khgGGGGGMCRy4mJoEfdakTeaaHe39vs1xzDw1rZnhHOAD)
+  last-modified (1562508828342)
+}

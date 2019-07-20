@@ -1,8 +1,0 @@
-action (AccessVivContext) {
-  type(Search)
-  description (viv context 접근하여 userId 얻어옴)
-  collect {
-    
-  }
-  output (UserIdentifier)
-}

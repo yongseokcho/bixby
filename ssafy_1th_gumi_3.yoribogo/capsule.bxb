@@ -1,0 +1,38 @@
+capsule {
+  id (ssafy_1th_gumi_3.bixef)
+  version (2.4.0)
+  format (3)
+  targets {
+    target (bixby-mobile-ko-KR)
+  }
+  store-sections{
+    section (FoodAndDrink)
+  }
+  
+  runtime-flags {
+    concepts-inherit-super-type-features
+    modern-prompt-rejection
+    support-halt-effect-in-computed-inputs
+  }
+   
+  capsule-imports {
+    import (viv.core) { 
+      as (core) 
+    }
+    import (viv.entity) {
+      as (entity) version(3.18.11)
+    }
+    import (viv.money) {
+      as (money) version (2.20.9)
+    }
+    import (viv.common) {
+      as (common) version-from (entity)
+    }
+    import (viv.image) {
+      as (image) version-from (common)
+    }
+    import (viv.contact) {
+      as (contact) version(2.5146.7)
+    }
+  }
+}
