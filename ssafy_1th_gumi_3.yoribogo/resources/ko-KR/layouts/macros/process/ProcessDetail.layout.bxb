@@ -1,0 +1,152 @@
+layout-macro-def(ProcessDetail) {
+  params {
+    param (process) {
+      type (Process)
+      min (Required)
+      max (One)
+    }
+    param(recipeName){
+      type(RecipeName)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {
+      content {
+        hbox {
+          content {
+            vbox {
+              halign (Start)
+              content {
+                single-line {
+                  text {
+                    value (" ")
+                  }
+                }
+              }
+            }
+            vbox {
+              halign (Center)
+              content {
+                single-line {
+                  text {
+                    value ("#{value(recipeName)}")
+                    style (Title_L)
+                  }
+                }
+              }
+            }
+            vbox {
+              halign (End)
+              content {
+                single-line {
+                  text {
+                    value (" ")
+                  }
+                }
+              }
+            }
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              halign (Start)
+              
+              content {
+                single-line {
+                  text {
+                    value (" ")
+                  }
+                }
+              }
+            }
+            vbox {
+              halign (Center)
+              
+              content {
+                single-line {
+                  text {
+                    value ("#{value(process.currentStep)} 단계")
+                    style (Title_S)
+                  }
+                }
+              }
+            }
+            vbox {
+              halign (Start)
+              
+              content {
+                single-line {
+                  text {
+                    value (" ")
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value (" ")
+                  }
+                }
+              }
+            }
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value (" ")
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+        // 요리과정 이미지 사진 1장
+        image {
+          url ("#{value(process.imgUrl)}")
+          aspect-ratio (4:3)
+          object-fit (Cover)
+        }
+
+        partitioned {
+          content {
+            single-line {
+              text {
+                value ("설명")
+                style (Detail_L)
+              }
+            }
+            single-line {
+              text {
+                value (" ")
+              }
+            }
+          }
+        }
+
+        // 요리과정 설명
+        paragraph {
+          value {
+            template ("#{value(process.description)}")
+          }
+          style (Title_S)
+        }
+      }
+    }
+  }
+}
