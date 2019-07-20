@@ -31,7 +31,7 @@ train (t-biqbkmnp73k9viz6kgpslrfmx) {
 train (t-bmsgsc7xhtmgmv5yunpjtgo8q) {
   utterance ("[g:CommitRecipeSearch,r:WrapBoundaryOption,r:BeginRecipeSearch] 칼로리 (200)[v:LowerBound]에서 (300)[v:UpperBound] 사이 (보여줘)[v:SearchKeyword:검색]")
   plan (jY+9CsIwFIWPf636FoqDLgX1DRQnBcEijiVtb9sMbUKaol18dtMfB4eAgYR7D9/5IJhjXZYsqYOtzoK0ynmw90L+osQ7vUhFvCRfqyrSlSJsLORR5DnXN4q4JJ+YijKrtIO6gq+ZJit5oJQXP86ljRRVEV+l5qLAysJ0ijPVT6Fi60ceisnWxlTdC3d/o++wX7GwdC7iSaotWZG7lF9khgGGGGGMCRy4mJoEfdakTeaaHe39vs1xzDw1rZnhHOAD)
-  last-modified (1562508586095)
+  last-modified (1563630598571)
 }
 train (t-bqetb7qk8y5d6xr1035nh3iuk) {
   utterance (" [g:CommitRecipeSearch,r:BeginRecipeSearch] (맑은 대구탕)[v:RecipeName] (레시피)[v:RecipeKeyword:레시피] (조회해줘)[v:SearchKeyword:검색]")

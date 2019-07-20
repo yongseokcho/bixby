@@ -145,9 +145,9 @@ module.exports.GetYoutubeUrl = function(word){
 }
 
 module.exports.searchRecipeByName = function(recipeName){
-  
+
   let queryName = recipeName.replace(' ', '');
-  
+
   let options = {
     query : {
       recipeName : queryName

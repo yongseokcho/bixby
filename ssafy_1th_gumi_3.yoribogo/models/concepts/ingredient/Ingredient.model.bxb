@@ -1,3 +1,3 @@
 name (Ingredient) {
-  description (재료명)
+  description (재료명 검색 발화에서 재료를 저장하는 모델)
 }

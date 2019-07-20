@@ -1,5 +1,5 @@
 structure (ParameterStructure) {
-  description (파라메터를 위한 구조체)
+  description (가이드 모델들로 구성한 구조체)
   property (parameterName) {
     type (ParameterName)
     min (Required) max (One)
