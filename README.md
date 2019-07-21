@@ -1,10 +1,15 @@
 # 요리보고
 
-![](./img/yoribogo_logo.jpg)
+<p align="center">
+  <img style="max-width: 300px;" src="./img/yoribogo_logo.jpg"/>
+  <img style="max-width: 600px;" src="./img/team_img.jpg"/>
+</p>
 
-
-
-![License](http://img.shields.io/:license-mit-green.svg) ![Bixby](https://img.shields.io/badge/platform-bixby-blue.svg) ![langjs](https://img.shields.io/badge/language-javascript-brightgreen.svg) 
+<p align="center">
+  <img src="http://img.shields.io/:license-mit-green.svg"/>
+  <img src="https://img.shields.io/badge/platform-bixby-blue.svg"/>
+  <img src="https://img.shields.io/badge/language-javascript-brightgreen.svg"/>
+</p>
 
 "안녕하세요. 개발자에겐 즐거움을, 사용자에겐 편리함을 선물하는 요리보고 팀입니다."
   
@@ -674,5 +679,4 @@ private static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, St
 - OAuth 2.0
 
   https://opentutorials.org/course/3405
-
 
