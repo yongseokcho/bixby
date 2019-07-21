@@ -1,8 +1,8 @@
 # 요리보고
 
 <p align="center">
-  <img src="./img/yoribogo_logo.jpg"/>
-  <img width="400px" src="./img/team_img.jpg"/>
+  <img src="./docs/img/yoribogo_logo.jpg"/>
+  <img width="400px" src="./docs/img/team_img.jpg"/>
 </p>
 
 <p align="center">
@@ -12,7 +12,7 @@
 </p>
 
 "안녕하세요. 개발자에겐 즐거움을, 사용자에겐 편리함을 선물하는 요리보고 팀입니다."
-  
+
 ## 목차
 1. [캡슐구조](#캡슐구조)
 2. [캡슐설정](#캡슐설정)
@@ -24,10 +24,10 @@
 8. [HTTP 요청](#HTTP-요청)
 9. [외부 어플리케이션 실행](#외부-어플리케이션-실행)
 10. [부록](#부록)  
-  
+
 ## 캡슐구조
    캡슐은 크게 assets, code, models, resources 부분으로 나누져 있는데 assets 같은 경우에는 정적으로 사용되는 파일(이미지)이 저장되어있고, code 부분은 .js 파일들을 각 기능에 맞게 폴더를 만들어서 구성을 하였습니다. 이미지 파일만 있는 assets과 .js 파일이 있는 code을 제외하고 나머지 폴더들의 구조에 대해서 설명을 드리겠습니다.  
-  
+
 ### models
 
 > 디렉토리 상세
@@ -57,7 +57,7 @@ concepts 같은 경우에는 structure라는 다수의 model들을 포함하는 
 `ko-KR` 폴더는 한국어와 관련된 resources를 모아놓은 폴더입니다. 마켓 플레이스에서 해당 캡슐의 간단한 사용방법을 알려주는 `.hints.bxb` 와 발화를 학습하는 `training` 파일,  특정 발화에 대한 결과 화면을 구성하는 파일들을 모아 놓은 `layouts` , `views` 폴더, 동의어 처리나 특정 단어를 빅스비에게 학습시키 위한 단어파일을 모아놓은 `voca` 폴더 등으로 구성을 하였습니다.
 
 `capsule.properties` 은 HTTP 요청에 필요한 서버의 주소, API 키값이나 권한 범위 등 캡슐을 구성할 때 필요한 값들을 저장할 수 있습니다. 이외의 파일들에 대해서는 [캡슐설정](#캡슐설정) 부분에서 다시 언급하도록 하겠습니다.
-  
+
 ## 캡슐설정
 
 빅스비 캡슐을 개발하면서 필요하거나 도움이 되는 설정들에 대해서 말씀드리겠습니다.
@@ -412,7 +412,7 @@ vocab(Ingredient){
 
 사용자 입력 발화가 들어왔을 때 레시피 검색 트랜잭션 전체흐름입니다. [4. 발화](#발화)에서 언급했듯이 요리보고에는 레시피 검색에 대해 총 3종류의 발화( `재료명을 이용한 레시피 검색` , `레시피명을 이용한 레시피 검색` , `칼로리를 이용한 레시피 검색` ) 가 존재하며, 이 발화들은 공통적으로 아래의 흐름을 따라갑니다. 
 
-![](./img/ts_recipe_flow.PNG)
+![](./docs/img/ts_recipe_flow.PNG)
 
 발화는 BeginRecipeSearch을 거쳐서 CommitRecipeSearch로 가게 되는데, 레시피 검색 트랜잭션 전체를 의미하고 사용자가 최종 레시피 하나를 선택하기 전까지 종료되지 않습니다. UpdateRecipeSearch는 트랜잭션 도중 조건을 다르게 하여 검색하고 싶을 때 사용되는데 현재는 `재료명을 이용한 레시피 검색`에서 재료를 추가하거나 제거 하는데 주로 활용되고 있습니다. 아래는 예시 발화입니다. 
 
@@ -422,7 +422,7 @@ vocab(Ingredient){
 
 SelectRecipeSearch는 검색된 레시피 중 하나에 대한 상세정보를 보고싶을 때 사용됩니다. 레시피 검색 트랜잭션 전반에 걸쳐 유지되는 RecipeCommitState는 현재 검색 조건 상태를 가지고 있는 구조체로, 발화 사이에 문맥을 만들어 주는 역할을 합니다. RecipCommitState는 다음과 같은 흐름을 따릅니다.
 
-![](./img/ts_concept_flow.PNG)
+![](./docs/img/ts_concept_flow.PNG)
 
 위 그림에서 RecipeCommitState는 BeginRecipeSearch에서 생성되어 CommitRecipeSearch - UpdateRecipeSearch 사이클에 주입된 후, 하나의 CommitRecipeSearch가 끝날 때까지 유지되며 입력된 사용자의 발화에 따라 작업을 처리합니다.
 
@@ -440,11 +440,271 @@ SelectRecipeSearch는 검색된 레시피 중 하나에 대한 상세정보를 �
 
 아래의 그림은 사용자가 레시피 검색을 통해 최종적으로 요리를 선택했을 때, 해당 요리에 대한 요리과정을 보기 위한 트랜잭션 전체흐름입니다. 
 
-![](./img/ts_process_flow.PNG)
+![](./docs/img/ts_process_flow.PNG)
 
 레시피 검색과 마찬가지로 CommitProcessSearch는 요리과정 보기에 대한 트랜잭션 자체를 의미합니다. UpdateProcessSearch는 요리과정을 단계적으로 보여줄 때 사용하는데, 사용자는 ***"다음"*** 혹은 ***"이전"*** 발화를 이용하여 이전 단계 혹은 다음 단계의 요리과정으로 넘어갈 수 있습니다. 레시피 검색 트랜잭션과 마찬가지로 요리과정 트랜잭션을 처리하기 위한 상태를 저장하는 ProcessCommitState가 유지되며, 이 구조체를 활용하여 사용자의 발화(명령)을 처리합니다.
 
 
+
+## 레이아웃
+
+Layout에는 크게 화면을 나타내는 view와 view에서 사용할 수 있는 함수 macro로 나누어져 있습니다.
+
+
+
+### View
+
+요리보고 프로젝트의 레이아웃은 빅스비의 세 가지 레이아웃 중 두 가지, `confirmation-view`와 `result-view`를 사용하였습니다.  
+
+> 관련 파일
+
+- confirmation-view
+  - recipe : RecipeConfirmation.view.bxb
+  - process : ProcessConfirmation.view.bxb
+
+- result-view
+  - exercise : Exercise.view.bxb
+  - guide : BixefGuide.view.bxb
+  - recipe : RecipeList.view.bxb
+
+
+
+#### confirmation-view
+
+요리보고에서 confirmation-view를 사용한 이유는 다음과 같습니다.
+
+- 레시피 목록을 보여줄 때, 목록이 추가 / 삭제 발화를 통해 **update** 됩니다.
+  1. ***"양파랑 돼지고기를 이용한 요리법 검색해줘"***
+  2. ***"양파 <u>빼고</u> 검색해줘"***
+  3. ***"김치 <u>추가해서</u> 검색해줘"***
+
+- 요리과정을 보여줄 때, `layoutType`과 `currentStep`으로 인해 **update** 됩니다.
+
+
+
+하나의 confirmation-view에서 조건을 주어 다양한 화면이 나타나도록 구현하였습니다.
+
+**RecipeConfirmation.view.bxb**
+
+```javascript
+confirmation-view{
+  ...
+  render{
+    layout{ 
+      # 보여줄 레시피가 1개보다 많은 경우
+      if(size(action.recipeCommitState.recipeBasicStructures) > 1){
+        ...
+      # 보여줄 레시피가 1개 인 경우
+      }else-if(size(action.recipeCommitState.recipeBasicStructures) == 1){        
+        ...
+      # 보여줄 레시피가 없는 경우
+      }else{
+        ...
+      }
+    }
+  }
+  ...
+}
+```
+
+위 코드에서는 layout 부분에 `if`, `else-if`, `else`의 조건문을 통해 해당 조건에 맞는 `layout-macro`를 호출하여 하나의 view에서 각 상황에 맞는 화면을 보여주었습니다. 
+
+
+
+**ProcessConfirmation.view.bxb**
+
+```javascript
+confirmation-view{
+  ...
+  render{
+    layout{
+      # 현재 layout이 전체 요리법 순서를 나타내는 경우
+      if(action.processCommitState.layoutType == 'List'){
+        # for-each 문을 통해 요리법 전체 순서를 나타냄
+        for-each (action.processCommitState.processes){
+          as (item){
+            layout-macro (ProcessImage){
+              param (process){
+                expression (item)
+              }
+            }
+            layout-macro (ProcessDescription){
+              param (process){
+                expression (item)
+              }
+            }
+          }
+        }
+      }
+      # 현재 currentStep에 맞는 요리순서를 보여주는 경우
+      else{
+        # ProcessDetail 매크로 호출
+        layout-macro (ProcessDetail){
+          param (process){
+            expression (action.processCommitState.processes[action.processCommitState.currentStep])
+          }
+          param(recipeName){
+            expression (action.processCommitState.recipeName)
+          }
+        }
+      }
+    }
+  }
+  ...
+}
+```
+
+위 코드에서도 앞서 말한 `layoutType`의 값을 통해 전체 요리법 순서를 보여주는 것인지 하나의 과정에 대한 자세한 정보를 보여주는 것인지를 구분하였습니다. 또한, `message`부분도 같은 방식으로 각 조건에 맞는 메세지 함수를 호출하였습니다.
+
+
+
+#### result-view
+
+- 요리보고 프로젝트에서 요리보고의 활용법 가이드 화면과 각 요리마다 해야하는 운동 정보를 나타내는 화면같이 단순하게 정보를 제공하는 화면에 result-view를 사용하였습니다.
+- result-view의 경우 다음 기능으로 진행하기 위해 `follow-up` 기능을 사용하였습니다.
+
+
+
+#### follow-up
+
+result-view에서 yes or no 질문에 대한 응답으로 사용자가 특정한 **action**을 취할 수 있도록 하는 기능입니다. 이 기능의 발화를 통해 동작할 수 있기 때문에 손을 쓰지 않는 경우에 유용할 수 있습니다.
+
+
+
+**Exercise.view.bxb**
+
+```javascript
+result-view {
+  ...
+  followup {
+    prompt {
+      dialog (" ")
+      on-confirm {
+        if (false) {
+          message (I see...)
+        } else {
+          intent {
+            goal: CommitProcessShow
+            route : BeginProcessShow
+            value : ProcessParameter{
+              recipeId : $expr(result.recipeId)
+              recipeName : $expr(result.recipeName)
+              }
+          }
+        }
+      }
+      on-deny {
+        intent{
+          goal : GuideStructure
+        }
+      }
+    }
+  }
+  ...
+}
+```
+
+`follow-up` 기능에는 한국어 버전인 경우 ***응***, ***그래***, ***아니***, ***싫어*** 등과 같은 발화들이 내장되어 있습니다. 응과 같은 긍정의 발화가 입력되면 intent기능을 사용해 `recipeId`, `recipeName` 값을 입력으로 주어 `BeginProcessShow` action이 실행되도록 하였습니다. 아니와 같은 부정의 발화가 입력된 경우 요리보고 가이드 화면을 한 번 더 보여주도록 설정하였습니다.
+
+
+
+### Macro
+
+요리보고에서는 코드의 효율성을 위해 view와 macro파일을 별도로 분리하여 관리하고 있습니다. macro파일도 각 view에 맞게 구분하여 작성하였습니다. 
+
+
+
+> 구분
+
+- exercise : ExerciseList.layout.bxb
+
+- guide : DialogGuide.layout.bxb
+
+- process : ProcessDescription.layout.bxb, ProcessDetail.layout.bxb, ProcessImage.layout.bxb
+
+- recipe : RecipeDetailLevel.layout.bxb, RecipeDetailName.layout.bxb, RecipeDetailSummary.layout.bxb
+
+  			  RecipeOneHeader.layout.bxb, RecipeOneImage.layout.bxb
+
+    			  RecipeListSummary.layout.bxb, RecipeSummaryLarge.layout.bxb
+
+  
+
+  
+
+**RecipeSummaryLarge.layout.bxb**
+
+```javascript
+layout-macro-def(RecipeSummaryLarge) {
+  ...
+  content {
+    image-card{
+      on-click{
+        intent{
+          goal: CommitRecipeSearch
+          route: SelectRecipeSearch
+          value: RecipeBasicStructure{
+            recipeId: $expr(recipeBasicStructure.recipeId)
+            recipeName: $expr(recipeBasicStructure.recipeName)
+              calorie: $expr(recipeBasicStructure.calorie)
+              cookingTime: $expr(recipeBasicStructure.cookingTime)
+              detailedUrl: $expr(recipeBasicStructure.detailedUrl)
+              ingredientCode: $expr(recipeBasicStructure.ingredientCode)
+              level: $expr(recipeBasicStructure.level)
+              nationCode: $expr(recipeBasicStructure.nationCode)
+              nationName: $expr(recipeBasicStructure.nationName)
+              price: $expr(recipeBasicStructure.price)
+              quantity: $expr(recipeBasicStructure.quantity)
+              summary: $expr(recipeBasicStructure.summary)
+              typeCode: $expr(recipeBasicStructure.typeCode)
+              typeName: $expr(recipeBasicStructure.typeName)
+              materials: $expr(recipeBasicStructure.materials)
+              hit: $expr(recipeBasicStructure.hit)
+              rating: $expr(recipeBasicStructure.rating)
+              images: $expr(recipeBasicStructure.images)
+              materialStr : $expr(recipeBasicStructure.materialStr)
+              materialShow : $expr(recipeBasicStructure.materialShow)
+            }
+        }
+      }
+      text-position (Below)
+      image-object-fit (Cover)
+      aspect-ratio(16:9)
+      image-url("#{value(recipeBasicStructure.images[0].url)}")
+      title-area{
+        slot1{
+          text ("")
+        }
+        slot2{
+          paragraph ("")
+        }
+        slot3{
+          paragraph ("")
+        }
+      }
+    }
+  }
+}
+
+```
+
+요리보고의 경우 레시피 목록을 보여줄 때 `image-card`를 사용하였습니다. 한 레시피에 사진이 여러개인 경우 혹은 레시피 목록이 많은 경우 `image-carousel`나 `image-list`를 사용해 보여주려 했지만 `on-click` 메소드가 다 정의되어 있지 않아 원하는 하나의 목록에 대한 다음 화면으로 넘어갈 수 없었기 때문에 `image-card`를 사용하였습니다. 
+
+또한, `image-card`의 경우 `title-area`가 필수적이기 때문에 넣을 내용이 없더라도 ""와 같이 공백을 넣어주었습니다. `text-position, image-object-fit, aspect-ratio`와 같은 구문의 경우 빅스비 문서를 참조하시면 될 것 같습니다.
+
+
+
+> 참고자료
+
+- intent 관련 자료
+
+  https://bixbydevelopers.com/dev/docs/reference/type/intent
+
+- image-card 관련 자료
+
+  https://bixbydevelopers.com/dev/docs/reference/type/layout-macro-def.content.image-card
+  
+  
 
 ## 에러처리
 
@@ -679,4 +939,88 @@ private static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, St
 - OAuth 2.0
 
   https://opentutorials.org/course/3405
+
+
+
+### 데이터베이스
+
+#### ERD (Entity-Relationship Diagram)
+
+![ERD](./docs/img/erd_diagram.png)
+
+
+
+#### API Reference for Developers(Swagger)
+
+보다 자세한 설명은 [Swagger UI](./docs/swagger/Swagger_UI.html)를 참고해주세요
+
+----------------
+
+##### food_basic_controller
+
+###### GET )  /foodBasic/findAll
+
+- `basic` 테이블의 모든 정보를 출력
+
+###### GET)   /foodBasic/lessCalorle
+
+-  칼로리 검색을 할 때 칼로리를 넣게되면 칼로리 값보다 작은 칼로리에 대해 `basic` 테이블의 정보를 출력
+
+###### GET)  /foodBasic/lessMoreCalorie
+
+- 최소 칼로리와 최대 칼로리를 이용하여 테이블 정보를 출력
+
+###### GET)  /foodBasic/moreCalorle
+
+- 최소 칼로리를 이용하여 칼로리 값보다 큰 값의 테이블 정보를 출력
+
+###### GET)  /foodBasic/searchByMaterial
+
+- 재료정보를 배열로 보내주어 재료가 material을 통해 basic 테이블을 정보를 출력 
+
+###### GET)  /foodBasic/searchByRecipeId
+
+- recipeId를 이용하여 테이블 정보 출력
+
+###### GET)  /foodBasic/searchByRecipeName
+
+- 레시피의 명을 통해 테이블 정보를 출력 (like)
+
+-------------------------
+
+##### food_material_controller
+
+###### GET)  /foodMaterial/findAll
+
+- 모든 레시피별 재료정보를 출력
+
+###### GET)  /foodMaterial/searchByRecipeId
+
+- recipeId를 통해 레시피의 재료들을 출력
+
+--------------------
+
+##### food_process_controller
+
+###### GET)  /foodProcess/findAll
+
+- 모든 레시피별 과정 정보를 출력
+
+###### GET)  /foodProcess/processSearchByRecipeId
+
+- recipeId를 통해 레시피에 대한 과정 정보를 출력
+
+---------------------
+
+##### hits_controller
+
+###### GET)  /hits/Insert
+
+- 날짜, 레시피아이디, 유저주소를 받아와 조회 수를 증가
+
+###### GET)  /hits/searchByRecipeId
+
+- recipeId 를 이용하여 레시피에 대한 조회수 출력
+
+
 
