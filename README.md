@@ -1,8 +1,8 @@
 # 요리보고
 
 <p align="center">
-  <img style="max-width: 300px;" src="./img/yoribogo_logo.jpg"/>
-  <img style="max-width: 600px;" src="./img/team_img.jpg"/>
+  <img src="./img/yoribogo_logo.jpg"/>
+  <img width="400px" src="./img/team_img.jpg"/>
 </p>
 
 <p align="center">
