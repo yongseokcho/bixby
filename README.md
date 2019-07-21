@@ -7,11 +7,8 @@
 ![License](http://img.shields.io/:license-mit-green.svg) ![Bixby](https://img.shields.io/badge/platform-bixby-blue.svg) ![langjs](https://img.shields.io/badge/language-javascript-brightgreen.svg) 
 
 "안녕하세요. 개발자에겐 즐거움을, 사용자에겐 편리함을 선물하는 요리보고 팀입니다."
-
-
-
+  
 ## 목차
-
 1. [캡슐구조](#캡슐구조)
 2. [캡슐설정](#캡슐설정)
 3. [사전(Dictionary)](#사전)
@@ -21,15 +18,11 @@
 7. [에러처리](#에러처리)
 8. [HTTP 요청](#HTTP-요청)
 9. [외부 어플리케이션 실행](#외부-어플리케이션-실행)
-10. [부록](#부록)
-
-
-
+10. [부록](#부록)  
+  
 ## 캡슐구조
-   캡슐은 크게 assets, code, models, resources 부분으로 나누져 있는데 assets 같은 경우에는 정적으로 사용되는 파일(이미지)이 저장되어있고, code 부분은 .js 파일들을 각 기능에 맞게 폴더를 만들어서 구성을 하였습니다. 이미지 파일만 있는 assets과 .js 파일이 있는 code을 제외하고 나머지 폴더들의 구조에 대해서 설명을 드리겠습니다.
-
-
-
+   캡슐은 크게 assets, code, models, resources 부분으로 나누져 있는데 assets 같은 경우에는 정적으로 사용되는 파일(이미지)이 저장되어있고, code 부분은 .js 파일들을 각 기능에 맞게 폴더를 만들어서 구성을 하였습니다. 이미지 파일만 있는 assets과 .js 파일이 있는 code을 제외하고 나머지 폴더들의 구조에 대해서 설명을 드리겠습니다.  
+  
 ### models
 
 > 디렉토리 상세
@@ -59,14 +52,10 @@ concepts 같은 경우에는 structure라는 다수의 model들을 포함하는 
 `ko-KR` 폴더는 한국어와 관련된 resources를 모아놓은 폴더입니다. 마켓 플레이스에서 해당 캡슐의 간단한 사용방법을 알려주는 `.hints.bxb` 와 발화를 학습하는 `training` 파일,  특정 발화에 대한 결과 화면을 구성하는 파일들을 모아 놓은 `layouts` , `views` 폴더, 동의어 처리나 특정 단어를 빅스비에게 학습시키 위한 단어파일을 모아놓은 `voca` 폴더 등으로 구성을 하였습니다.
 
 `capsule.properties` 은 HTTP 요청에 필요한 서버의 주소, API 키값이나 권한 범위 등 캡슐을 구성할 때 필요한 값들을 저장할 수 있습니다. 이외의 파일들에 대해서는 [프로젝트 설정]() 부분에서 다시 언급하도록 하겠습니다.
-
-
-
+  
 ## 캡슐설정
 
 빅스비 캡슐을 개발하면서 필요하거나 도움이 되는 설정들에 대해서 말씀드리겠습니다.
-
-
 
 ### .hints.bxb
 
