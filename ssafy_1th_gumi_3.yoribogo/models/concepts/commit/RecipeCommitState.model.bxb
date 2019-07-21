@@ -23,6 +23,7 @@ structure (RecipeCommitState) {
     type(LayoutType)
     min (Required) max (One)
   }
+  // Pagenation 기능은 구현하지 않았습니다
   property (maxPageNumber){
     type(MaxPageNumber)
     min (Required) max (One)

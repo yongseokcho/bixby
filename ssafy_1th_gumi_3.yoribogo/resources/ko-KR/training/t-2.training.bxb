@@ -25,8 +25,8 @@ train (t-28uk1ofn7eycvibaxfsmc1jdg) {
 }
 train (t-294vczc1arvfkk2k0h002t1fd) {
   utterance ("[g:CommitRecipeSearch,r:WrapBoundaryOption,r:BeginRecipeSearch] (300)[v:LowerBound] 칼로리 (이상)[v:LowerBoundKeyword:이상] (700)[v:UpperBound] 칼로리 (미만)[v:UpperBoundKeyword:이하] (레시피)[v:RecipeKeyword:레시피] (찾아줘)[v:SearchKeyword:검색]")
-  plan (lZDPagIxEMY/u7b+7Vu0eFCEIr6A0lOFgov0uMR1uuawmzCbRffSZ2+a7FIqNLYzhzCZ33zzJbjHtCzFe508mWOSVblMFvNasdyrTM2fz8SpLCk2XKWmYsLsd3it8lyaLaVSU0yC02NI2nN+JjbCUAheUSaLH8qPAVhVxeFVG6kKTK4ZeKH6pPgQAv3GFgx8wBsL7ZYLrpv9gTdt1InY4a10AN5pfQEv/+PjY9+UePiLoRD17QRjdHCDCF3c4g499DHAECN7j6YTuW7P5dBmx3V8tKePga1HVuFLaWyryE7gEw==)
-  last-modified (1562503029411)
+  plan (jY/PbsIwDMY/Vhjjzx4CtMN2QRq8AdNOTJpEhThWoRjIoU2UpoJeeHaypBXaJMPsQ+T45++z8YzXohC7Knm3h2RfZjKZTTbyRLvJ54lMKguKrSlTWxrCG0N+qCyTdkmp1BSTMOmBFQ1QGIitsMSSc9rL/JfmmCNVmW+/tZUqx8tN3wVVR2W2LBWMGoo7d22E9p7CVLUtd8SXOpLxbCPKkSut/5DTf9ufN3WJ0d09WOS6AIZo4QER2ujgEV08oYc+Bu4fdSfy3a7PvsuW74Ro3hA9Vw+cwo/S0FWRm8AF)
+  last-modified (1563630032420)
 }
 train (t-2d1j762qr0yr721dp7lqdqw9f) {
   utterance ("[g:CommitRecipeSearch,r:BeginRecipeSearch] (닭고기 명란 튀김)[v:RecipeName] (하는법)[v:RecipeKeyword:레시피] (가르쳐줘)[v:SearchKeyword:검색]")

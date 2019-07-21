@@ -1,5 +1,5 @@
 action (UpdateRecipeSearch) {
-  description (요리 검색 업데이트)
+  description (기존 발화에서 재료를 추가/삭제 업데이트)
   type(UpdateTransaction)
   collect {
     input (recipeCommitState) {

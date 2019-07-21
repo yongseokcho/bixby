@@ -1,4 +1,4 @@
 enum (GuideKeyword) {
-  description (가이드를 위한 키워드)
+  description (가이드를 호출할 때 사용하는 모델)
   symbol (가이드)
 }

@@ -952,8 +952,6 @@ private static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, St
 
 #### API Reference for Developers(Swagger)
 
-보다 자세한 설명은 [Swagger UI](./docs/swagger/Swagger_UI.html)를 참고해주세요
-
 ----------------
 
 ##### food_basic_controller
@@ -1022,5 +1020,7 @@ private static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, St
 
 - recipeId 를 이용하여 레시피에 대한 조회수 출력
 
+------------------------
 
+![](./docs/img/swaggerUI.png)
 

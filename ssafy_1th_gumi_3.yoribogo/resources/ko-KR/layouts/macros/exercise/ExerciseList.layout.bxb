@@ -44,8 +44,6 @@ layout-macro-def(ExerciseList) {
             }
           }
         }
-
-
       }
     }
   }
